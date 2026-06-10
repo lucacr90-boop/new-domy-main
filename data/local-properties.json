@@ -1,5 +1,2494 @@
 [
   {
+    "_id": "local-import-puglia-casa-indipendente-triggiano-via-tito-fanfulla-1780577731120-lwpwr",
+    "_type": "listing",
+    "title": {
+      "en": "House in Triggiano, Via Tito Fanfulla",
+      "cs": "Samostatný dům v Triggianu, Via Tito Fanfulla",
+      "it": "Casa Indipendente a Triggiano, Via Tito Fanfulla"
+    },
+    "slug": {
+      "_type": "slug",
+      "current": "puglia-casa-indipendente-triggiano-via-tito-fanfulla"
+    },
+    "propertyType": "house",
+    "price": {
+      "amount": 90000,
+      "currency": "EUR"
+    },
+    "specifications": {
+      "rooms": 3,
+      "bedrooms": 2,
+      "bathrooms": 2,
+      "squareFootage": 90
+    },
+    "location": {
+      "city": {
+        "name": {
+          "en": "Triggiano",
+          "cs": "Triggiano",
+          "it": "Triggiano"
+        },
+        "slug": {
+          "current": "triggiano"
+        },
+        "region": {
+          "name": {
+            "it": "Puglia",
+            "en": "Apulia",
+            "cs": "Apulie"
+          },
+          "country": {
+            "en": "Italy",
+            "cs": "Italie",
+            "it": "Italia"
+          }
+        }
+      },
+      "address": {
+        "en": "Via Tito Fanfulla, 38, Triggiano",
+        "cs": "Via Tito Fanfulla, 38, Triggiano",
+        "it": "Via Tito Fanfulla, 38, Triggiano"
+      },
+      "coordinates": {
+        "lat": 41.0625,
+        "lng": 16.9226
+      }
+    },
+    "status": "available",
+    "featured": false,
+    "isNew": false,
+    "noAgency": false,
+    "description": {
+      "en": "In Triggiano, this house offers 90 sqm, 3 rooms, 2 bedrooms and 2 bathrooms. The property is located at Via Tito Fanfulla, 38, Triggiano and has an asking price of EUR 90,000.\n\nThe point to assess is usable outdoor space such as terrace or balcony. The property should be reviewed according to the buyer's goals, with particular attention to documentation, technical condition and real costs.\n\nBefore any purchase decision, documents, technical checks and an on-site visit remain essential.",
+      "cs": "V lokalitě Triggiano nabízí tato nemovitost 90 m2, 3 místností, 2 ložnic a 2 koupelen. Nachází se na adrese Via Tito Fanfulla, 38, Triggiano a požadovaná cena je 90 000 EUR.\n\nHlavním bodem k posouzení je využitelné venkovní prostory jako terasa nebo balkon. Nemovitost je vhodné hodnotit podle cíle kupujícího, se zvláštním důrazem na dokumentaci, technický stav a reálné náklady.\n\nPřed rozhodnutím o koupi je nutné ověřit dokumenty, technický stav a nemovitost osobně navštívit.",
+      "it": "A Triggiano, proponiamo casa indipendente con 90 mq, 3 locali, 2 camere e 2 bagni. La proprietà si trova in Via Tito Fanfulla, 38, Triggiano e ha un prezzo richiesto di 90.000 euro.\n\nIl punto da valutare è spazi esterni vivibili come terrazzo o balcone. Dalla descrizione originale emerge inoltre: Vi presento questo fantastica casa singola di 3 locali in vendita nel comune di Triggiano. Si trova proprio nel pieno centro del paese, ma in una zona super tranquilla. Il prezzo è davvero conveniente, solo 90.000 euro! La casa ha tutto quello di cui avete bisogno: scuole, trasporti pubblici e servizi sono tutti a portata di mano. Cii sono due camere da letto e quattro posti letto in totale. Inoltre, ci sono due bagni, quindi niente più code la mattina! La casa è stata recentemente ristrutturata, quindi potete essere sicuri che sia in ottime condizioni. Inoltre dispone di due ampi terrazzi dove potrete trascorrere momenti di relax in compagnia della vostra famiglia o dei vostri amici. Non lasciatevi scappare questa occasione, contattateci subito per organizzare una visita!\n\nPrima di procedere è necessario verificare documenti, stato tecnico, spese e condizioni reali con sopralluogo."
+    },
+    "images": [
+      "/uploads/properties/puglia-casa-indipendente-triggiano-via-tito-fanfulla/01-gallery-1.jpg",
+      "/uploads/properties/puglia-casa-indipendente-triggiano-via-tito-fanfulla/02-gallery-10.jpg",
+      "/uploads/properties/puglia-casa-indipendente-triggiano-via-tito-fanfulla/03-gallery-11.jpg",
+      "/uploads/properties/puglia-casa-indipendente-triggiano-via-tito-fanfulla/04-gallery-12.jpg",
+      "/uploads/properties/puglia-casa-indipendente-triggiano-via-tito-fanfulla/05-gallery-2.jpg",
+      "/uploads/properties/puglia-casa-indipendente-triggiano-via-tito-fanfulla/06-gallery-3.jpg",
+      "/uploads/properties/puglia-casa-indipendente-triggiano-via-tito-fanfulla/07-gallery-4.jpg",
+      "/uploads/properties/puglia-casa-indipendente-triggiano-via-tito-fanfulla/08-gallery-5.jpg",
+      "/uploads/properties/puglia-casa-indipendente-triggiano-via-tito-fanfulla/09-gallery-6.jpg",
+      "/uploads/properties/puglia-casa-indipendente-triggiano-via-tito-fanfulla/10-gallery-7.jpg",
+      "/uploads/properties/puglia-casa-indipendente-triggiano-via-tito-fanfulla/11-gallery-8.jpg",
+      "/uploads/properties/puglia-casa-indipendente-triggiano-via-tito-fanfulla/12-gallery-9.jpg",
+      "/uploads/properties/puglia-casa-indipendente-triggiano-via-tito-fanfulla/13-main.jpg",
+      "/uploads/properties/puglia-casa-indipendente-triggiano-via-tito-fanfulla/14-plan.jpg"
+    ],
+    "mainImage": 0,
+    "amenities": [
+      {
+        "name": {
+          "it": "spazi esterni vivibili come terrazzo o balcone",
+          "en": "usable outdoor space such as terrace or balcony",
+          "cs": "využitelné venkovní prostory jako terasa nebo balkon"
+        }
+      },
+      {
+        "name": {
+          "it": "90 mq commerciali",
+          "en": "90 commercial sqm",
+          "cs": "90 m2 užitné plochy"
+        }
+      },
+      {
+        "name": {
+          "it": "3 locali",
+          "en": "3 rooms",
+          "cs": "3 místností"
+        }
+      },
+      {
+        "name": {
+          "it": "2 camere da letto",
+          "en": "2 bedrooms",
+          "cs": "2 ložnice"
+        }
+      },
+      {
+        "name": {
+          "it": "2 bagni",
+          "en": "2 bathrooms",
+          "cs": "2 koupelny"
+        }
+      }
+    ],
+    "seoTitle": {
+      "en": "House in Triggiano, Via Tito Fanfulla for sale",
+      "cs": "Samostatný dům v Triggianu, Via Tito Fanfulla na prodej",
+      "it": "Casa Indipendente a Triggiano, Via Tito Fanfulla in vendita"
+    },
+    "seoDescription": {
+      "en": "Triggiano: house of 90 sqm, 2 bedrooms, 2 bathrooms. Asking price EUR 90,000.",
+      "cs": "Triggiano: nemovitost 90 m2, 2 ložnice, 2 koupelny. Cena 90 000 EUR.",
+      "it": "Triggiano: casa indipendente di 90 mq, 2 camere, 2 bagni. Prezzo 90.000 euro."
+    },
+    "keywords": [
+      "puglia",
+      "triggiano",
+      "house",
+      "via-tito-fanfulla",
+      "immobiliare-it"
+    ],
+    "sourceUrl": "https://www.immobiliare.it/annunci/120549148/",
+    "_createdAt": "2026-04-30T10:00:00.000Z",
+    "_updatedAt": "2026-04-30T10:00:00.000Z"
+  },
+  {
+    "_id": "local-import-puglia-appartamento-monopoli-viale-aldo-moro-1780577730963-fqgcg",
+    "_type": "listing",
+    "title": {
+      "en": "Apartment in Monopoli, Viale Aldo Moro",
+      "cs": "Dostupný byt v Monopoli, Viale Aldo Moro",
+      "it": "Appartamento a Monopoli, Viale Aldo Moro"
+    },
+    "slug": {
+      "_type": "slug",
+      "current": "puglia-appartamento-monopoli-viale-aldo-moro"
+    },
+    "propertyType": "apartment",
+    "price": {
+      "amount": 53000,
+      "currency": "EUR"
+    },
+    "specifications": {
+      "rooms": 2,
+      "bedrooms": 1,
+      "bathrooms": 2,
+      "squareFootage": 55
+    },
+    "location": {
+      "city": {
+        "name": {
+          "en": "Monopoli",
+          "cs": "Monopoli",
+          "it": "Monopoli"
+        },
+        "slug": {
+          "current": "monopoli"
+        },
+        "region": {
+          "name": {
+            "it": "Puglia",
+            "en": "Apulia",
+            "cs": "Apulie"
+          },
+          "country": {
+            "en": "Italy",
+            "cs": "Italie",
+            "it": "Italia"
+          }
+        }
+      },
+      "address": {
+        "en": "Viale Aldo Moro, 6, Monopoli",
+        "cs": "Viale Aldo Moro, 6, Monopoli",
+        "it": "Viale Aldo Moro, 6, Monopoli"
+      },
+      "coordinates": {
+        "lat": 40.9714,
+        "lng": 17.2636
+      }
+    },
+    "status": "available",
+    "featured": false,
+    "isNew": false,
+    "noAgency": false,
+    "description": {
+      "en": "In Monopoli, this apartment offers 55 sqm, 2 rooms, 1 bedrooms and 2 bathrooms. The property is located at Viale Aldo Moro, 6, Monopoli and has an asking price of EUR 53,000.\n\nThe point to assess is usable outdoor space such as terrace or balcony. The property should be reviewed according to the buyer's goals, with particular attention to documentation, technical condition and real costs.\n\nBefore any purchase decision, documents, technical checks and an on-site visit remain essential.",
+      "cs": "V lokalitě Monopoli nabízí tato nemovitost 55 m2, 2 místností, 1 ložnic a 2 koupelen. Nachází se na adrese Viale Aldo Moro, 6, Monopoli a požadovaná cena je 53 000 EUR.\n\nHlavním bodem k posouzení je využitelné venkovní prostory jako terasa nebo balkon. Nemovitost je vhodné hodnotit podle cíle kupujícího, se zvláštním důrazem na dokumentaci, technický stav a reálné náklady.\n\nPřed rozhodnutím o koupi je nutné ověřit dokumenty, technický stav a nemovitost osobně navštívit.",
+      "it": "A Monopoli, proponiamo appartamento con 55 mq, 2 locali, 1 camere e 2 bagni. La proprietà si trova in Viale Aldo Moro, 6, Monopoli e ha un prezzo richiesto di 53.000 euro.\n\nIl punto da valutare è spazi esterni vivibili come terrazzo o balcone. Dalla descrizione originale emerge inoltre: A Cala Corvino nella palazzina Multivantage proponiamo la vendita di un appartamento arredato, solamente nel periodo estivo da giugno a settembre e precisamente dalla 23 alla 36 settimana dell’anno solare, al primo piano di 55 mq, di 5 posti letto, in un condominio di 16 appartamenti, composto da ingresso veranda, zona pranzo/cucina, 2 bagni, letto matrimoniale e terrazzino retrostante. Impianto climatizzato autonomo e gas metano. In adiacenza disponibilità di un posto auto scoperto per ciascun immobile. La spesa condominiale per quanto riguarda i mesi di proprietà comporta l’iscrizione alla tessera club del villaggio, comprendente gli impianti sportivi, piscine, pizzeria, ristorante e bar, con servizio piscine e spiaggia provvisti di lettini e ombrelloni. Se l'acquirente usa l'immobile in periodi parziali rispetto ai 3 mesi previsti, gli spetterà di pagare le spese condominiali solo per i giorni di uso, mentre per i restanti giorni non utilizzati non si paga condominio. Monopoli è un comune italiano di 49 133 abitanti della città metropolitana di Bari, in Puglia. Si trova a 43 chilometri a sud-est del capoluogo metropolitano. Monopoli rappresenta, sull'Adriatico, uno dei porti più attivi e popolosi della regione. Il suo caratteristico centro storico di origine alto-medievale, sovrapposto ai resti di un abitato messapico fortificato già nel V secolo a.C., si affaccia sul mare circondato da alte mura. L'agro infatti è diviso in varie località denominate contrade, i cui toponimi rievocano antichi casali scomparsi, la presenza di una masseria, di una chiesa o altri riferimenti storico-geografici. Il territorio della città di Monopoli si estende complessivamente su una superficie di 157,89 km². La costa, lunga quasi 15 chilometri, è bassa e frastagliata: con oltre 25 cale ed ampie distese sabbiose risulta particolarmente adatta alla balneazione e all'esplorazione della vita sottomarina. Nel territorio è dunque ampiamente diffuso il turismo balneare. Monopoli è anche detta la città delle cento contrade, il territorio della città è diviso in unità denominate contrade, alcune delle quali oramai incluse all'interno del centro abitato. Sono caratterizzate dalla presenza di antiche masserie fortificate, chiese e insediamenti rupestri, trulli, ville patrizie neoclassiche e case coloniche. La nostra Agenzia nasce in Putignano sin dal 1985 promuovendo un’immagine di professionalità, trasparenza e serietà avvalendosi di personale tecnico e di agenti immobiliari qualificati. La nostra Mission da 35 anni è quella di seguire i clienti con professionalità nel percorso della compravendita, delle procedure tecniche, urbanistiche, catastali e fiscali in maniera da completare tutte le procedure, a richiesta dei clienti, sino ai lavori di ristrutturazione e ammodernamento degli immobili a 360°.\n\nPrima di procedere è necessario verificare documenti, stato tecnico, spese e condizioni reali con sopralluogo."
+    },
+    "images": [
+      "/uploads/properties/puglia-appartamento-monopoli-viale-aldo-moro/01-gallery-1.jpg",
+      "/uploads/properties/puglia-appartamento-monopoli-viale-aldo-moro/02-gallery-10.jpg",
+      "/uploads/properties/puglia-appartamento-monopoli-viale-aldo-moro/03-gallery-11.jpg",
+      "/uploads/properties/puglia-appartamento-monopoli-viale-aldo-moro/04-gallery-12.jpg",
+      "/uploads/properties/puglia-appartamento-monopoli-viale-aldo-moro/05-gallery-2.jpg",
+      "/uploads/properties/puglia-appartamento-monopoli-viale-aldo-moro/06-gallery-3.jpg",
+      "/uploads/properties/puglia-appartamento-monopoli-viale-aldo-moro/07-gallery-4.jpg",
+      "/uploads/properties/puglia-appartamento-monopoli-viale-aldo-moro/08-gallery-5.jpg",
+      "/uploads/properties/puglia-appartamento-monopoli-viale-aldo-moro/09-gallery-6.jpg",
+      "/uploads/properties/puglia-appartamento-monopoli-viale-aldo-moro/10-gallery-7.jpg",
+      "/uploads/properties/puglia-appartamento-monopoli-viale-aldo-moro/11-gallery-8.jpg",
+      "/uploads/properties/puglia-appartamento-monopoli-viale-aldo-moro/12-gallery-9.jpg",
+      "/uploads/properties/puglia-appartamento-monopoli-viale-aldo-moro/13-main.jpg",
+      "/uploads/properties/puglia-appartamento-monopoli-viale-aldo-moro/14-plan.jpg"
+    ],
+    "mainImage": 0,
+    "amenities": [
+      {
+        "name": {
+          "it": "spazi esterni vivibili come terrazzo o balcone",
+          "en": "usable outdoor space such as terrace or balcony",
+          "cs": "využitelné venkovní prostory jako terasa nebo balkon"
+        }
+      },
+      {
+        "name": {
+          "it": "55 mq commerciali",
+          "en": "55 commercial sqm",
+          "cs": "55 m2 užitné plochy"
+        }
+      },
+      {
+        "name": {
+          "it": "2 locali",
+          "en": "2 rooms",
+          "cs": "2 místností"
+        }
+      },
+      {
+        "name": {
+          "it": "1 camere da letto",
+          "en": "1 bedrooms",
+          "cs": "1 ložnice"
+        }
+      },
+      {
+        "name": {
+          "it": "2 bagni",
+          "en": "2 bathrooms",
+          "cs": "2 koupelny"
+        }
+      }
+    ],
+    "seoTitle": {
+      "en": "Apartment in Monopoli, Viale Aldo Moro for sale",
+      "cs": "Dostupný byt v Monopoli, Viale Aldo Moro na prodej",
+      "it": "Appartamento a Monopoli, Viale Aldo Moro in vendita"
+    },
+    "seoDescription": {
+      "en": "Monopoli: apartment of 55 sqm, 1 bedrooms, 2 bathrooms. Asking price EUR 53,000.",
+      "cs": "Monopoli: nemovitost 55 m2, 1 ložnice, 2 koupelny. Cena 53 000 EUR.",
+      "it": "Monopoli: appartamento di 55 mq, 1 camere, 2 bagni. Prezzo 53.000 euro."
+    },
+    "keywords": [
+      "puglia",
+      "monopoli",
+      "apartment",
+      "viale-aldo-moro",
+      "immobiliare-it"
+    ],
+    "sourceUrl": "https://www.immobiliare.it/annunci/113335747/",
+    "_createdAt": "2026-04-30T10:00:00.000Z",
+    "_updatedAt": "2026-04-30T10:00:00.000Z"
+  },
+  {
+    "_id": "local-import-puglia-villa-mola-di-bari-strada-provinciale-mola-conversano-per-villa-pepe-1780577730804-vfpfg",
+    "_type": "listing",
+    "title": {
+      "en": "Villa in Mola di Bari, Strada Provinciale Mola-Conversano per Villa Pepe",
+      "cs": "Menší vila v Mola di Bari u silnice na Conversano",
+      "it": "Villa a Mola di Bari, Strada Provinciale Mola-Conversano per Villa Pepe"
+    },
+    "slug": {
+      "_type": "slug",
+      "current": "puglia-villa-mola-di-bari-strada-provinciale-mola-conversano-per-villa-pepe"
+    },
+    "propertyType": "villa",
+    "price": {
+      "amount": 85000,
+      "currency": "EUR"
+    },
+    "specifications": {
+      "rooms": 2,
+      "bedrooms": 1,
+      "bathrooms": 1,
+      "squareFootage": 42
+    },
+    "location": {
+      "city": {
+        "name": {
+          "en": "Mola di Bari",
+          "cs": "Mola di Bari",
+          "it": "Mola di Bari"
+        },
+        "slug": {
+          "current": "mola-di-bari"
+        },
+        "region": {
+          "name": {
+            "it": "Puglia",
+            "en": "Apulia",
+            "cs": "Apulie"
+          },
+          "country": {
+            "en": "Italy",
+            "cs": "Italie",
+            "it": "Italia"
+          }
+        }
+      },
+      "address": {
+        "en": "Strada Provinciale Mola-Conversano per Villa Pepe, Mola di Bari",
+        "cs": "Strada Provinciale Mola-Conversano per Villa Pepe, Mola di Bari",
+        "it": "Strada Provinciale Mola-Conversano per Villa Pepe, Mola di Bari"
+      },
+      "coordinates": {
+        "lat": 41.0491,
+        "lng": 17.095
+      }
+    },
+    "status": "available",
+    "featured": false,
+    "isNew": false,
+    "noAgency": false,
+    "description": {
+      "en": "In Mola di Bari, this villa offers 42 sqm, 2 rooms, 1 bedrooms and 1 bathrooms. The property is located at Strada Provinciale Mola-Conversano per Villa Pepe, Mola di Bari and has an asking price of EUR 85,000.\n\nThe point to assess is property described as renovated or in good condition. The property should be reviewed according to the buyer's goals, with particular attention to documentation, technical condition and real costs.\n\nBefore any purchase decision, documents, technical checks and an on-site visit remain essential.",
+      "cs": "V lokalitě Mola di Bari nabízí tato nemovitost 42 m2, 2 místností, 1 ložnic a 1 koupelen. Nachází se na adrese Strada Provinciale Mola-Conversano per Villa Pepe, Mola di Bari a požadovaná cena je 85 000 EUR.\n\nHlavním bodem k posouzení je nemovitost uvedená jako zrekonstruovaná nebo v dobrém stavu. Nemovitost je vhodné hodnotit podle cíle kupujícího, se zvláštním důrazem na dokumentaci, technický stav a reálné náklady.\n\nPřed rozhodnutím o koupi je nutné ověřit dokumenty, technický stav a nemovitost osobně navštívit.",
+      "it": "A Mola di Bari, proponiamo villa con 42 mq, 2 locali, 1 camere e 1 bagni. La proprietà si trova in Strada Provinciale Mola-Conversano per Villa Pepe, Mola di Bari e ha un prezzo richiesto di 85.000 euro.\n\nIl punto da valutare è immobile indicato come ristrutturato o in buono stato. Dalla descrizione originale emerge inoltre: Nelle immediate vicinanze del centro abitato e in contrada Trappeto don Orazio, proponiamo in vendita fabbricato di categoria C2 con superficie catastale di 42 mq più terreno agricolo di 2.723 mq. Il fabbricato è stato ristrutturato quattro anni fa ed è composto da un vano adibito a cucina-pranzo, una camera da letto, bagno e veranda coperta. L’immobile è dotato di ampia cisterna interrata per la raccolta di acqua con profondità di 3,5 mt e impianto imhoff per lo smaltimento delle acque reflue. Il terreno è recintato con circa 45 alberi di olive, palme, e altri alberi da frutta. Per maggiori informazioni e appuntamenti contattare Giancarlo Clemente 3482243208\n\nPrima di procedere è necessario verificare documenti, stato tecnico, spese e condizioni reali con sopralluogo."
+    },
+    "images": [
+      "/uploads/properties/puglia-villa-mola-di-bari-strada-provinciale-mola-conversano-per-villa-pepe/01-gallery-1.jpg",
+      "/uploads/properties/puglia-villa-mola-di-bari-strada-provinciale-mola-conversano-per-villa-pepe/02-gallery-10.jpg",
+      "/uploads/properties/puglia-villa-mola-di-bari-strada-provinciale-mola-conversano-per-villa-pepe/03-gallery-11.jpg",
+      "/uploads/properties/puglia-villa-mola-di-bari-strada-provinciale-mola-conversano-per-villa-pepe/04-gallery-12.jpg",
+      "/uploads/properties/puglia-villa-mola-di-bari-strada-provinciale-mola-conversano-per-villa-pepe/05-gallery-2.jpg",
+      "/uploads/properties/puglia-villa-mola-di-bari-strada-provinciale-mola-conversano-per-villa-pepe/06-gallery-3.jpg",
+      "/uploads/properties/puglia-villa-mola-di-bari-strada-provinciale-mola-conversano-per-villa-pepe/07-gallery-4.jpg",
+      "/uploads/properties/puglia-villa-mola-di-bari-strada-provinciale-mola-conversano-per-villa-pepe/08-gallery-5.jpg",
+      "/uploads/properties/puglia-villa-mola-di-bari-strada-provinciale-mola-conversano-per-villa-pepe/09-gallery-6.jpg",
+      "/uploads/properties/puglia-villa-mola-di-bari-strada-provinciale-mola-conversano-per-villa-pepe/10-gallery-7.jpg",
+      "/uploads/properties/puglia-villa-mola-di-bari-strada-provinciale-mola-conversano-per-villa-pepe/11-gallery-8.jpg",
+      "/uploads/properties/puglia-villa-mola-di-bari-strada-provinciale-mola-conversano-per-villa-pepe/12-gallery-9.jpg",
+      "/uploads/properties/puglia-villa-mola-di-bari-strada-provinciale-mola-conversano-per-villa-pepe/13-main.jpg"
+    ],
+    "mainImage": 0,
+    "amenities": [
+      {
+        "name": {
+          "it": "immobile indicato come ristrutturato o in buono stato",
+          "en": "property described as renovated or in good condition",
+          "cs": "nemovitost uvedená jako zrekonstruovaná nebo v dobrém stavu"
+        }
+      },
+      {
+        "name": {
+          "it": "42 mq commerciali",
+          "en": "42 commercial sqm",
+          "cs": "42 m2 užitné plochy"
+        }
+      },
+      {
+        "name": {
+          "it": "2 locali",
+          "en": "2 rooms",
+          "cs": "2 místností"
+        }
+      },
+      {
+        "name": {
+          "it": "1 camere da letto",
+          "en": "1 bedrooms",
+          "cs": "1 ložnice"
+        }
+      },
+      {
+        "name": {
+          "it": "1 bagni",
+          "en": "1 bathrooms",
+          "cs": "1 koupelny"
+        }
+      }
+    ],
+    "seoTitle": {
+      "en": "Villa in Mola di Bari, Strada Provinciale Mola-Conversano per Villa Pepe for sale",
+      "cs": "Menší vila v Mola di Bari u silnice na Conversano na prodej",
+      "it": "Villa a Mola di Bari, Strada Provinciale Mola-Conversano per Villa Pepe in vendita"
+    },
+    "seoDescription": {
+      "en": "Mola di Bari: villa of 42 sqm, 1 bedrooms, 1 bathrooms. Asking price EUR 85,000.",
+      "cs": "Mola di Bari: nemovitost 42 m2, 1 ložnice, 1 koupelny. Cena 85 000 EUR.",
+      "it": "Mola di Bari: villa di 42 mq, 1 camere, 1 bagni. Prezzo 85.000 euro."
+    },
+    "keywords": [
+      "puglia",
+      "mola-di-bari",
+      "villa",
+      "strada-provinciale-mola-conversano-per-villa-pepe",
+      "immobiliare-it"
+    ],
+    "sourceUrl": "https://www.immobiliare.it/annunci/121337792/",
+    "_createdAt": "2026-04-30T10:00:00.000Z",
+    "_updatedAt": "2026-04-30T10:00:00.000Z"
+  },
+  {
+    "_id": "local-import-puglia-villa-conversano-viale-discesa-del-monte-1780577730650-48yz9",
+    "_type": "listing",
+    "title": {
+      "en": "Villa in Conversano, Viale Discesa del Monte",
+      "cs": "Rodinná vila v Conversanu, Viale Discesa del Monte",
+      "it": "Villa a Conversano, Viale Discesa del Monte"
+    },
+    "slug": {
+      "_type": "slug",
+      "current": "puglia-villa-conversano-viale-discesa-del-monte"
+    },
+    "propertyType": "villa",
+    "price": {
+      "amount": 90000,
+      "currency": "EUR"
+    },
+    "specifications": {
+      "rooms": 2,
+      "bedrooms": 1,
+      "bathrooms": 1,
+      "squareFootage": 60
+    },
+    "location": {
+      "city": {
+        "name": {
+          "en": "Conversano",
+          "cs": "Conversano",
+          "it": "Conversano"
+        },
+        "slug": {
+          "current": "conversano"
+        },
+        "region": {
+          "name": {
+            "it": "Puglia",
+            "en": "Apulia",
+            "cs": "Apulie"
+          },
+          "country": {
+            "en": "Italy",
+            "cs": "Italie",
+            "it": "Italia"
+          }
+        }
+      },
+      "address": {
+        "en": "Viale Discesa del Monte, 7, Conversano",
+        "cs": "Viale Discesa del Monte, 7, Conversano",
+        "it": "Viale Discesa del Monte, 7, Conversano"
+      },
+      "coordinates": {
+        "lat": 41.0083,
+        "lng": 17.1333
+      }
+    },
+    "status": "available",
+    "featured": false,
+    "isNew": false,
+    "noAgency": false,
+    "description": {
+      "en": "In Conversano, this villa offers 60 sqm, 2 rooms, 1 bedrooms and 1 bathrooms. The property is located at Viale Discesa del Monte, 7, Conversano and has an asking price of EUR 90,000.\n\nThe point to assess is outdoor areas or garden. The property should be reviewed according to the buyer's goals, with particular attention to documentation, technical condition and real costs.\n\nBefore any purchase decision, documents, technical checks and an on-site visit remain essential.",
+      "cs": "V lokalitě Conversano nabízí tato nemovitost 60 m2, 2 místností, 1 ložnic a 1 koupelen. Nachází se na adrese Viale Discesa del Monte, 7, Conversano a požadovaná cena je 90 000 EUR.\n\nHlavním bodem k posouzení je venkovní prostory nebo zahrada. Nemovitost je vhodné hodnotit podle cíle kupujícího, se zvláštním důrazem na dokumentaci, technický stav a reálné náklady.\n\nPřed rozhodnutím o koupi je nutné ověřit dokumenty, technický stav a nemovitost osobně navštívit.",
+      "it": "A Conversano, proponiamo villa con 60 mq, 2 locali, 1 camere e 1 bagni. La proprietà si trova in Viale Discesa del Monte, 7, Conversano e ha un prezzo richiesto di 90.000 euro.\n\nIl punto da valutare è presenza di spazi esterni o giardino. Dalla descrizione originale emerge inoltre: Villino con giardino a pochi minuti dal mare – Strada Conversano-Cozze Proponiamo in vendita un grazioso villino indipendente di circa 70 mq situato in posizione strategica lungo la strada che collega Conversano alla rinomata località balneare di Cozze, distante appena 3 km dal mare. L'immobile è inserito all'interno del Complesso Esperia, un contesto composto da numerose ville, per la maggior parte abitate durante tutto l'anno, che garantisce tranquillità ma anche presenza e vivibilità costante, ideale sia per chi cerca relax che sicurezza. Il villino si sviluppa su un unico livello e offre ambienti funzionali e luminosi, con grande potenziale di personalizzazione. Completa la proprietà un ampio giardino privato, perfetto per vivere al meglio gli spazi esterni: ideale per pranzi all'aperto, momenti di relax, area giochi o anche per realizzare una zona barbecue. La posizione rappresenta uno dei punti di forza dell'immobile: • a pochi minuti dal mare e dalle calette più apprezzate della costa • facilmente raggiungibile dai principali centri abitati • perfetta combinazione tra tranquillità e comodità Lo stato dell'immobile è discreto, già utilizzabile, ma con margini di valorizzazione tramite interventi di ammodernamento, rendendolo una soluzione estremamente interessante anche in ottica investimento. Ideale per: • chi cerca una casa vacanza vicino al mare ma lontana dal caos • famiglie che desiderano una soluzione con giardino • chi vuole un punto di appoggio estivo in una delle zone più richieste della costa barese • investitori interessati ad affitti stagionali o locazioni brevi Una soluzione versatile, immersa nel verde e a pochi minuti dal mare, perfetta per vivere la Puglia in ogni stagione.\n\nPrima di procedere è necessario verificare documenti, stato tecnico, spese e condizioni reali con sopralluogo."
+    },
+    "images": [
+      "/uploads/properties/puglia-villa-conversano-viale-discesa-del-monte/01-gallery-1.jpg",
+      "/uploads/properties/puglia-villa-conversano-viale-discesa-del-monte/02-gallery-10.jpg",
+      "/uploads/properties/puglia-villa-conversano-viale-discesa-del-monte/03-gallery-11.jpg",
+      "/uploads/properties/puglia-villa-conversano-viale-discesa-del-monte/04-gallery-12.jpg",
+      "/uploads/properties/puglia-villa-conversano-viale-discesa-del-monte/05-gallery-2.jpg",
+      "/uploads/properties/puglia-villa-conversano-viale-discesa-del-monte/06-gallery-3.jpg",
+      "/uploads/properties/puglia-villa-conversano-viale-discesa-del-monte/07-gallery-4.jpg",
+      "/uploads/properties/puglia-villa-conversano-viale-discesa-del-monte/08-gallery-5.jpg",
+      "/uploads/properties/puglia-villa-conversano-viale-discesa-del-monte/09-gallery-6.jpg",
+      "/uploads/properties/puglia-villa-conversano-viale-discesa-del-monte/10-gallery-7.jpg",
+      "/uploads/properties/puglia-villa-conversano-viale-discesa-del-monte/11-gallery-8.jpg",
+      "/uploads/properties/puglia-villa-conversano-viale-discesa-del-monte/12-gallery-9.jpg",
+      "/uploads/properties/puglia-villa-conversano-viale-discesa-del-monte/13-main.jpg"
+    ],
+    "mainImage": 0,
+    "amenities": [
+      {
+        "name": {
+          "it": "presenza di spazi esterni o giardino",
+          "en": "outdoor areas or garden",
+          "cs": "venkovní prostory nebo zahrada"
+        }
+      },
+      {
+        "name": {
+          "it": "60 mq commerciali",
+          "en": "60 commercial sqm",
+          "cs": "60 m2 užitné plochy"
+        }
+      },
+      {
+        "name": {
+          "it": "2 locali",
+          "en": "2 rooms",
+          "cs": "2 místností"
+        }
+      },
+      {
+        "name": {
+          "it": "1 camere da letto",
+          "en": "1 bedrooms",
+          "cs": "1 ložnice"
+        }
+      },
+      {
+        "name": {
+          "it": "1 bagni",
+          "en": "1 bathrooms",
+          "cs": "1 koupelny"
+        }
+      }
+    ],
+    "seoTitle": {
+      "en": "Villa in Conversano, Viale Discesa del Monte for sale",
+      "cs": "Rodinná vila v Conversanu, Viale Discesa del Monte na prodej",
+      "it": "Villa a Conversano, Viale Discesa del Monte in vendita"
+    },
+    "seoDescription": {
+      "en": "Conversano: villa of 60 sqm, 1 bedrooms, 1 bathrooms. Asking price EUR 90,000.",
+      "cs": "Conversano: nemovitost 60 m2, 1 ložnice, 1 koupelny. Cena 90 000 EUR.",
+      "it": "Conversano: villa di 60 mq, 1 camere, 1 bagni. Prezzo 90.000 euro."
+    },
+    "keywords": [
+      "puglia",
+      "conversano",
+      "villa",
+      "viale-discesa-del-monte",
+      "immobiliare-it"
+    ],
+    "sourceUrl": "https://www.immobiliare.it/annunci/127766248/",
+    "_createdAt": "2026-04-30T10:00:00.000Z",
+    "_updatedAt": "2026-04-30T10:00:00.000Z"
+  },
+  {
+    "_id": "local-import-puglia-casa-indipendente-bari-via-de-marinis-1780577730495-58e4z",
+    "_type": "listing",
+    "title": {
+      "en": "House in Bari, Via De Marinis",
+      "cs": "Samostatný dům v Bari, Via De Marinis",
+      "it": "Casa Indipendente a Bari, Via De Marinis"
+    },
+    "slug": {
+      "_type": "slug",
+      "current": "puglia-casa-indipendente-bari-via-de-marinis"
+    },
+    "propertyType": "house",
+    "price": {
+      "amount": 87000,
+      "currency": "EUR"
+    },
+    "specifications": {
+      "rooms": 2,
+      "bedrooms": 1,
+      "bathrooms": 1,
+      "squareFootage": 65
+    },
+    "location": {
+      "city": {
+        "name": {
+          "en": "Bari",
+          "cs": "Bari",
+          "it": "Bari"
+        },
+        "slug": {
+          "current": "bari"
+        },
+        "region": {
+          "name": {
+            "it": "Puglia",
+            "en": "Apulia",
+            "cs": "Apulie"
+          },
+          "country": {
+            "en": "Italy",
+            "cs": "Italie",
+            "it": "Italia"
+          }
+        }
+      },
+      "address": {
+        "en": "Via De Marinis, Bari",
+        "cs": "Via De Marinis, Bari",
+        "it": "Via De Marinis, Bari"
+      },
+      "coordinates": {
+        "lat": 41.0757,
+        "lng": 16.8702
+      }
+    },
+    "status": "available",
+    "featured": false,
+    "isNew": false,
+    "noAgency": false,
+    "description": {
+      "en": "In Bari, this house offers 65 sqm, 2 rooms, 1 bedrooms and 1 bathrooms. The property is located at Via De Marinis, Bari and has an asking price of EUR 87,000.\n\nThe point to assess is property described as renovated or in good condition. The property should be reviewed according to the buyer's goals, with particular attention to documentation, technical condition and real costs.\n\nBefore any purchase decision, documents, technical checks and an on-site visit remain essential.",
+      "cs": "V lokalitě Bari nabízí tato nemovitost 65 m2, 2 místností, 1 ložnic a 1 koupelen. Nachází se na adrese Via De Marinis, Bari a požadovaná cena je 87 000 EUR.\n\nHlavním bodem k posouzení je nemovitost uvedená jako zrekonstruovaná nebo v dobrém stavu. Nemovitost je vhodné hodnotit podle cíle kupujícího, se zvláštním důrazem na dokumentaci, technický stav a reálné náklady.\n\nPřed rozhodnutím o koupi je nutné ověřit dokumenty, technický stav a nemovitost osobně navštívit.",
+      "it": "A Bari, proponiamo casa indipendente con 65 mq, 2 locali, 1 camere e 1 bagni. La proprietà si trova in Via De Marinis, Bari e ha un prezzo richiesto di 87.000 euro.\n\nIl punto da valutare è immobile indicato come ristrutturato o in buono stato. Dalla descrizione originale emerge inoltre: PROFESSIONECASA CARBONARA PROPONE IN VENDITA RIBASSATO DI € 10.000 DA € 97.000 A € 87.000 Clicca sull'icona \"virtual tour\" per visitare l'immobile a 360° CARBONARA: all'ingresso del quartiere, Via De Marinis, fulcro di tutte le attività commerciali e servizi pubblici, rifinito bivani indipendente di 65 mq c.a. con tavernetta. L'immobile è composto da ingresso con piccolo soggiornino/pranzo con angolo cottura, camera matrimoniale con finestra e bagno con finestra. Al piano seminterrato, ampio salone e ripostiglio. l' immobile si vende completamente arredato come si vede in foto e si precisa inoltre che è stato ristrutturato recentemente. Libero da subito! ALTRE DISPONIBILITA' CARBONARA - CEGLIE - LOSETO\n\nPrima di procedere è necessario verificare documenti, stato tecnico, spese e condizioni reali con sopralluogo."
+    },
+    "images": [
+      "/uploads/properties/puglia-casa-indipendente-bari-via-de-marinis/01-gallery-1.jpg",
+      "/uploads/properties/puglia-casa-indipendente-bari-via-de-marinis/02-gallery-10.jpg",
+      "/uploads/properties/puglia-casa-indipendente-bari-via-de-marinis/03-gallery-11.jpg",
+      "/uploads/properties/puglia-casa-indipendente-bari-via-de-marinis/04-gallery-12.jpg",
+      "/uploads/properties/puglia-casa-indipendente-bari-via-de-marinis/05-gallery-2.jpg",
+      "/uploads/properties/puglia-casa-indipendente-bari-via-de-marinis/06-gallery-3.jpg",
+      "/uploads/properties/puglia-casa-indipendente-bari-via-de-marinis/07-gallery-4.jpg",
+      "/uploads/properties/puglia-casa-indipendente-bari-via-de-marinis/08-gallery-5.jpg",
+      "/uploads/properties/puglia-casa-indipendente-bari-via-de-marinis/09-gallery-6.jpg",
+      "/uploads/properties/puglia-casa-indipendente-bari-via-de-marinis/10-gallery-7.jpg",
+      "/uploads/properties/puglia-casa-indipendente-bari-via-de-marinis/11-gallery-8.jpg",
+      "/uploads/properties/puglia-casa-indipendente-bari-via-de-marinis/12-gallery-9.jpg",
+      "/uploads/properties/puglia-casa-indipendente-bari-via-de-marinis/13-main.jpg",
+      "/uploads/properties/puglia-casa-indipendente-bari-via-de-marinis/14-plan.jpg"
+    ],
+    "mainImage": 0,
+    "amenities": [
+      {
+        "name": {
+          "it": "immobile indicato come ristrutturato o in buono stato",
+          "en": "property described as renovated or in good condition",
+          "cs": "nemovitost uvedená jako zrekonstruovaná nebo v dobrém stavu"
+        }
+      },
+      {
+        "name": {
+          "it": "65 mq commerciali",
+          "en": "65 commercial sqm",
+          "cs": "65 m2 užitné plochy"
+        }
+      },
+      {
+        "name": {
+          "it": "2 locali",
+          "en": "2 rooms",
+          "cs": "2 místností"
+        }
+      },
+      {
+        "name": {
+          "it": "1 camere da letto",
+          "en": "1 bedrooms",
+          "cs": "1 ložnice"
+        }
+      },
+      {
+        "name": {
+          "it": "1 bagni",
+          "en": "1 bathrooms",
+          "cs": "1 koupelny"
+        }
+      }
+    ],
+    "seoTitle": {
+      "en": "House in Bari, Via De Marinis for sale",
+      "cs": "Samostatný dům v Bari, Via De Marinis na prodej",
+      "it": "Casa Indipendente a Bari, Via De Marinis in vendita"
+    },
+    "seoDescription": {
+      "en": "Bari: house of 65 sqm, 1 bedrooms, 1 bathrooms. Asking price EUR 87,000.",
+      "cs": "Bari: nemovitost 65 m2, 1 ložnice, 1 koupelny. Cena 87 000 EUR.",
+      "it": "Bari: casa indipendente di 65 mq, 1 camere, 1 bagni. Prezzo 87.000 euro."
+    },
+    "keywords": [
+      "puglia",
+      "bari",
+      "house",
+      "via-de-marinis",
+      "immobiliare-it"
+    ],
+    "sourceUrl": "https://www.immobiliare.it/annunci/127175569/",
+    "_createdAt": "2026-04-30T10:00:00.000Z",
+    "_updatedAt": "2026-04-30T10:00:00.000Z"
+  },
+  {
+    "_id": "local-import-calabria-villa-francavilla-marittima-via-sant-emiddio-21-1780577730313-eugwj",
+    "_type": "listing",
+    "title": {
+      "en": "Villa in Francavilla Marittima, Via Sant'Emiddio, 21",
+      "cs": "Samostatná vila ve Francavilla Marittima, Via Sant'Emiddio",
+      "it": "Villa a Francavilla Marittima, Via Sant'Emiddio, 21"
+    },
+    "slug": {
+      "_type": "slug",
+      "current": "calabria-villa-francavilla-marittima-via-sant-emiddio-21"
+    },
+    "propertyType": "villa",
+    "price": {
+      "amount": 150000,
+      "currency": "EUR"
+    },
+    "specifications": {
+      "rooms": 4,
+      "bedrooms": 4,
+      "bathrooms": 2,
+      "squareFootage": 110
+    },
+    "location": {
+      "city": {
+        "name": {
+          "en": "Francavilla Marittima",
+          "cs": "Francavilla Marittima",
+          "it": "Francavilla Marittima"
+        },
+        "slug": {
+          "current": "francavilla-marittima"
+        },
+        "region": {
+          "name": {
+            "it": "Calabria",
+            "en": "Calabria",
+            "cs": "Kalábrie"
+          },
+          "country": {
+            "en": "Italy",
+            "cs": "Italie",
+            "it": "Italia"
+          }
+        }
+      },
+      "address": {
+        "en": "Via Sant'Emiddio, 21, Francavilla Marittima",
+        "cs": "Via Sant'Emiddio, 21, Francavilla Marittima",
+        "it": "Via Sant'Emiddio, 21, Francavilla Marittima"
+      },
+      "coordinates": {
+        "lat": 39.8177,
+        "lng": 16.3915
+      }
+    },
+    "status": "available",
+    "featured": false,
+    "isNew": false,
+    "noAgency": false,
+    "description": {
+      "en": "In Francavilla Marittima, this villa offers 110 sqm, 4 rooms, 4 bedrooms and 2 bathrooms. The property is located at Via Sant'Emiddio, 21, Francavilla Marittima and has an asking price of EUR 150,000.\n\nThe point to assess is usable outdoor space such as terrace or balcony. The property should be reviewed according to the buyer's goals, with particular attention to documentation, technical condition and real costs.\n\nBefore any purchase decision, documents, technical checks and an on-site visit remain essential.",
+      "cs": "V lokalitě Francavilla Marittima nabízí tato nemovitost 110 m2, 4 místností, 4 ložnic a 2 koupelen. Nachází se na adrese Via Sant'Emiddio, 21, Francavilla Marittima a požadovaná cena je 150 000 EUR.\n\nHlavním bodem k posouzení je využitelné venkovní prostory jako terasa nebo balkon. Nemovitost je vhodné hodnotit podle cíle kupujícího, se zvláštním důrazem na dokumentaci, technický stav a reálné náklady.\n\nPřed rozhodnutím o koupi je nutné ověřit dokumenty, technický stav a nemovitost osobně navštívit.",
+      "it": "A Francavilla Marittima, proponiamo villa con 110 mq, 4 locali, 4 camere e 2 bagni. La proprietà si trova in Via Sant'Emiddio, 21, Francavilla Marittima e ha un prezzo richiesto di 150.000 euro.\n\nIl punto da valutare è spazi esterni vivibili come terrazzo o balcone. Dalla descrizione originale emerge inoltre: Francavilla M. ma - Si vende, su di una dolce collina e alle porte del centro abitato cittadino, una villa indipendente di 85 con attorno oltre 2000 mq di terreno con diversi alberi da frutto. L’immobile presenta due ingressi, uno in cucina abitabile, l’altro nell’ampio salone, quindi troviamo una camera matrimoniale e un bagno con box doccia. Interamente ristrutturato, la casa presenta infissi in legno pvc, pavimento in vero rovere, portoni blindati, riscaldamento autonomo con termosifoni e caldaia a gas (con serbatoio del gas interrato). A livello troviamo all’esterno un grande terrazzo coperto da tettoia in legno e, tutto attorno l’abitazione, un cortile interamente pavimentato e parzialmente coperto da un'altra tettoia in legno. All’immobile fa parte anche un’altra piccola struttura adibita a tavernetta di 25mq e composto di ampio locale zona giorno con una cucina fornita di tutto, un bagno, un capiente ripostiglio e un terrazzo esterno coperto anch’egli da una tettoia. Spettacolare è la vista che viaggia panoramica dal mare di Villapiana (distante meno di 10 minuti in auto), fino alle Piana di Sibari, Altopiano della Sila e, alle sue spalle l’abitato storico di Francavilla M. ma con le cime del monte Sellaro. Tra le piante da frutto troviamo 41 piante di ulivo di cui 7 esemplari già in produzione), 4 limoni, 5 piante di arancio, 7 melograni, ed ancora fichi d’india, clementini, mandorli e uva da tavola. Il prezzo richiesto è di 150.000€.\n\nPrima di procedere è necessario verificare documenti, stato tecnico, spese e condizioni reali con sopralluogo."
+    },
+    "images": [
+      "/uploads/properties/calabria-villa-francavilla-marittima-via-sant-emiddio-21/01-gallery-1.jpg",
+      "/uploads/properties/calabria-villa-francavilla-marittima-via-sant-emiddio-21/02-gallery-10.jpg",
+      "/uploads/properties/calabria-villa-francavilla-marittima-via-sant-emiddio-21/03-gallery-11.jpg",
+      "/uploads/properties/calabria-villa-francavilla-marittima-via-sant-emiddio-21/04-gallery-12.jpg",
+      "/uploads/properties/calabria-villa-francavilla-marittima-via-sant-emiddio-21/05-gallery-2.jpg",
+      "/uploads/properties/calabria-villa-francavilla-marittima-via-sant-emiddio-21/06-gallery-3.jpg",
+      "/uploads/properties/calabria-villa-francavilla-marittima-via-sant-emiddio-21/07-gallery-4.jpg",
+      "/uploads/properties/calabria-villa-francavilla-marittima-via-sant-emiddio-21/08-gallery-5.jpg",
+      "/uploads/properties/calabria-villa-francavilla-marittima-via-sant-emiddio-21/09-gallery-6.jpg",
+      "/uploads/properties/calabria-villa-francavilla-marittima-via-sant-emiddio-21/10-gallery-7.jpg",
+      "/uploads/properties/calabria-villa-francavilla-marittima-via-sant-emiddio-21/11-gallery-8.jpg",
+      "/uploads/properties/calabria-villa-francavilla-marittima-via-sant-emiddio-21/12-gallery-9.jpg",
+      "/uploads/properties/calabria-villa-francavilla-marittima-via-sant-emiddio-21/13-main.jpg",
+      "/uploads/properties/calabria-villa-francavilla-marittima-via-sant-emiddio-21/14-plan.jpg"
+    ],
+    "mainImage": 0,
+    "amenities": [
+      {
+        "name": {
+          "it": "spazi esterni vivibili come terrazzo o balcone",
+          "en": "usable outdoor space such as terrace or balcony",
+          "cs": "využitelné venkovní prostory jako terasa nebo balkon"
+        }
+      },
+      {
+        "name": {
+          "it": "110 mq commerciali",
+          "en": "110 commercial sqm",
+          "cs": "110 m2 užitné plochy"
+        }
+      },
+      {
+        "name": {
+          "it": "4 locali",
+          "en": "4 rooms",
+          "cs": "4 místností"
+        }
+      },
+      {
+        "name": {
+          "it": "4 camere da letto",
+          "en": "4 bedrooms",
+          "cs": "4 ložnice"
+        }
+      },
+      {
+        "name": {
+          "it": "2 bagni",
+          "en": "2 bathrooms",
+          "cs": "2 koupelny"
+        }
+      }
+    ],
+    "seoTitle": {
+      "en": "Villa in Francavilla Marittima, Via Sant'Emiddio, 21 for sale",
+      "cs": "Samostatná vila ve Francavilla Marittima, Via Sant'Emiddio na prodej",
+      "it": "Villa a Francavilla Marittima, Via Sant'Emiddio, 21 in vendita"
+    },
+    "seoDescription": {
+      "en": "Francavilla Marittima: villa of 110 sqm, 4 bedrooms, 2 bathrooms. Asking price EUR 150,000.",
+      "cs": "Francavilla Marittima: nemovitost 110 m2, 4 ložnice, 2 koupelny. Cena 150 000 EUR.",
+      "it": "Francavilla Marittima: villa di 110 mq, 4 camere, 2 bagni. Prezzo 150.000 euro."
+    },
+    "keywords": [
+      "calabria",
+      "francavilla-marittima",
+      "villa",
+      "via-sant-emiddio-21",
+      "immobiliare-it"
+    ],
+    "sourceUrl": "https://www.immobiliare.it/annunci/129044560/",
+    "_createdAt": "2026-04-30T10:00:00.000Z",
+    "_updatedAt": "2026-04-30T10:00:00.000Z"
+  },
+  {
+    "_id": "local-import-calabria-villa-praia-a-mare-localita-laccata-1780577730125-63nkm",
+    "_type": "listing",
+    "title": {
+      "en": "Villa in Praia a Mare, Località Laccata",
+      "cs": "Přímořská vila v Praia a Mare, lokalita Laccata",
+      "it": "Villa a Praia a Mare, Località Laccata"
+    },
+    "slug": {
+      "_type": "slug",
+      "current": "calabria-villa-praia-a-mare-localita-laccata"
+    },
+    "propertyType": "villa",
+    "price": {
+      "amount": 190000,
+      "currency": "EUR"
+    },
+    "specifications": {
+      "rooms": 4,
+      "bedrooms": 3,
+      "bathrooms": 2,
+      "squareFootage": 170
+    },
+    "location": {
+      "city": {
+        "name": {
+          "en": "Praia a Mare",
+          "cs": "Praia a Mare",
+          "it": "Praia a Mare"
+        },
+        "slug": {
+          "current": "praia-a-mare"
+        },
+        "region": {
+          "name": {
+            "it": "Calabria",
+            "en": "Calabria",
+            "cs": "Kalábrie"
+          },
+          "country": {
+            "en": "Italy",
+            "cs": "Italie",
+            "it": "Italia"
+          }
+        }
+      },
+      "address": {
+        "en": "Località Laccata, Praia a Mare",
+        "cs": "Località Laccata, Praia a Mare",
+        "it": "Località Laccata, Praia a Mare"
+      },
+      "coordinates": {
+        "lat": 39.91389847,
+        "lng": 15.77840042
+      }
+    },
+    "status": "available",
+    "featured": false,
+    "isNew": false,
+    "noAgency": false,
+    "description": {
+      "en": "In Praia a Mare, this villa offers 170 sqm, 4 rooms, 3 bedrooms and 2 bathrooms. The property is located at Località Laccata, Praia a Mare and has an asking price of EUR 190,000.\n\nThe point to assess is outdoor areas or garden. The property should be reviewed according to the buyer's goals, with particular attention to documentation, technical condition and real costs.\n\nBefore any purchase decision, documents, technical checks and an on-site visit remain essential.",
+      "cs": "V lokalitě Praia a Mare nabízí tato nemovitost 170 m2, 4 místností, 3 ložnic a 2 koupelen. Nachází se na adrese Località Laccata, Praia a Mare a požadovaná cena je 190 000 EUR.\n\nHlavním bodem k posouzení je venkovní prostory nebo zahrada. Nemovitost je vhodné hodnotit podle cíle kupujícího, se zvláštním důrazem na dokumentaci, technický stav a reálné náklady.\n\nPřed rozhodnutím o koupi je nutné ověřit dokumenty, technický stav a nemovitost osobně navštívit.",
+      "it": "A Praia a Mare, proponiamo villa con 170 mq, 4 locali, 3 camere e 2 bagni. La proprietà si trova in Località Laccata, Praia a Mare e ha un prezzo richiesto di 190.000 euro.\n\nIl punto da valutare è presenza di spazi esterni o giardino. Dalla descrizione originale emerge inoltre: Cerchi un’abitazione ampia, comoda, indipendente, con terrazzo, giardino e posti auto coperti? Desideri evitare le aree periferiche senza rinunciare alla tranquillità di una zona residenziale? Ecco la soluzione. Appartamento indipendente in villa bifamiliare collocato al piano rialzato (oltre ad una camera al piano seminterrato) composto da cucina abitabile, ampio soggiorno (circa 50 mq), tre camere (di cui 1 di circa 30 mq posta al piano seminterrato con ampia vetrata, adatta anche a studio professionale), doppi servizi, terrazzo con porticato di mq. 50, giardino privato e n. 2 posti auto coperti. Superficie complessiva appartamento: mq. 170 Superficie terrazzo con porticato: mq. 50 Superficie giardino: mq. 500 Prezzo € 190.000,00.\n\nPrima di procedere è necessario verificare documenti, stato tecnico, spese e condizioni reali con sopralluogo."
+    },
+    "images": [
+      "/uploads/properties/calabria-villa-praia-a-mare-localita-laccata/01-gallery-1.jpg",
+      "/uploads/properties/calabria-villa-praia-a-mare-localita-laccata/02-gallery-10.jpg",
+      "/uploads/properties/calabria-villa-praia-a-mare-localita-laccata/03-gallery-11.jpg",
+      "/uploads/properties/calabria-villa-praia-a-mare-localita-laccata/04-gallery-12.jpg",
+      "/uploads/properties/calabria-villa-praia-a-mare-localita-laccata/05-gallery-2.jpg",
+      "/uploads/properties/calabria-villa-praia-a-mare-localita-laccata/06-gallery-3.jpg",
+      "/uploads/properties/calabria-villa-praia-a-mare-localita-laccata/07-gallery-4.jpg",
+      "/uploads/properties/calabria-villa-praia-a-mare-localita-laccata/08-gallery-5.jpg",
+      "/uploads/properties/calabria-villa-praia-a-mare-localita-laccata/09-gallery-6.jpg",
+      "/uploads/properties/calabria-villa-praia-a-mare-localita-laccata/10-gallery-7.jpg",
+      "/uploads/properties/calabria-villa-praia-a-mare-localita-laccata/11-gallery-8.jpg",
+      "/uploads/properties/calabria-villa-praia-a-mare-localita-laccata/12-gallery-9.jpg",
+      "/uploads/properties/calabria-villa-praia-a-mare-localita-laccata/13-main.jpg",
+      "/uploads/properties/calabria-villa-praia-a-mare-localita-laccata/14-plan.jpg"
+    ],
+    "mainImage": 0,
+    "amenities": [
+      {
+        "name": {
+          "it": "presenza di spazi esterni o giardino",
+          "en": "outdoor areas or garden",
+          "cs": "venkovní prostory nebo zahrada"
+        }
+      },
+      {
+        "name": {
+          "it": "170 mq commerciali",
+          "en": "170 commercial sqm",
+          "cs": "170 m2 užitné plochy"
+        }
+      },
+      {
+        "name": {
+          "it": "4 locali",
+          "en": "4 rooms",
+          "cs": "4 místností"
+        }
+      },
+      {
+        "name": {
+          "it": "3 camere da letto",
+          "en": "3 bedrooms",
+          "cs": "3 ložnice"
+        }
+      },
+      {
+        "name": {
+          "it": "2 bagni",
+          "en": "2 bathrooms",
+          "cs": "2 koupelny"
+        }
+      }
+    ],
+    "seoTitle": {
+      "en": "Villa in Praia a Mare, Località Laccata for sale",
+      "cs": "Přímořská vila v Praia a Mare, lokalita Laccata na prodej",
+      "it": "Villa a Praia a Mare, Località Laccata in vendita"
+    },
+    "seoDescription": {
+      "en": "Praia a Mare: villa of 170 sqm, 3 bedrooms, 2 bathrooms. Asking price EUR 190,000.",
+      "cs": "Praia a Mare: nemovitost 170 m2, 3 ložnice, 2 koupelny. Cena 190 000 EUR.",
+      "it": "Praia a Mare: villa di 170 mq, 3 camere, 2 bagni. Prezzo 190.000 euro."
+    },
+    "keywords": [
+      "calabria",
+      "praia-a-mare",
+      "villa",
+      "localita-laccata",
+      "immobiliare-it"
+    ],
+    "sourceUrl": "https://www.immobiliare.it/annunci/79848369/",
+    "_createdAt": "2026-04-30T10:00:00.000Z",
+    "_updatedAt": "2026-04-30T10:00:00.000Z"
+  },
+  {
+    "_id": "local-import-campania-casa-indipendente-ascea-via-grisi-s-n-c-1780577729969-oi6dy",
+    "_type": "listing",
+    "title": {
+      "en": "House in Ascea, Via Grisi, s.n.c.",
+      "cs": "Samostatný dům v Ascee, Via Grisi",
+      "it": "Casa Indipendente a Ascea, Via Grisi, s.n.c."
+    },
+    "slug": {
+      "_type": "slug",
+      "current": "campania-casa-indipendente-ascea-via-grisi-s-n-c"
+    },
+    "propertyType": "house",
+    "price": {
+      "amount": 220000,
+      "currency": "EUR"
+    },
+    "specifications": {
+      "rooms": 6,
+      "bedrooms": 4,
+      "bathrooms": 2,
+      "squareFootage": 122
+    },
+    "location": {
+      "city": {
+        "name": {
+          "en": "Ascea",
+          "cs": "Ascea",
+          "it": "Ascea"
+        },
+        "slug": {
+          "current": "ascea"
+        },
+        "region": {
+          "name": {
+            "it": "Campania",
+            "en": "Campania",
+            "cs": "Kampánie"
+          },
+          "country": {
+            "en": "Italy",
+            "cs": "Italie",
+            "it": "Italia"
+          }
+        }
+      },
+      "address": {
+        "en": "Via Grisi, s.n.c., Ascea",
+        "cs": "Via Grisi, s.n.c., Ascea",
+        "it": "Via Grisi, s.n.c., Ascea"
+      },
+      "coordinates": {
+        "lat": 40.1529,
+        "lng": 15.1716
+      }
+    },
+    "status": "available",
+    "featured": false,
+    "isNew": false,
+    "noAgency": false,
+    "description": {
+      "en": "In Ascea, this house offers 122 sqm, 6 rooms, 4 bedrooms and 2 bathrooms. The property is located at Via Grisi, s.n.c., Ascea and has an asking price of EUR 220,000.\n\nThe point to assess is usable outdoor space such as terrace or balcony. The property should be reviewed according to the buyer's goals, with particular attention to documentation, technical condition and real costs.\n\nBefore any purchase decision, documents, technical checks and an on-site visit remain essential.",
+      "cs": "V lokalitě Ascea nabízí tato nemovitost 122 m2, 6 místností, 4 ložnic a 2 koupelen. Nachází se na adrese Via Grisi, s.n.c., Ascea a požadovaná cena je 220 000 EUR.\n\nHlavním bodem k posouzení je využitelné venkovní prostory jako terasa nebo balkon. Nemovitost je vhodné hodnotit podle cíle kupujícího, se zvláštním důrazem na dokumentaci, technický stav a reálné náklady.\n\nPřed rozhodnutím o koupi je nutné ověřit dokumenty, technický stav a nemovitost osobně navštívit.",
+      "it": "A Ascea, proponiamo casa indipendente con 122 mq, 6 locali, 4 camere e 2 bagni. La proprietà si trova in Via Grisi, s.n.c., Ascea e ha un prezzo richiesto di 220.000 euro.\n\nIl punto da valutare è spazi esterni vivibili come terrazzo o balcone. Dalla descrizione originale emerge inoltre: Splendida casa semi - indipendente situata nel comune di Ascea (SA), a pochi passi dalle meravigliose spiagge della costa cilentana. Questa proprietà offre ampi spazi e comfort per tutta la famiglia. Composto da un luminoso soggiorno, una cucina abitabile, quattro camere da letto e due bagni, è perfetto per chi cerca un'abitazione spaziosa e accogliente. All'esterno, la casa dispone di due terrazzi ideali per godersi il clima mediterraneo e due comodi posti auto scoperti. Non perdere l'opportunità di vivere nel suggestivo contesto di Ascea. Contattaci per organizzare una visita e scoprire tutte le potenzialità di questa splendida proprietà.\n\nPrima di procedere è necessario verificare documenti, stato tecnico, spese e condizioni reali con sopralluogo."
+    },
+    "images": [
+      "/uploads/properties/campania-casa-indipendente-ascea-via-grisi-s-n-c/01-gallery-1.jpg",
+      "/uploads/properties/campania-casa-indipendente-ascea-via-grisi-s-n-c/02-gallery-10.jpg",
+      "/uploads/properties/campania-casa-indipendente-ascea-via-grisi-s-n-c/03-gallery-11.jpg",
+      "/uploads/properties/campania-casa-indipendente-ascea-via-grisi-s-n-c/04-gallery-2.jpg",
+      "/uploads/properties/campania-casa-indipendente-ascea-via-grisi-s-n-c/05-gallery-3.jpg",
+      "/uploads/properties/campania-casa-indipendente-ascea-via-grisi-s-n-c/06-gallery-4.jpg",
+      "/uploads/properties/campania-casa-indipendente-ascea-via-grisi-s-n-c/07-gallery-5.jpg",
+      "/uploads/properties/campania-casa-indipendente-ascea-via-grisi-s-n-c/08-gallery-6.jpg",
+      "/uploads/properties/campania-casa-indipendente-ascea-via-grisi-s-n-c/09-gallery-7.jpg",
+      "/uploads/properties/campania-casa-indipendente-ascea-via-grisi-s-n-c/10-gallery-8.jpg",
+      "/uploads/properties/campania-casa-indipendente-ascea-via-grisi-s-n-c/11-gallery-9.jpg",
+      "/uploads/properties/campania-casa-indipendente-ascea-via-grisi-s-n-c/12-main.jpg"
+    ],
+    "mainImage": 0,
+    "amenities": [
+      {
+        "name": {
+          "it": "spazi esterni vivibili come terrazzo o balcone",
+          "en": "usable outdoor space such as terrace or balcony",
+          "cs": "využitelné venkovní prostory jako terasa nebo balkon"
+        }
+      },
+      {
+        "name": {
+          "it": "122 mq commerciali",
+          "en": "122 commercial sqm",
+          "cs": "122 m2 užitné plochy"
+        }
+      },
+      {
+        "name": {
+          "it": "6 locali",
+          "en": "6 rooms",
+          "cs": "6 místností"
+        }
+      },
+      {
+        "name": {
+          "it": "4 camere da letto",
+          "en": "4 bedrooms",
+          "cs": "4 ložnice"
+        }
+      },
+      {
+        "name": {
+          "it": "2 bagni",
+          "en": "2 bathrooms",
+          "cs": "2 koupelny"
+        }
+      }
+    ],
+    "seoTitle": {
+      "en": "House in Ascea, Via Grisi, s.n.c. for sale",
+      "cs": "Samostatný dům v Ascee, Via Grisi na prodej",
+      "it": "Casa Indipendente a Ascea, Via Grisi, s.n.c. in vendita"
+    },
+    "seoDescription": {
+      "en": "Ascea: house of 122 sqm, 4 bedrooms, 2 bathrooms. Asking price EUR 220,000.",
+      "cs": "Ascea: nemovitost 122 m2, 4 ložnice, 2 koupelny. Cena 220 000 EUR.",
+      "it": "Ascea: casa indipendente di 122 mq, 4 camere, 2 bagni. Prezzo 220.000 euro."
+    },
+    "keywords": [
+      "campania",
+      "ascea",
+      "house",
+      "via-grisi-s-n-c",
+      "immobiliare-it"
+    ],
+    "sourceUrl": "https://www.immobiliare.it/annunci/128259742/",
+    "_createdAt": "2026-04-30T10:00:00.000Z",
+    "_updatedAt": "2026-04-30T10:00:00.000Z"
+  },
+  {
+    "_id": "local-import-calabria-villa-san-nicola-arcella-villaggio-del-bridge-1780577729763-vgkh0",
+    "_type": "listing",
+    "title": {
+      "en": "Villa in San Nicola Arcella, Villaggio del Bridge",
+      "cs": "Prostorná vila v San Nicola Arcella, Villaggio del Bridge",
+      "it": "Villa a San Nicola Arcella, Villaggio del Bridge"
+    },
+    "slug": {
+      "_type": "slug",
+      "current": "calabria-villa-san-nicola-arcella-villaggio-del-bridge"
+    },
+    "propertyType": "villa",
+    "price": {
+      "amount": 240000,
+      "currency": "EUR"
+    },
+    "specifications": {
+      "rooms": 5,
+      "bedrooms": 3,
+      "bathrooms": 3,
+      "squareFootage": 156
+    },
+    "location": {
+      "city": {
+        "name": {
+          "en": "San Nicola Arcella",
+          "cs": "San Nicola Arcella",
+          "it": "San Nicola Arcella"
+        },
+        "slug": {
+          "current": "san-nicola-arcella"
+        },
+        "region": {
+          "name": {
+            "it": "Calabria",
+            "en": "Calabria",
+            "cs": "Kalábrie"
+          },
+          "country": {
+            "en": "Italy",
+            "cs": "Italie",
+            "it": "Italia"
+          }
+        }
+      },
+      "address": {
+        "en": "Villaggio del Bridge, 69, San Nicola Arcella",
+        "cs": "Villaggio del Bridge, 69, San Nicola Arcella",
+        "it": "Villaggio del Bridge, 69, San Nicola Arcella"
+      },
+      "coordinates": {
+        "lat": 39.8649,
+        "lng": 15.7992
+      }
+    },
+    "status": "available",
+    "featured": false,
+    "isNew": false,
+    "noAgency": false,
+    "description": {
+      "en": "In San Nicola Arcella, this villa offers 156 sqm, 5 rooms, 3 bedrooms and 3 bathrooms. The property is located at Villaggio del Bridge, 69, San Nicola Arcella and has an asking price of EUR 240,000.\n\nThe point to assess is outdoor areas or garden. The property should be reviewed according to the buyer's goals, with particular attention to documentation, technical condition and real costs.\n\nBefore any purchase decision, documents, technical checks and an on-site visit remain essential.",
+      "cs": "V lokalitě San Nicola Arcella nabízí tato nemovitost 156 m2, 5 místností, 3 ložnic a 3 koupelen. Nachází se na adrese Villaggio del Bridge, 69, San Nicola Arcella a požadovaná cena je 240 000 EUR.\n\nHlavním bodem k posouzení je venkovní prostory nebo zahrada. Nemovitost je vhodné hodnotit podle cíle kupujícího, se zvláštním důrazem na dokumentaci, technický stav a reálné náklady.\n\nPřed rozhodnutím o koupi je nutné ověřit dokumenty, technický stav a nemovitost osobně navštívit.",
+      "it": "A San Nicola Arcella, proponiamo villa con 156 mq, 5 locali, 3 camere e 3 bagni. La proprietà si trova in Villaggio del Bridge, 69, San Nicola Arcella e ha un prezzo richiesto di 240.000 euro.\n\nIl punto da valutare è presenza di spazi esterni o giardino. Dalla descrizione originale emerge inoltre: RIF. 382780 - La scelta di Rexer Exclusive. Villa nel complesso denominato \"Villaggio del Bridge\" il Villaggio del Bridge è un complesso turistico residenziale situato in San Nicola Arcella (CS), costituito da circa 200 unità abitative di varia metratura. La villa di cui trattasi è una delle più belle e grandi, con ampio giardino e una stupefacente vista sul golfo di Policastro, l'isola Dino e la punta di Palinuro. Si compone di tre livelli. Si accede dal piano superiore attraverso un'ampia terrazza parzialmente coperta, trovando il soggiorno, la cucina e un piccolo bagno per ospiti. Una scala interna e un'altra all'esterno conducono al livello intermedio, dove c'è la camera matrimoniale con cabina armadio e bagno en suite, una camera singola, una camera doppia, un bagno e l'accesso a un ampio locale di servizio (lavanderia/stireria e cantina). Con accesso solo esterno si può scendere al livello inferiore, dove si trova un ampio locale ad uso cantina. Il tutto è immerso in un giardino terrazzato, piantumato e ben curato. Posto auto nelle immediate vicinanze. Tutti gli impianti autonomi.\n\nPrima di procedere è necessario verificare documenti, stato tecnico, spese e condizioni reali con sopralluogo."
+    },
+    "images": [
+      "/uploads/properties/calabria-villa-san-nicola-arcella-villaggio-del-bridge/01-gallery-1.jpg",
+      "/uploads/properties/calabria-villa-san-nicola-arcella-villaggio-del-bridge/02-gallery-10.jpg",
+      "/uploads/properties/calabria-villa-san-nicola-arcella-villaggio-del-bridge/03-gallery-11.jpg",
+      "/uploads/properties/calabria-villa-san-nicola-arcella-villaggio-del-bridge/04-gallery-12.jpg",
+      "/uploads/properties/calabria-villa-san-nicola-arcella-villaggio-del-bridge/05-gallery-2.jpg",
+      "/uploads/properties/calabria-villa-san-nicola-arcella-villaggio-del-bridge/06-gallery-3.jpg",
+      "/uploads/properties/calabria-villa-san-nicola-arcella-villaggio-del-bridge/07-gallery-4.jpg",
+      "/uploads/properties/calabria-villa-san-nicola-arcella-villaggio-del-bridge/08-gallery-5.jpg",
+      "/uploads/properties/calabria-villa-san-nicola-arcella-villaggio-del-bridge/09-gallery-6.jpg",
+      "/uploads/properties/calabria-villa-san-nicola-arcella-villaggio-del-bridge/10-gallery-7.jpg",
+      "/uploads/properties/calabria-villa-san-nicola-arcella-villaggio-del-bridge/11-gallery-8.jpg",
+      "/uploads/properties/calabria-villa-san-nicola-arcella-villaggio-del-bridge/12-gallery-9.jpg",
+      "/uploads/properties/calabria-villa-san-nicola-arcella-villaggio-del-bridge/13-main.jpg",
+      "/uploads/properties/calabria-villa-san-nicola-arcella-villaggio-del-bridge/14-plan.jpg"
+    ],
+    "mainImage": 0,
+    "amenities": [
+      {
+        "name": {
+          "it": "presenza di spazi esterni o giardino",
+          "en": "outdoor areas or garden",
+          "cs": "venkovní prostory nebo zahrada"
+        }
+      },
+      {
+        "name": {
+          "it": "156 mq commerciali",
+          "en": "156 commercial sqm",
+          "cs": "156 m2 užitné plochy"
+        }
+      },
+      {
+        "name": {
+          "it": "5 locali",
+          "en": "5 rooms",
+          "cs": "5 místností"
+        }
+      },
+      {
+        "name": {
+          "it": "3 camere da letto",
+          "en": "3 bedrooms",
+          "cs": "3 ložnice"
+        }
+      },
+      {
+        "name": {
+          "it": "3 bagni",
+          "en": "3 bathrooms",
+          "cs": "3 koupelny"
+        }
+      }
+    ],
+    "seoTitle": {
+      "en": "Villa in San Nicola Arcella, Villaggio del Bridge for sale",
+      "cs": "Prostorná vila v San Nicola Arcella, Villaggio del Bridge na prodej",
+      "it": "Villa a San Nicola Arcella, Villaggio del Bridge in vendita"
+    },
+    "seoDescription": {
+      "en": "San Nicola Arcella: villa of 156 sqm, 3 bedrooms, 3 bathrooms. Asking price EUR 240,000.",
+      "cs": "San Nicola Arcella: nemovitost 156 m2, 3 ložnice, 3 koupelny. Cena 240 000 EUR.",
+      "it": "San Nicola Arcella: villa di 156 mq, 3 camere, 3 bagni. Prezzo 240.000 euro."
+    },
+    "keywords": [
+      "calabria",
+      "san-nicola-arcella",
+      "villa",
+      "villaggio-del-bridge",
+      "immobiliare-it"
+    ],
+    "sourceUrl": "https://www.immobiliare.it/annunci/122047948/",
+    "_createdAt": "2026-04-30T10:00:00.000Z",
+    "_updatedAt": "2026-04-30T10:00:00.000Z"
+  },
+  {
+    "_id": "local-import-campania-villa-torchiara-parco-elena-1780577729602-hyzgr",
+    "_type": "listing",
+    "title": {
+      "en": "Villa in Torchiara, Parco Elena",
+      "cs": "Vila v Torchiaře, Parco Elena",
+      "it": "Villa a Torchiara, Parco Elena"
+    },
+    "slug": {
+      "_type": "slug",
+      "current": "campania-villa-torchiara-parco-elena"
+    },
+    "propertyType": "villa",
+    "price": {
+      "amount": 175000,
+      "currency": "EUR"
+    },
+    "specifications": {
+      "rooms": 3,
+      "bedrooms": 3,
+      "bathrooms": 2,
+      "squareFootage": 144
+    },
+    "location": {
+      "city": {
+        "name": {
+          "en": "Torchiara",
+          "cs": "Torchiara",
+          "it": "Torchiara"
+        },
+        "slug": {
+          "current": "torchiara"
+        },
+        "region": {
+          "name": {
+            "it": "Campania",
+            "en": "Campania",
+            "cs": "Kampánie"
+          },
+          "country": {
+            "en": "Italy",
+            "cs": "Italie",
+            "it": "Italia"
+          }
+        }
+      },
+      "address": {
+        "en": "Parco Elena, Torchiara",
+        "cs": "Parco Elena, Torchiara",
+        "it": "Parco Elena, Torchiara"
+      },
+      "coordinates": {
+        "lat": 40.3253,
+        "lng": 15.029
+      }
+    },
+    "status": "available",
+    "featured": false,
+    "isNew": false,
+    "noAgency": false,
+    "description": {
+      "en": "In Torchiara, this villa offers 144 sqm, 3 rooms, 3 bedrooms and 2 bathrooms. The property is located at Parco Elena, Torchiara and has an asking price of EUR 175,000.\n\nThe point to assess is villa in a residential area to be checked on site. The property should be reviewed according to the buyer's goals, with particular attention to documentation, technical condition and real costs.\n\nBefore any purchase decision, documents, technical checks and an on-site visit remain essential.",
+      "cs": "V lokalitě Torchiara nabízí tato nemovitost 144 m2, 3 místností, 3 ložnic a 2 koupelen. Nachází se na adrese Parco Elena, Torchiara a požadovaná cena je 175 000 EUR.\n\nHlavním bodem k posouzení je vila v rezidenční oblasti k ověření při prohlídce. Nemovitost je vhodné hodnotit podle cíle kupujícího, se zvláštním důrazem na dokumentaci, technický stav a reálné náklady.\n\nPřed rozhodnutím o koupi je nutné ověřit dokumenty, technický stav a nemovitost osobně navštívit.",
+      "it": "A Torchiara, proponiamo villa con 144 mq, 3 locali, 3 camere e 2 bagni. La proprietà si trova in Parco Elena, Torchiara e ha un prezzo richiesto di 175.000 euro.\n\nIl punto da valutare è villa in area residenziale da verificare con sopralluogo. Dalla descrizione originale emerge inoltre: Ci sono case che non si raccontano solo con le stanze, ma con le sensazioni che riescono a trasmettere. Questa soluzione, situata a Torchiara all’interno di un parco, accoglie fin dal primo ingresso con il piacere dell’indipendenza e della tranquillità. L’ingresso autonomo e lo spazio esterno privato regalano subito l’idea di una casa da vivere senza fretta: un angolo tutto proprio dove fermarsi al mattino per un caffè, organizzare una cena d’estate o semplicemente godersi il silenzio dopo una giornata intensa. L’abitazione si sviluppa su due livelli e offre ambienti pensati per la vita quotidiana, ma anche per i momenti più belli da condividere. La zona giorno è ampia e accogliente, con il camino che diventa il cuore caldo della casa: il luogo dove ritrovarsi nelle sere d’inverno, dove parlare, rilassarsi, vivere la famiglia. La cucina a vista rende l’ambiente ancora più conviviale, aperto e naturale, perfetto per chi ama una casa vissuta, autentica, piena di presenza. La zona notte custodisce tre camere da letto e un secondo bagno, offrendo spazi comodi e riservati per ogni esigenza: la camera padronale, le stanze per i figli, per gli ospiti o per creare un piccolo spazio personale dove lavorare, leggere o ritrovare il proprio tempo. La posizione completa il fascino di questa proprietà: siamo a Torchiara, a circa 10 minuti dalle spiagge di Agropoli e a pochi minuti dai servizi della zona Madonna del Carmine. Una distanza breve, che permette di vivere la quiete del parco e, allo stesso tempo, raggiungere facilmente il mare, i servizi e la quotidianità. Una casa ideale per chi desidera indipendenza, spazio esterno, atmosfera e vicinanza al mare. Una soluzione pensata per chi non cerca solo un immobile, ma un luogo dove sentirsi davvero a casa.\n\nPrima di procedere è necessario verificare documenti, stato tecnico, spese e condizioni reali con sopralluogo."
+    },
+    "images": [
+      "/uploads/properties/campania-villa-torchiara-parco-elena/01-gallery-1.jpg",
+      "/uploads/properties/campania-villa-torchiara-parco-elena/02-gallery-10.jpg",
+      "/uploads/properties/campania-villa-torchiara-parco-elena/03-gallery-11.jpg",
+      "/uploads/properties/campania-villa-torchiara-parco-elena/04-gallery-12.jpg",
+      "/uploads/properties/campania-villa-torchiara-parco-elena/05-gallery-2.jpg",
+      "/uploads/properties/campania-villa-torchiara-parco-elena/06-gallery-3.jpg",
+      "/uploads/properties/campania-villa-torchiara-parco-elena/07-gallery-4.jpg",
+      "/uploads/properties/campania-villa-torchiara-parco-elena/08-gallery-5.jpg",
+      "/uploads/properties/campania-villa-torchiara-parco-elena/09-gallery-6.jpg",
+      "/uploads/properties/campania-villa-torchiara-parco-elena/10-gallery-7.jpg",
+      "/uploads/properties/campania-villa-torchiara-parco-elena/11-gallery-8.jpg",
+      "/uploads/properties/campania-villa-torchiara-parco-elena/12-gallery-9.jpg",
+      "/uploads/properties/campania-villa-torchiara-parco-elena/13-main.jpg",
+      "/uploads/properties/campania-villa-torchiara-parco-elena/14-plan.jpg"
+    ],
+    "mainImage": 0,
+    "amenities": [
+      {
+        "name": {
+          "it": "villa in area residenziale da verificare con sopralluogo",
+          "en": "villa in a residential area to be checked on site",
+          "cs": "vila v rezidenční oblasti k ověření při prohlídce"
+        }
+      },
+      {
+        "name": {
+          "it": "144 mq commerciali",
+          "en": "144 commercial sqm",
+          "cs": "144 m2 užitné plochy"
+        }
+      },
+      {
+        "name": {
+          "it": "3 locali",
+          "en": "3 rooms",
+          "cs": "3 místností"
+        }
+      },
+      {
+        "name": {
+          "it": "3 camere da letto",
+          "en": "3 bedrooms",
+          "cs": "3 ložnice"
+        }
+      },
+      {
+        "name": {
+          "it": "2 bagni",
+          "en": "2 bathrooms",
+          "cs": "2 koupelny"
+        }
+      }
+    ],
+    "seoTitle": {
+      "en": "Villa in Torchiara, Parco Elena for sale",
+      "cs": "Vila v Torchiaře, Parco Elena na prodej",
+      "it": "Villa a Torchiara, Parco Elena in vendita"
+    },
+    "seoDescription": {
+      "en": "Torchiara: villa of 144 sqm, 3 bedrooms, 2 bathrooms. Asking price EUR 175,000.",
+      "cs": "Torchiara: nemovitost 144 m2, 3 ložnice, 2 koupelny. Cena 175 000 EUR.",
+      "it": "Torchiara: villa di 144 mq, 3 camere, 2 bagni. Prezzo 175.000 euro."
+    },
+    "keywords": [
+      "campania",
+      "torchiara",
+      "villa",
+      "parco-elena",
+      "immobiliare-it"
+    ],
+    "sourceUrl": "https://www.immobiliare.it/annunci/129047742/",
+    "_createdAt": "2026-04-30T10:00:00.000Z",
+    "_updatedAt": "2026-04-30T10:00:00.000Z"
+  },
+  {
+    "_id": "local-import-campania-villa-casal-velino-via-ardisani-s-n-c-1780577729442-gt5qq",
+    "_type": "listing",
+    "title": {
+      "en": "Villa in Casal Velino, Via Ardisani , s.n.c.",
+      "cs": "Rodinná vila v Casal Velino, Via Ardisani",
+      "it": "Villa a Casal Velino, Via Ardisani , s.n.c."
+    },
+    "slug": {
+      "_type": "slug",
+      "current": "campania-villa-casal-velino-via-ardisani-s-n-c"
+    },
+    "propertyType": "villa",
+    "price": {
+      "amount": 189000,
+      "currency": "EUR"
+    },
+    "specifications": {
+      "rooms": 5,
+      "bedrooms": 2,
+      "bathrooms": 2,
+      "squareFootage": 89
+    },
+    "location": {
+      "city": {
+        "name": {
+          "en": "Casal Velino",
+          "cs": "Casal Velino",
+          "it": "Casal Velino"
+        },
+        "slug": {
+          "current": "casal-velino"
+        },
+        "region": {
+          "name": {
+            "it": "Campania",
+            "en": "Campania",
+            "cs": "Kampánie"
+          },
+          "country": {
+            "en": "Italy",
+            "cs": "Italie",
+            "it": "Italia"
+          }
+        }
+      },
+      "address": {
+        "en": "Via Ardisani , s.n.c., Casal Velino",
+        "cs": "Via Ardisani , s.n.c., Casal Velino",
+        "it": "Via Ardisani , s.n.c., Casal Velino"
+      },
+      "coordinates": {
+        "lat": 40.1972,
+        "lng": 15.1231
+      }
+    },
+    "status": "available",
+    "featured": false,
+    "isNew": false,
+    "noAgency": false,
+    "description": {
+      "en": "In Casal Velino, this villa offers 89 sqm, 5 rooms, 2 bedrooms and 2 bathrooms. The property is located at Via Ardisani , s.n.c., Casal Velino and has an asking price of EUR 189,000.\n\nThe point to assess is outdoor areas or garden. The property should be reviewed according to the buyer's goals, with particular attention to documentation, technical condition and real costs.\n\nBefore any purchase decision, documents, technical checks and an on-site visit remain essential.",
+      "cs": "V lokalitě Casal Velino nabízí tato nemovitost 89 m2, 5 místností, 2 ložnic a 2 koupelen. Nachází se na adrese Via Ardisani , s.n.c., Casal Velino a požadovaná cena je 189 000 EUR.\n\nHlavním bodem k posouzení je venkovní prostory nebo zahrada. Nemovitost je vhodné hodnotit podle cíle kupujícího, se zvláštním důrazem na dokumentaci, technický stav a reálné náklady.\n\nPřed rozhodnutím o koupi je nutné ověřit dokumenty, technický stav a nemovitost osobně navštívit.",
+      "it": "A Casal Velino, proponiamo villa con 89 mq, 5 locali, 2 camere e 2 bagni. La proprietà si trova in Via Ardisani , s.n.c., Casal Velino e ha un prezzo richiesto di 189.000 euro.\n\nIl punto da valutare è presenza di spazi esterni o giardino. Dalla descrizione originale emerge inoltre: Villa bifamiliare situata a Casal Velino, a pochi minuti dal mare, ideale per chi desidera vivere in un ambiente tranquillo e riservato. La proprietà si sviluppa su 89 mq catastali ed è composta da un accogliente soggiorno, un'ampia cucina abitabile, tre luminose camere da letto e due bagni. All'esterno, un portico esclusivo e un giardino privato su tre lati offrono spazi perfetti per momenti di relax all'aria aperta. La villa dispone inoltre di posti auto dedicati e ottime finiture. Un'occasione unica per chi cerca una soluzione di abitativa di prestigio in una delle zone più ambite di Casal Velino. Contattaci per fissare un appuntamento.\n\nPrima di procedere è necessario verificare documenti, stato tecnico, spese e condizioni reali con sopralluogo."
+    },
+    "images": [
+      "/uploads/properties/campania-villa-casal-velino-via-ardisani-s-n-c/01-gallery-1.jpg",
+      "/uploads/properties/campania-villa-casal-velino-via-ardisani-s-n-c/02-gallery-10.jpg",
+      "/uploads/properties/campania-villa-casal-velino-via-ardisani-s-n-c/03-gallery-11.jpg",
+      "/uploads/properties/campania-villa-casal-velino-via-ardisani-s-n-c/04-gallery-12.jpg",
+      "/uploads/properties/campania-villa-casal-velino-via-ardisani-s-n-c/05-gallery-2.jpg",
+      "/uploads/properties/campania-villa-casal-velino-via-ardisani-s-n-c/06-gallery-3.jpg",
+      "/uploads/properties/campania-villa-casal-velino-via-ardisani-s-n-c/07-gallery-4.jpg",
+      "/uploads/properties/campania-villa-casal-velino-via-ardisani-s-n-c/08-gallery-5.jpg",
+      "/uploads/properties/campania-villa-casal-velino-via-ardisani-s-n-c/09-gallery-6.jpg",
+      "/uploads/properties/campania-villa-casal-velino-via-ardisani-s-n-c/10-gallery-7.jpg",
+      "/uploads/properties/campania-villa-casal-velino-via-ardisani-s-n-c/11-gallery-8.jpg",
+      "/uploads/properties/campania-villa-casal-velino-via-ardisani-s-n-c/12-gallery-9.jpg",
+      "/uploads/properties/campania-villa-casal-velino-via-ardisani-s-n-c/13-main.jpg",
+      "/uploads/properties/campania-villa-casal-velino-via-ardisani-s-n-c/14-plan.jpg"
+    ],
+    "mainImage": 0,
+    "amenities": [
+      {
+        "name": {
+          "it": "presenza di spazi esterni o giardino",
+          "en": "outdoor areas or garden",
+          "cs": "venkovní prostory nebo zahrada"
+        }
+      },
+      {
+        "name": {
+          "it": "89 mq commerciali",
+          "en": "89 commercial sqm",
+          "cs": "89 m2 užitné plochy"
+        }
+      },
+      {
+        "name": {
+          "it": "5 locali",
+          "en": "5 rooms",
+          "cs": "5 místností"
+        }
+      },
+      {
+        "name": {
+          "it": "2 camere da letto",
+          "en": "2 bedrooms",
+          "cs": "2 ložnice"
+        }
+      },
+      {
+        "name": {
+          "it": "2 bagni",
+          "en": "2 bathrooms",
+          "cs": "2 koupelny"
+        }
+      }
+    ],
+    "seoTitle": {
+      "en": "Villa in Casal Velino, Via Ardisani , s.n.c. for sale",
+      "cs": "Rodinná vila v Casal Velino, Via Ardisani na prodej",
+      "it": "Villa a Casal Velino, Via Ardisani , s.n.c. in vendita"
+    },
+    "seoDescription": {
+      "en": "Casal Velino: villa of 89 sqm, 2 bedrooms, 2 bathrooms. Asking price EUR 189,000.",
+      "cs": "Casal Velino: nemovitost 89 m2, 2 ložnice, 2 koupelny. Cena 189 000 EUR.",
+      "it": "Casal Velino: villa di 89 mq, 2 camere, 2 bagni. Prezzo 189.000 euro."
+    },
+    "keywords": [
+      "campania",
+      "casal-velino",
+      "villa",
+      "via-ardisani-s-n-c",
+      "immobiliare-it"
+    ],
+    "sourceUrl": "https://www.immobiliare.it/annunci/128581296/",
+    "_createdAt": "2026-04-30T10:00:00.000Z",
+    "_updatedAt": "2026-04-30T10:00:00.000Z"
+  },
+  {
+    "_id": "local-import-campania-villa-camerota-contrada-conca-dei-vascelli-1780577729277-yjhdb",
+    "_type": "listing",
+    "title": {
+      "en": "Villa in Camerota, Contrada conca dei vascelli",
+      "cs": "Vila v Camerotě, Contrada Conca dei Vascelli",
+      "it": "Villetta A Schiera a Camerota, Contrada conca dei vascelli"
+    },
+    "slug": {
+      "_type": "slug",
+      "current": "campania-villa-camerota-contrada-conca-dei-vascelli"
+    },
+    "propertyType": "villa",
+    "price": {
+      "amount": 109000,
+      "currency": "EUR"
+    },
+    "specifications": {
+      "rooms": 3,
+      "bedrooms": 2,
+      "bathrooms": 1,
+      "squareFootage": 60
+    },
+    "location": {
+      "city": {
+        "name": {
+          "en": "Camerota",
+          "cs": "Camerota",
+          "it": "Camerota"
+        },
+        "slug": {
+          "current": "camerota"
+        },
+        "region": {
+          "name": {
+            "it": "Campania",
+            "en": "Campania",
+            "cs": "Kampánie"
+          },
+          "country": {
+            "en": "Italy",
+            "cs": "Italie",
+            "it": "Italia"
+          }
+        }
+      },
+      "address": {
+        "en": "Contrada conca dei vascelli, 2, Camerota",
+        "cs": "Contrada conca dei vascelli, 2, Camerota",
+        "it": "Contrada conca dei vascelli, 2, Camerota"
+      },
+      "coordinates": {
+        "lat": 40.0147,
+        "lng": 15.4057
+      }
+    },
+    "status": "available",
+    "featured": false,
+    "isNew": false,
+    "noAgency": false,
+    "description": {
+      "en": "In Camerota, this villa offers 60 sqm, 3 rooms, 2 bedrooms and 1 bathrooms. The property is located at Contrada conca dei vascelli, 2, Camerota and has an asking price of EUR 109,000.\n\nThe point to assess is property with sea view or coastal setting. The property should be reviewed according to the buyer's goals, with particular attention to documentation, technical condition and real costs.\n\nBefore any purchase decision, documents, technical checks and an on-site visit remain essential.",
+      "cs": "V lokalitě Camerota nabízí tato nemovitost 60 m2, 3 místností, 2 ložnic a 1 koupelen. Nachází se na adrese Contrada conca dei vascelli, 2, Camerota a požadovaná cena je 109 000 EUR.\n\nHlavním bodem k posouzení je nemovitost s výhledem na moře nebo v přímořském prostředí. Nemovitost je vhodné hodnotit podle cíle kupujícího, se zvláštním důrazem na dokumentaci, technický stav a reálné náklady.\n\nPřed rozhodnutím o koupi je nutné ověřit dokumenty, technický stav a nemovitost osobně navštívit.",
+      "it": "A Camerota, proponiamo villa con 60 mq, 3 locali, 2 camere e 1 bagni. La proprietà si trova in Contrada conca dei vascelli, 2, Camerota e ha un prezzo richiesto di 109.000 euro.\n\nIl punto da valutare è immobile con vista mare o contesto costiero. Dalla descrizione originale emerge inoltre: Nel cuore di Marina di Camerota, nel comune di Camerota, a 4,5 km dalle spiagge, è disponibile una villa a schiera in vendita, perfetta per chi cerca una soluzione abitativa comoda e funzionale. La proprietà, di 60 mq, si sviluppa al piano terra e offre un accogliente giardino privato con ripostiglio e doccia esterna, ideale per momenti di relax all'aperto. L'interno è composto da tre locali ben distribuiti: due camere da letto, un bagno e un'ampio salne angolo cottura con vista mare. La villa dispone anche di un balcone e un terrazzo, che ampliano gli spazi vivibili e offrono piacevoli affacci. L' immobile rappresenta un'opportunità interessante per chi desidera vivere in una località rinomata, lontano dal caos godendo a pieno dei meravigliosi tramonti cilentani. Ape non disponibile, la classe energetica non è stata verificata, il certificato verrà consegnato all'atto definitivo.\n\nPrima di procedere è necessario verificare documenti, stato tecnico, spese e condizioni reali con sopralluogo."
+    },
+    "images": [
+      "/uploads/properties/campania-villa-camerota-contrada-conca-dei-vascelli/01-gallery-1.jpg",
+      "/uploads/properties/campania-villa-camerota-contrada-conca-dei-vascelli/02-gallery-10.jpg",
+      "/uploads/properties/campania-villa-camerota-contrada-conca-dei-vascelli/03-gallery-11.jpg",
+      "/uploads/properties/campania-villa-camerota-contrada-conca-dei-vascelli/04-gallery-2.jpg",
+      "/uploads/properties/campania-villa-camerota-contrada-conca-dei-vascelli/05-gallery-3.jpg",
+      "/uploads/properties/campania-villa-camerota-contrada-conca-dei-vascelli/06-gallery-4.jpg",
+      "/uploads/properties/campania-villa-camerota-contrada-conca-dei-vascelli/07-gallery-5.jpg",
+      "/uploads/properties/campania-villa-camerota-contrada-conca-dei-vascelli/08-gallery-6.jpg",
+      "/uploads/properties/campania-villa-camerota-contrada-conca-dei-vascelli/09-gallery-7.jpg",
+      "/uploads/properties/campania-villa-camerota-contrada-conca-dei-vascelli/10-gallery-8.jpg",
+      "/uploads/properties/campania-villa-camerota-contrada-conca-dei-vascelli/11-gallery-9.jpg",
+      "/uploads/properties/campania-villa-camerota-contrada-conca-dei-vascelli/12-main.jpg",
+      "/uploads/properties/campania-villa-camerota-contrada-conca-dei-vascelli/13-plan.jpg"
+    ],
+    "mainImage": 0,
+    "amenities": [
+      {
+        "name": {
+          "it": "immobile con vista mare o contesto costiero",
+          "en": "property with sea view or coastal setting",
+          "cs": "nemovitost s výhledem na moře nebo v přímořském prostředí"
+        }
+      },
+      {
+        "name": {
+          "it": "60 mq commerciali",
+          "en": "60 commercial sqm",
+          "cs": "60 m2 užitné plochy"
+        }
+      },
+      {
+        "name": {
+          "it": "3 locali",
+          "en": "3 rooms",
+          "cs": "3 místností"
+        }
+      },
+      {
+        "name": {
+          "it": "2 camere da letto",
+          "en": "2 bedrooms",
+          "cs": "2 ložnice"
+        }
+      },
+      {
+        "name": {
+          "it": "1 bagni",
+          "en": "1 bathrooms",
+          "cs": "1 koupelny"
+        }
+      }
+    ],
+    "seoTitle": {
+      "en": "Villa in Camerota, Contrada conca dei vascelli for sale",
+      "cs": "Vila v Camerotě, Contrada Conca dei Vascelli na prodej",
+      "it": "Villetta A Schiera a Camerota, Contrada conca dei vascelli in vendita"
+    },
+    "seoDescription": {
+      "en": "Camerota: villa of 60 sqm, 2 bedrooms, 1 bathrooms. Asking price EUR 109,000.",
+      "cs": "Camerota: nemovitost 60 m2, 2 ložnice, 1 koupelny. Cena 109 000 EUR.",
+      "it": "Camerota: villa di 60 mq, 2 camere, 1 bagni. Prezzo 109.000 euro."
+    },
+    "keywords": [
+      "campania",
+      "camerota",
+      "villa",
+      "contrada-conca-dei-vascelli",
+      "immobiliare-it"
+    ],
+    "sourceUrl": "https://www.immobiliare.it/annunci/126530463/",
+    "_createdAt": "2026-04-30T10:00:00.000Z",
+    "_updatedAt": "2026-04-30T10:00:00.000Z"
+  },
+  {
+    "_id": "local-import-calabria-appartamento-cassano-all-ionio-via-giovanni-amendola-136-1780577729113-w98af",
+    "_type": "listing",
+    "title": {
+      "en": "Apartment in Cassano all'Ionio, Via Giovanni Amendola, 136",
+      "cs": "Světlý byt v Cassano all'Ionio, Via Giovanni Amendola",
+      "it": "Appartamento a Cassano all'Ionio, Via Giovanni Amendola, 136"
+    },
+    "slug": {
+      "_type": "slug",
+      "current": "calabria-appartamento-cassano-all-ionio-via-giovanni-amendola-136"
+    },
+    "propertyType": "apartment",
+    "price": {
+      "amount": 85000,
+      "currency": "EUR"
+    },
+    "specifications": {
+      "rooms": 5,
+      "bedrooms": 3,
+      "bathrooms": 2,
+      "squareFootage": 145
+    },
+    "location": {
+      "city": {
+        "name": {
+          "en": "Cassano all'Ionio",
+          "cs": "Cassano all'Ionio",
+          "it": "Cassano all'Ionio"
+        },
+        "slug": {
+          "current": "cassano-all-ionio"
+        },
+        "region": {
+          "name": {
+            "it": "Calabria",
+            "en": "Calabria",
+            "cs": "Kalábrie"
+          },
+          "country": {
+            "en": "Italy",
+            "cs": "Italie",
+            "it": "Italia"
+          }
+        }
+      },
+      "address": {
+        "en": "Via Giovanni Amendola, 136, Cassano all'Ionio",
+        "cs": "Via Giovanni Amendola, 136, Cassano all'Ionio",
+        "it": "Via Giovanni Amendola, 136, Cassano all'Ionio"
+      },
+      "coordinates": {
+        "lat": 39.7809,
+        "lng": 16.3201
+      }
+    },
+    "status": "available",
+    "featured": false,
+    "isNew": false,
+    "noAgency": false,
+    "description": {
+      "en": "In Cassano all'Ionio, this apartment offers 145 sqm, 5 rooms, 3 bedrooms and 2 bathrooms. The property is located at Via Giovanni Amendola, 136, Cassano all'Ionio and has an asking price of EUR 85,000.\n\nThe point to assess is apartment with clear basic data and defined price. The property should be reviewed according to the buyer's goals, with particular attention to documentation, technical condition and real costs.\n\nBefore any purchase decision, documents, technical checks and an on-site visit remain essential.",
+      "cs": "V lokalitě Cassano all'Ionio nabízí tato nemovitost 145 m2, 5 místností, 3 ložnic a 2 koupelen. Nachází se na adrese Via Giovanni Amendola, 136, Cassano all'Ionio a požadovaná cena je 85 000 EUR.\n\nHlavním bodem k posouzení je byt s jasnými základními údaji a stanovenou cenou. Nemovitost je vhodné hodnotit podle cíle kupujícího, se zvláštním důrazem na dokumentaci, technický stav a reálné náklady.\n\nPřed rozhodnutím o koupi je nutné ověřit dokumenty, technický stav a nemovitost osobně navštívit.",
+      "it": "A Cassano all'Ionio, proponiamo appartamento con 145 mq, 5 locali, 3 camere e 2 bagni. La proprietà si trova in Via Giovanni Amendola, 136, Cassano all'Ionio e ha un prezzo richiesto di 85.000 euro.\n\nIl punto da valutare è appartamento con dati essenziali chiari e prezzo definito. Dalla descrizione originale emerge inoltre: RIF. 384041 - La Scelta Di Rexer. Proponiamo in vendita un'opportunità immobiliare nel cuore di Cassano all' Ionio, in una zona centrale e ottimamente servita. Si tratta di un luminosissimo appartamento di 145 mq situato al quinto piano di uno stabile edificato alla fine degli anni '70 e dotato di ascensore. L'immobile vanta una distribuzione razionale e ampie metrature, composto da un accogliente ingresso, un grande salone doppio ideale per la vita familiare o per ricevere ospiti, una cucina abitabile, tre camere da letto e due bagni. L'appartamento è in ottimo stato di conservazione risultando subito abitabile. Dotato di riscaldamento autonomo a gas, garantisce un comfort termico indipendente. Lo stabile è curato e tranquillo e, sebbene sia privo di box o garage, è ubicato in posizione comoda a tutti i principali servizi, rendendo la quotidianità estremamente pratica. Vivere qui significa godere della tranquillità di un centro urbano storico senza rinunciare ai servizi. Cassano allo Ionio è una località nota per le sue Terme Sibarite, un'oasi di benessere a pochi minuti di distanza. Inoltre, la zona funge da porta d'accesso privilegiata al Parco Nazionale del Pollino per gli amanti della natura e offre la vicinanza strategica alle splendide coste del Mar Ionio, incluse le rinomate aree archeologiche di Sibari, rendendo la vita quotidiana un perfetto equilibrio tra storia, natura e mare.\n\nPrima di procedere è necessario verificare documenti, stato tecnico, spese e condizioni reali con sopralluogo."
+    },
+    "images": [
+      "/uploads/properties/calabria-appartamento-cassano-all-ionio-via-giovanni-amendola-136/01-gallery-1.jpg",
+      "/uploads/properties/calabria-appartamento-cassano-all-ionio-via-giovanni-amendola-136/02-gallery-10.jpg",
+      "/uploads/properties/calabria-appartamento-cassano-all-ionio-via-giovanni-amendola-136/03-gallery-11.jpg",
+      "/uploads/properties/calabria-appartamento-cassano-all-ionio-via-giovanni-amendola-136/04-gallery-12.jpg",
+      "/uploads/properties/calabria-appartamento-cassano-all-ionio-via-giovanni-amendola-136/05-gallery-2.jpg",
+      "/uploads/properties/calabria-appartamento-cassano-all-ionio-via-giovanni-amendola-136/06-gallery-3.jpg",
+      "/uploads/properties/calabria-appartamento-cassano-all-ionio-via-giovanni-amendola-136/07-gallery-4.jpg",
+      "/uploads/properties/calabria-appartamento-cassano-all-ionio-via-giovanni-amendola-136/08-gallery-5.jpg",
+      "/uploads/properties/calabria-appartamento-cassano-all-ionio-via-giovanni-amendola-136/09-gallery-6.jpg",
+      "/uploads/properties/calabria-appartamento-cassano-all-ionio-via-giovanni-amendola-136/10-gallery-7.jpg",
+      "/uploads/properties/calabria-appartamento-cassano-all-ionio-via-giovanni-amendola-136/11-gallery-8.jpg",
+      "/uploads/properties/calabria-appartamento-cassano-all-ionio-via-giovanni-amendola-136/12-gallery-9.jpg",
+      "/uploads/properties/calabria-appartamento-cassano-all-ionio-via-giovanni-amendola-136/13-main.jpg",
+      "/uploads/properties/calabria-appartamento-cassano-all-ionio-via-giovanni-amendola-136/14-plan.jpg"
+    ],
+    "mainImage": 0,
+    "amenities": [
+      {
+        "name": {
+          "it": "appartamento con dati essenziali chiari e prezzo definito",
+          "en": "apartment with clear basic data and defined price",
+          "cs": "byt s jasnými základními údaji a stanovenou cenou"
+        }
+      },
+      {
+        "name": {
+          "it": "145 mq commerciali",
+          "en": "145 commercial sqm",
+          "cs": "145 m2 užitné plochy"
+        }
+      },
+      {
+        "name": {
+          "it": "5 locali",
+          "en": "5 rooms",
+          "cs": "5 místností"
+        }
+      },
+      {
+        "name": {
+          "it": "3 camere da letto",
+          "en": "3 bedrooms",
+          "cs": "3 ložnice"
+        }
+      },
+      {
+        "name": {
+          "it": "2 bagni",
+          "en": "2 bathrooms",
+          "cs": "2 koupelny"
+        }
+      }
+    ],
+    "seoTitle": {
+      "en": "Apartment in Cassano all'Ionio, Via Giovanni Amendola, 136 for sale",
+      "cs": "Světlý byt v Cassano all'Ionio, Via Giovanni Amendola na prodej",
+      "it": "Appartamento a Cassano all'Ionio, Via Giovanni Amendola, 136 in vendita"
+    },
+    "seoDescription": {
+      "en": "Cassano all'Ionio: apartment of 145 sqm, 3 bedrooms, 2 bathrooms. Asking price EUR 85,000.",
+      "cs": "Cassano all'Ionio: nemovitost 145 m2, 3 ložnice, 2 koupelny. Cena 85 000 EUR.",
+      "it": "Cassano all'Ionio: appartamento di 145 mq, 3 camere, 2 bagni. Prezzo 85.000 euro."
+    },
+    "keywords": [
+      "calabria",
+      "cassano-all-ionio",
+      "apartment",
+      "via-giovanni-amendola-136",
+      "immobiliare-it"
+    ],
+    "sourceUrl": "https://www.immobiliare.it/annunci/124226039/",
+    "_createdAt": "2026-04-30T10:00:00.000Z",
+    "_updatedAt": "2026-04-30T10:00:00.000Z"
+  },
+  {
+    "_id": "local-import-campania-appartamento-rutino-via-dei-mille-1780577728950-w6yz4",
+    "_type": "listing",
+    "title": {
+      "en": "Apartment in Rutino, Via dei Mille",
+      "cs": "Prostorný byt se zahradou v Rutinu, Via dei Mille",
+      "it": "Appartamento a Rutino, Via dei Mille"
+    },
+    "slug": {
+      "_type": "slug",
+      "current": "campania-appartamento-rutino-via-dei-mille"
+    },
+    "propertyType": "apartment",
+    "price": {
+      "amount": 79000,
+      "currency": "EUR"
+    },
+    "specifications": {
+      "rooms": 6,
+      "bedrooms": 3,
+      "bathrooms": 3,
+      "squareFootage": 169
+    },
+    "location": {
+      "city": {
+        "name": {
+          "en": "Rutino",
+          "cs": "Rutino",
+          "it": "Rutino"
+        },
+        "slug": {
+          "current": "rutino"
+        },
+        "region": {
+          "name": {
+            "it": "Campania",
+            "en": "Campania",
+            "cs": "Kampánie"
+          },
+          "country": {
+            "en": "Italy",
+            "cs": "Italie",
+            "it": "Italia"
+          }
+        }
+      },
+      "address": {
+        "en": "Via dei Mille, Rutino",
+        "cs": "Via dei Mille, Rutino",
+        "it": "Via dei Mille, Rutino"
+      },
+      "coordinates": {
+        "lat": 40.2999,
+        "lng": 15.0801
+      }
+    },
+    "status": "available",
+    "featured": false,
+    "isNew": false,
+    "noAgency": false,
+    "description": {
+      "en": "In Rutino, this apartment offers 169 sqm, 6 rooms, 3 bedrooms and 3 bathrooms. The property is located at Via dei Mille, Rutino and has an asking price of EUR 79,000.\n\nThe point to assess is outdoor areas or garden. The property should be reviewed according to the buyer's goals, with particular attention to documentation, technical condition and real costs.\n\nBefore any purchase decision, documents, technical checks and an on-site visit remain essential.",
+      "cs": "V lokalitě Rutino nabízí tato nemovitost 169 m2, 6 místností, 3 ložnic a 3 koupelen. Nachází se na adrese Via dei Mille, Rutino a požadovaná cena je 79 000 EUR.\n\nHlavním bodem k posouzení je venkovní prostory nebo zahrada. Nemovitost je vhodné hodnotit podle cíle kupujícího, se zvláštním důrazem na dokumentaci, technický stav a reálné náklady.\n\nPřed rozhodnutím o koupi je nutné ověřit dokumenty, technický stav a nemovitost osobně navštívit.",
+      "it": "A Rutino, proponiamo appartamento con 169 mq, 6 locali, 3 camere e 3 bagni. La proprietà si trova in Via dei Mille, Rutino e ha un prezzo richiesto di 79.000 euro.\n\nIl punto da valutare è presenza di spazi esterni o giardino. Dalla descrizione originale emerge inoltre: Rutino (Sa), nel cuore del Cilento, in zona collinare a 371 metri s. l. m. e a circa 9 km da Agropoli (15 minuti in auto), vendesi soluzione con ingresso indipendente, su 2 livelli, libera su due lati (paralleli), con giardino di proprietà esclusivo di circa 150 mq. L’immobile, di circa 169 mq, ha doppio ingresso su strada, che lo rende ideale, eventualmente, anche per due nuclei familiari. Al piano rialzato, troviamo soggiorno con cucina a vista e camino classico, camera da letto matrimoniale con uscita sul balcone e bagno, disimpegno, ulteriore camera da letto matrimoniale con veranda e bagno, cameretta e scala a chiocciola che porta al piano inferiore con soggiorno/cucina, bagno e uscita su terrazzino con discesa al giardino, delimitato da muretti in cemento e aiuole, curato con alberi di ulivo, limoni, gelsomino e fiori vari. Dal giardino si ha accesso a due spaziosi e comodi locali cantina, in buone condizioni di uso, con serbatoio d’acqua. Riscaldamento autonomo Gpl (termosifoni). Condizionatori. Infissi in doppio vetro, zanzariere e tende da sole sul balcone. Possibilità di parcheggio nelle vicinanze dell’immobile. Vittorio Vento Immobiliare Tel. 0974823370 - 3274291553\n\nPrima di procedere è necessario verificare documenti, stato tecnico, spese e condizioni reali con sopralluogo."
+    },
+    "images": [
+      "/uploads/properties/campania-appartamento-rutino-via-dei-mille/01-gallery-1.jpg",
+      "/uploads/properties/campania-appartamento-rutino-via-dei-mille/02-gallery-10.jpg",
+      "/uploads/properties/campania-appartamento-rutino-via-dei-mille/03-gallery-11.jpg",
+      "/uploads/properties/campania-appartamento-rutino-via-dei-mille/04-gallery-12.jpg",
+      "/uploads/properties/campania-appartamento-rutino-via-dei-mille/05-gallery-2.jpg",
+      "/uploads/properties/campania-appartamento-rutino-via-dei-mille/06-gallery-3.jpg",
+      "/uploads/properties/campania-appartamento-rutino-via-dei-mille/07-gallery-4.jpg",
+      "/uploads/properties/campania-appartamento-rutino-via-dei-mille/08-gallery-5.jpg",
+      "/uploads/properties/campania-appartamento-rutino-via-dei-mille/09-gallery-6.jpg",
+      "/uploads/properties/campania-appartamento-rutino-via-dei-mille/10-gallery-7.jpg",
+      "/uploads/properties/campania-appartamento-rutino-via-dei-mille/11-gallery-8.jpg",
+      "/uploads/properties/campania-appartamento-rutino-via-dei-mille/12-gallery-9.jpg",
+      "/uploads/properties/campania-appartamento-rutino-via-dei-mille/13-main.jpg",
+      "/uploads/properties/campania-appartamento-rutino-via-dei-mille/14-plan.jpg"
+    ],
+    "mainImage": 0,
+    "amenities": [
+      {
+        "name": {
+          "it": "presenza di spazi esterni o giardino",
+          "en": "outdoor areas or garden",
+          "cs": "venkovní prostory nebo zahrada"
+        }
+      },
+      {
+        "name": {
+          "it": "169 mq commerciali",
+          "en": "169 commercial sqm",
+          "cs": "169 m2 užitné plochy"
+        }
+      },
+      {
+        "name": {
+          "it": "6 locali",
+          "en": "6 rooms",
+          "cs": "6 místností"
+        }
+      },
+      {
+        "name": {
+          "it": "3 camere da letto",
+          "en": "3 bedrooms",
+          "cs": "3 ložnice"
+        }
+      },
+      {
+        "name": {
+          "it": "3 bagni",
+          "en": "3 bathrooms",
+          "cs": "3 koupelny"
+        }
+      }
+    ],
+    "seoTitle": {
+      "en": "Apartment in Rutino, Via dei Mille for sale",
+      "cs": "Prostorný byt se zahradou v Rutinu, Via dei Mille na prodej",
+      "it": "Appartamento a Rutino, Via dei Mille in vendita"
+    },
+    "seoDescription": {
+      "en": "Rutino: apartment of 169 sqm, 3 bedrooms, 3 bathrooms. Asking price EUR 79,000.",
+      "cs": "Rutino: nemovitost 169 m2, 3 ložnice, 3 koupelny. Cena 79 000 EUR.",
+      "it": "Rutino: appartamento di 169 mq, 3 camere, 3 bagni. Prezzo 79.000 euro."
+    },
+    "keywords": [
+      "campania",
+      "rutino",
+      "apartment",
+      "via-dei-mille",
+      "immobiliare-it"
+    ],
+    "sourceUrl": "https://www.immobiliare.it/annunci/103650712/",
+    "_createdAt": "2026-04-30T10:00:00.000Z",
+    "_updatedAt": "2026-04-30T10:00:00.000Z"
+  },
+  {
+    "_id": "local-import-campania-villa-centola-via-velardino-1780577728774-18in9",
+    "_type": "listing",
+    "title": {
+      "en": "Villa in Centola, Via velardino",
+      "cs": "Řadová vila v Centole, Via Velardino",
+      "it": "Villetta A Schiera a Centola, Via velardino"
+    },
+    "slug": {
+      "_type": "slug",
+      "current": "campania-villa-centola-via-velardino"
+    },
+    "propertyType": "villa",
+    "price": {
+      "amount": 119000,
+      "currency": "EUR"
+    },
+    "specifications": {
+      "rooms": 2,
+      "bedrooms": 2,
+      "bathrooms": 1,
+      "squareFootage": 70
+    },
+    "location": {
+      "city": {
+        "name": {
+          "en": "Centola",
+          "cs": "Centola",
+          "it": "Centola"
+        },
+        "slug": {
+          "current": "centola"
+        },
+        "region": {
+          "name": {
+            "it": "Campania",
+            "en": "Campania",
+            "cs": "Kampánie"
+          },
+          "country": {
+            "en": "Italy",
+            "cs": "Italie",
+            "it": "Italia"
+          }
+        }
+      },
+      "address": {
+        "en": "Via velardino, 22, Centola",
+        "cs": "Via velardino, 22, Centola",
+        "it": "Via velardino, 22, Centola"
+      },
+      "coordinates": {
+        "lat": 40.0725,
+        "lng": 15.3058
+      }
+    },
+    "status": "available",
+    "featured": false,
+    "isNew": false,
+    "noAgency": false,
+    "description": {
+      "en": "In Centola, this villa offers 70 sqm, 2 rooms, 2 bedrooms and 1 bathrooms. The property is located at Via velardino, 22, Centola and has an asking price of EUR 119,000.\n\nThe point to assess is property with sea view or coastal setting. The property should be reviewed according to the buyer's goals, with particular attention to documentation, technical condition and real costs.\n\nBefore any purchase decision, documents, technical checks and an on-site visit remain essential.",
+      "cs": "V lokalitě Centola nabízí tato nemovitost 70 m2, 2 místností, 2 ložnic a 1 koupelen. Nachází se na adrese Via velardino, 22, Centola a požadovaná cena je 119 000 EUR.\n\nHlavním bodem k posouzení je nemovitost s výhledem na moře nebo v přímořském prostředí. Nemovitost je vhodné hodnotit podle cíle kupujícího, se zvláštním důrazem na dokumentaci, technický stav a reálné náklady.\n\nPřed rozhodnutím o koupi je nutné ověřit dokumenty, technický stav a nemovitost osobně navštívit.",
+      "it": "A Centola, proponiamo villa con 70 mq, 2 locali, 2 camere e 1 bagni. La proprietà si trova in Via velardino, 22, Centola e ha un prezzo richiesto di 119.000 euro.\n\nIl punto da valutare è immobile con vista mare o contesto costiero. Dalla descrizione originale emerge inoltre: Centola, In vendita, incantevole villetta situata in una zona collinare, all'interno di un parco privato e immerso nel verde. La casa, luminosa e spaziosa, si sviluppa con un ampio salone che si collega a una cucina perfetta per vivere momenti conviviali. La zona notte è composta da due camere da letto, una matrimoniale e una singola, entrambe con affaccio su un balcone che regala una vista serena sulla natura circostante. A completare l’interno, un elegante bagno. Il vero valore aggiunto della proprietà è lo spazio esterno esclusivo, con una splendida vista mare che rende ogni angolo un rifugio di tranquillità. Il parco, dotato di piscina, campo da tennis e campo da basket, offre molteplici opportunità di svago. A pochi minuti dal centro del paese e dalle meravigliose spiagge di Palinuro, questa villetta è il luogo ideale per chi cerca comfort, natura e serenità. Ape non disponibile, la classe energetica non è stata verificata, il certificato verrà consegnato all'atto definitivo.\n\nPrima di procedere è necessario verificare documenti, stato tecnico, spese e condizioni reali con sopralluogo."
+    },
+    "images": [
+      "/uploads/properties/campania-villa-centola-via-velardino/01-gallery-1.jpg",
+      "/uploads/properties/campania-villa-centola-via-velardino/02-gallery-2.jpg",
+      "/uploads/properties/campania-villa-centola-via-velardino/03-gallery-3.jpg",
+      "/uploads/properties/campania-villa-centola-via-velardino/04-main.jpg",
+      "/uploads/properties/campania-villa-centola-via-velardino/05-plan.jpg"
+    ],
+    "mainImage": 0,
+    "amenities": [
+      {
+        "name": {
+          "it": "immobile con vista mare o contesto costiero",
+          "en": "property with sea view or coastal setting",
+          "cs": "nemovitost s výhledem na moře nebo v přímořském prostředí"
+        }
+      },
+      {
+        "name": {
+          "it": "70 mq commerciali",
+          "en": "70 commercial sqm",
+          "cs": "70 m2 užitné plochy"
+        }
+      },
+      {
+        "name": {
+          "it": "2 locali",
+          "en": "2 rooms",
+          "cs": "2 místností"
+        }
+      },
+      {
+        "name": {
+          "it": "2 camere da letto",
+          "en": "2 bedrooms",
+          "cs": "2 ložnice"
+        }
+      },
+      {
+        "name": {
+          "it": "1 bagni",
+          "en": "1 bathrooms",
+          "cs": "1 koupelny"
+        }
+      }
+    ],
+    "seoTitle": {
+      "en": "Villa in Centola, Via velardino for sale",
+      "cs": "Řadová vila v Centole, Via Velardino na prodej",
+      "it": "Villetta A Schiera a Centola, Via velardino in vendita"
+    },
+    "seoDescription": {
+      "en": "Centola: villa of 70 sqm, 2 bedrooms, 1 bathrooms. Asking price EUR 119,000.",
+      "cs": "Centola: nemovitost 70 m2, 2 ložnice, 1 koupelny. Cena 119 000 EUR.",
+      "it": "Centola: villa di 70 mq, 2 camere, 1 bagni. Prezzo 119.000 euro."
+    },
+    "keywords": [
+      "campania",
+      "centola",
+      "villa",
+      "via-velardino",
+      "immobiliare-it"
+    ],
+    "sourceUrl": "https://www.immobiliare.it/annunci/126461445/",
+    "_createdAt": "2026-04-30T10:00:00.000Z",
+    "_updatedAt": "2026-04-30T10:00:00.000Z"
+  },
+  {
+    "_id": "zoncolan-la-dane-apartment-2026",
+    "_type": "listing",
+    "title": {
+      "en": "Wellness Apartment on Mount Zoncolan at La Dâne",
+      "cs": "Wellness apartmán na Zoncolanu v La Dâne",
+      "it": "Appartamento wellness sullo Zoncolan a La Dâne"
+    },
+    "slug": {
+      "_type": "slug",
+      "current": "friuli-venezia-giulia-appartamento-zoncolan-la-dane"
+    },
+    "propertyType": "apartment",
+    "price": {
+      "amount": 200000,
+      "currency": "EUR",
+      "prefix": true,
+      "startingFrom": true
+    },
+    "priceOptions": [
+      {
+        "bedrooms": 1,
+        "amount": 200000,
+        "currency": "EUR"
+      },
+      {
+        "bedrooms": 2,
+        "amount": 300000,
+        "currency": "EUR"
+      }
+    ],
+    "specifications": {
+      "rooms": 2,
+      "bedrooms": 1,
+      "bathrooms": 1,
+      "squareFootage": 50,
+      "parking": 2,
+      "terrace": true,
+      "energyPerformance": "high"
+    },
+    "location": {
+      "city": {
+        "name": {
+          "en": "Ravascletto",
+          "cs": "Ravascletto",
+          "it": "Ravascletto"
+        },
+        "slug": {
+          "current": "ravascletto"
+        },
+        "region": {
+          "name": {
+            "en": "Friuli-Venezia Giulia",
+            "cs": "Furlansko-Julské Benátsko",
+            "it": "Friuli-Venezia Giulia"
+          },
+          "country": {
+            "en": "Italy",
+            "cs": "Itálie",
+            "it": "Italia"
+          }
+        }
+      },
+      "address": {
+        "en": "La Dâne Zoncolan Aparthotel & Spa, Mount Zoncolan, Ravascletto (UD), Friuli-Venezia Giulia",
+        "cs": "La Dâne Zoncolan Aparthotel & Spa, Monte Zoncolan, Ravascletto (UD), Furlansko-Julské Benátsko",
+        "it": "La Dâne Zoncolan Aparthotel & Spa, Monte Zoncolan, Ravascletto (UD), Friuli-Venezia Giulia"
+      },
+      "coordinates": {
+        "lat": 46.5039,
+        "lng": 12.9258
+      }
+    },
+    "status": "available",
+    "featured": true,
+    "isNew": true,
+    "noAgency": true,
+    "exclusive": true,
+    "badges": [
+      "new",
+      "exclusive",
+      "no-agency"
+    ],
+    "description": {
+      "it": "Un rifugio contemporaneo sullo Zoncolan, pensato per chi ama la montagna autentica, lo sport e il silenzio delle quote. L'appartamento misura circa 50 m² e si trova all'interno del La Dâne Zoncolan Aparthotel & Spa, in un contesto ideale per vivere la montagna in ogni stagione.\n\nLa distribuzione comprende una luminosa zona living con cucina a vista e area pranzo, una camera matrimoniale, un bagno moderno e un terrazzo di ampia metratura, perfetto per colazioni all'aperto, relax dopo lo sci o momenti di quiete davanti al paesaggio alpino. L'abitazione è ad alte prestazioni energetiche e dispone di due posti auto.\n\nLa proposta è disponibile in due configurazioni: soluzione con una camera da letto a partire da 200.000€ e possibilità di soluzione con due camere da letto a partire da 300.000€. L'immobile è attualmente in fase di completamento, con la possibilità di personalizzare finiture e dettagli interni secondo il proprio gusto.\n\nAl piano terra si trova un'elegante e accogliente area wellness, con possibilità di utilizzo privato, completa di vasca idromassaggio, sauna, zona relax e doccia emozionale. Una proposta esclusiva, senza agenzia, per chi cerca una base raffinata tra sport, natura e benessere.",
+      "en": "A contemporary retreat on Mount Zoncolan, designed for those who love authentic mountain life, sport and the quiet of higher altitudes. The apartment measures approximately 50 m² and is located within La Dâne Zoncolan Aparthotel & Spa, an ideal setting for enjoying the mountains in every season.\n\nThe layout includes a bright living area with open kitchen and dining space, one double bedroom, a modern bathroom and a generous terrace, perfect for outdoor breakfasts, relaxing after skiing or enjoying peaceful moments with an alpine outlook. The home has high energy performance and includes two parking spaces.\n\nThe property is available in two configurations: a one-bedroom option starting from €200,000 and a two-bedroom option starting from €300,000. It is currently being completed, with the possibility to personalize finishes and interior details according to the buyer's taste.\n\nOn the ground floor there is an elegant and welcoming wellness area, available also for private use, with whirlpool tub, sauna, relaxation area and emotional shower. An exclusive no-agency opportunity for anyone looking for a refined mountain base combining sport, nature and wellbeing.",
+      "cs": "Současné horské útočiště na Zoncolanu pro ty, kteří milují autentickou horskou atmosféru, sport a ticho vyšších poloh. Apartmán má přibližně 50 m² a nachází se v komplexu La Dâne Zoncolan Aparthotel & Spa, v prostředí ideálním pro pobyt na horách v každém ročním období.\n\nDispozice zahrnuje světlou obytnou část s otevřenou kuchyní a jídelním koutem, jednu manželskou ložnici, moderní koupelnu a prostornou terasu, která je ideální pro snídani venku, odpočinek po lyžování nebo klidné chvíle s výhledem na alpskou krajinu. Byt má vysokou energetickou úspornost a náleží k němu dvě parkovací místa.\n\nNabídka je dostupná ve dvou konfiguracích: varianta s jednou ložnicí od 200 000 € a možnost varianty se dvěma ložnicemi od 300 000 €. Nemovitost je aktuálně ve fázi dokončování, takže je možné přizpůsobit povrchové úpravy a detaily interiéru podle vlastního vkusu.\n\nV přízemí se nachází elegantní a příjemná wellness zóna, s možností soukromého využití, vybavená vířivkou, saunou, relaxační částí a zážitkovou sprchou. Exkluzivní nabídka bez realitní kanceláře pro ty, kdo hledají vytříbené horské zázemí spojující sport, přírodu a odpočinek."
+    },
+    "images": [
+      "/uploads/properties/friuli-venezia-giulia-appartamento-zoncolan-la-dane/01-zoncolan-ski-view.jpeg",
+      "/uploads/properties/friuli-venezia-giulia-appartamento-zoncolan-la-dane/04-cucina-living.jpeg",
+      "/uploads/properties/friuli-venezia-giulia-appartamento-zoncolan-la-dane/08-zona-pranzo.jpeg",
+      "/uploads/properties/friuli-venezia-giulia-appartamento-zoncolan-la-dane/05-camera-matrimoniale.jpeg",
+      "/uploads/properties/friuli-venezia-giulia-appartamento-zoncolan-la-dane/02-bagno-doccia.jpeg",
+      "/uploads/properties/friuli-venezia-giulia-appartamento-zoncolan-la-dane/14-terrazzo-vista.jpeg",
+      "/uploads/properties/friuli-venezia-giulia-appartamento-zoncolan-la-dane/19-idromassaggio-wellness.jpeg",
+      "/uploads/properties/friuli-venezia-giulia-appartamento-zoncolan-la-dane/22-sauna.jpeg",
+      "/uploads/properties/friuli-venezia-giulia-appartamento-zoncolan-la-dane/21-doccia-emozionale.jpeg",
+      "/uploads/properties/friuli-venezia-giulia-appartamento-zoncolan-la-dane/25-zona-relax-wellness.jpeg",
+      "/uploads/properties/friuli-venezia-giulia-appartamento-zoncolan-la-dane/07-vista-piste-zoncolan.jpeg",
+      "/uploads/properties/friuli-venezia-giulia-appartamento-zoncolan-la-dane/11-living-pranzo-travi.jpeg",
+      "/uploads/properties/friuli-venezia-giulia-appartamento-zoncolan-la-dane/12-cucina-divano.jpeg",
+      "/uploads/properties/friuli-venezia-giulia-appartamento-zoncolan-la-dane/13-camera-dettaglio.jpeg",
+      "/uploads/properties/friuli-venezia-giulia-appartamento-zoncolan-la-dane/15-cucina-armadi.jpeg",
+      "/uploads/properties/friuli-venezia-giulia-appartamento-zoncolan-la-dane/17-cucina-balcone.jpeg",
+      "/uploads/properties/friuli-venezia-giulia-appartamento-zoncolan-la-dane/03-bagno-lavabo.jpeg",
+      "/uploads/properties/friuli-venezia-giulia-appartamento-zoncolan-la-dane/06-camera-vista-bosco.jpeg",
+      "/uploads/properties/friuli-venezia-giulia-appartamento-zoncolan-la-dane/09-divano-wallpaper-autunno.jpeg",
+      "/uploads/properties/friuli-venezia-giulia-appartamento-zoncolan-la-dane/10-divano-wallpaper-montagna.jpeg",
+      "/uploads/properties/friuli-venezia-giulia-appartamento-zoncolan-la-dane/16-ingresso-living.jpeg",
+      "/uploads/properties/friuli-venezia-giulia-appartamento-zoncolan-la-dane/18-area-wellness-dettaglio.jpeg",
+      "/uploads/properties/friuli-venezia-giulia-appartamento-zoncolan-la-dane/23-idromassaggio-vista.jpeg",
+      "/uploads/properties/friuli-venezia-giulia-appartamento-zoncolan-la-dane/24-area-tisana-wellness.jpeg",
+      "/uploads/properties/friuli-venezia-giulia-appartamento-zoncolan-la-dane/26-dettaglio-wellness.jpeg",
+      "/uploads/properties/friuli-venezia-giulia-appartamento-zoncolan-la-dane/20-tastiera-salen-la-dane.jpeg"
+    ],
+    "mainImage": 0,
+    "amenities": [
+      {
+        "name": {
+          "it": "Prezzo a partire da 200.000€",
+          "en": "Starting price from €200,000",
+          "cs": "Cena od 200 000 €"
+        }
+      },
+      {
+        "name": {
+          "it": "Opzione con due camere da letto a partire da 300.000€",
+          "en": "Two-bedroom option from €300,000",
+          "cs": "Varianta se dvěma ložnicemi od 300 000 €"
+        }
+      },
+      {
+        "name": {
+          "it": "Terrazzo di ampia metratura",
+          "en": "Large terrace",
+          "cs": "Prostorná terasa"
+        }
+      },
+      {
+        "name": {
+          "it": "Due posti auto",
+          "en": "Two parking spaces",
+          "cs": "Dvě parkovací místa"
+        }
+      },
+      {
+        "name": {
+          "it": "Alte prestazioni energetiche",
+          "en": "High energy performance",
+          "cs": "Vysoká energetická úspornost"
+        }
+      },
+      {
+        "name": {
+          "it": "Area wellness con utilizzo privato possibile",
+          "en": "Wellness area with possible private use",
+          "cs": "Wellness zóna s možností soukromého využití"
+        }
+      },
+      {
+        "name": {
+          "it": "Vasca idromassaggio",
+          "en": "Whirlpool tub",
+          "cs": "Vířivka"
+        }
+      },
+      {
+        "name": {
+          "it": "Sauna",
+          "en": "Sauna",
+          "cs": "Sauna"
+        }
+      },
+      {
+        "name": {
+          "it": "Doccia emozionale",
+          "en": "Emotional shower",
+          "cs": "Zážitková sprcha"
+        }
+      },
+      {
+        "name": {
+          "it": "Finiture personalizzabili",
+          "en": "Customizable finishes",
+          "cs": "Možnost přizpůsobení povrchových úprav"
+        }
+      },
+      {
+        "name": {
+          "it": "Senza agenzia",
+          "en": "No agency",
+          "cs": "Bez realitní kanceláře"
+        }
+      }
+    ],
+    "seoTitle": {
+      "it": "Appartamento wellness sullo Zoncolan senza agenzia",
+      "en": "Wellness Apartment on Mount Zoncolan with No Agency",
+      "cs": "Wellness apartmán na Zoncolanu bez realitní kanceláře"
+    },
+    "seoDescription": {
+      "it": "Nuovo appartamento a La Dâne Zoncolan Aparthotel & Spa: da 200.000€, terrazzo, 2 posti auto, wellness, sauna e idromassaggio. Senza agenzia.",
+      "en": "New apartment at La Dâne Zoncolan Aparthotel & Spa from €200,000, with terrace, two parking spaces, wellness, sauna and whirlpool. No agency.",
+      "cs": "Nový apartmán v La Dâne Zoncolan Aparthotel & Spa od 200 000 €, terasa, dvě parkovací místa, wellness, sauna a vířivka. Bez realitní kanceláře."
+    },
+    "keywords": [
+      "Zoncolan",
+      "La Dâne",
+      "Ravascletto",
+      "Monte Zoncolan",
+      "appartamento Zoncolan",
+      "apartmán Zoncolan",
+      "wellness apartment Italy",
+      "senza agenzia",
+      "no agency",
+      "bez realitní kanceláře",
+      "novità",
+      "esclusiva"
+    ],
+    "sourceUrl": "",
+    "publishAt": null,
+    "scheduledPublish": false,
+    "_createdAt": "2026-06-02T10:52:52.599Z",
+    "_updatedAt": "2026-06-02T10:52:52.599Z"
+  },
+  {
+    "_id": "local-import-friuli-venezia-giulia-villa-ravascletto-via-nazionale-1779716127795-cxert",
+    "_type": "listing",
+    "title": {
+      "en": "Detached Chalet in Ravascletto Close to the Ski Lifts",
+      "cs": "Samostatný horský chalet v Ravascletto blízko vleků",
+      "it": "Chalet indipendente a Ravascletto vicino agli impianti"
+    },
+    "slug": {
+      "_type": "slug",
+      "current": "friuli-venezia-giulia-villa-ravascletto-via-nazionale"
+    },
+    "propertyType": "villa",
+    "price": {
+      "amount": 300000,
+      "currency": "EUR"
+    },
+    "specifications": {
+      "rooms": 6,
+      "bedrooms": 5,
+      "bathrooms": 3,
+      "squareFootage": 243,
+      "parking": 1,
+      "yearBuilt": 1979
+    },
+    "location": {
+      "city": {
+        "name": {
+          "en": "Ravascletto",
+          "cs": "Ravascletto",
+          "it": "Ravascletto"
+        },
+        "slug": {
+          "current": "ravascletto"
+        },
+        "region": {
+          "name": {
+            "it": "Friuli-Venezia Giulia",
+            "en": "Friuli-Venezia Giulia",
+            "cs": "Furlansko-Julské Benátsko"
+          },
+          "country": {
+            "en": "Italy",
+            "cs": "Italie",
+            "it": "Italia"
+          }
+        }
+      },
+      "address": {
+        "en": "Via Nazionale 30, Ravascletto (UD), Friuli-Venezia Giulia",
+        "cs": "Via Nazionale 30, Ravascletto (UD), Furlansko-Julske Benatsko",
+        "it": "Via Nazionale 30, Ravascletto (UD), Friuli-Venezia Giulia"
+      },
+      "coordinates": {
+        "lat": 46.526344,
+        "lng": 12.9388231
+      }
+    },
+    "status": "available",
+    "featured": false,
+    "isNew": true,
+    "noAgency": false,
+    "exclusive": true,
+    "badges": [
+      "new",
+      "exclusive"
+    ],
+    "description": {
+      "en": "In Ravascletto, on Via Nazionale 30, this detached chalet offers about 243 commercial square metres in a convenient position a few minutes from the ski lifts and main services. The house is easily accessible from the main road while still keeping direct contact with the surrounding natural setting.\n\nThe property is arranged over three floors with generous interiors. The ground floor includes an airy living area with wood finishes, exposed beams and a fireplace, creating a warm mountain atmosphere. Upstairs there are three bedrooms, a bathroom and a terrace opening toward the surrounding landscape. The attic level adds two further rooms, useful for hosting family and friends or for flexible extra space.\n\nThe property also includes service areas, a large garage and a beautiful covered porch overlooking the well-kept garden. A strong option for buyers looking for an independent home in Carnia, close to mountain nature and ski facilities.",
+      "cs": "V obci Ravascletto, na adrese Via Nazionale 30, nabizime samostatny horsky chalet o priblizne 243 m2 komercni plochy. Nemovitost lezi v pohodlne poloze jen nekolik minut od lyzarskych vleku a hlavnich sluzeb. Dum je dobre pristupny z hlavni silnice, zaroven si ale zachovava primy kontakt s okolni prirodou.\n\nDispozice je rozlozena do tri podlazi a nabizi velkoryse prostory. V prizemi se nachazi vzdusna obytna cast s drevenymi prvky, priznanami tramy a krbem, ktera vytvari prijemnou horskou atmosferu. V hornim patre jsou tri loznice, koupelna a terasa s vyhledem do okolni krajiny. Podkrovi pridava dalsi dva pokoje, vyuzitelne pro rodinu, hosty nebo jako flexibilni prostor.\n\nSoucasti nemovitosti jsou take servisni prostory, prostorna garaz a pekny kryty portik smerem do udrzovane zahrady. Zajimava volba pro kupujici, kteri hledaji samostatny dum v oblasti Carnia, blizko hor a lyzarske infrastruktury.",
+      "it": "A Ravascletto, in Via Nazionale 30, proponiamo un tipico chalet indipendente di circa 243 m2 commerciali, in posizione comoda a pochi minuti dagli impianti di risalita e dai principali servizi. La casa e facilmente accessibile dalla strada principale, ma mantiene un contatto diretto con il contesto naturale circostante.\n\nGli spazi sono ampi e distribuiti su tre piani. Al piano terra si trova una zona giorno ariosa con finiture in legno, travi a vista e caminetto, pensata per creare un ambiente caldo e accogliente. Al piano superiore sono presenti tre camere da letto, un bagno e un terrazzo aperto verso il paesaggio. Il piano mansardato offre altre due stanze, utili per ospitare familiari e amici o per ricavare spazi flessibili.\n\nCompletano la proprieta ulteriori ambienti di servizio, un garage di generose dimensioni e uno splendido porticato affacciato sul giardino curato. Una soluzione interessante per chi cerca una casa indipendente in Carnia, vicino alla montagna e agli impianti sciistici."
+    },
+    "images": [
+      "https://img4.idealista.it/blur/WEB_DETAIL/0/id.pro.it.image.master/6d/7d/43/733579310.jpg",
+      "https://img4.idealista.it/blur/WEB_DETAIL/0/id.pro.it.image.master/c7/bc/e1/733579328.jpg",
+      "https://img4.idealista.it/blur/WEB_DETAIL/0/id.pro.it.image.master/4b/c4/fa/733579329.jpg",
+      "https://img4.idealista.it/blur/WEB_DETAIL/0/id.pro.it.image.master/f2/31/67/733579330.jpg",
+      "https://img4.idealista.it/blur/WEB_DETAIL/0/id.pro.it.image.master/47/de/96/733579311.jpg",
+      "https://img4.idealista.it/blur/WEB_DETAIL/0/id.pro.it.image.master/1b/e9/f6/733579331.jpg",
+      "https://img4.idealista.it/blur/WEB_DETAIL/0/id.pro.it.image.master/c2/30/f3/733579332.jpg",
+      "https://img4.idealista.it/blur/WEB_DETAIL/0/id.pro.it.image.master/5f/1a/13/733579333.jpg",
+      "https://img4.idealista.it/blur/WEB_DETAIL/0/id.pro.it.image.master/9b/ec/fb/733579334.jpg",
+      "https://img4.idealista.it/blur/WEB_DETAIL/0/id.pro.it.image.master/1c/3e/f6/733579335.jpg",
+      "https://img4.idealista.it/blur/WEB_DETAIL/0/id.pro.it.image.master/4f/4a/a4/733579336.jpg",
+      "https://img4.idealista.it/blur/WEB_DETAIL/0/id.pro.it.image.master/2e/b5/49/733579337.jpg",
+      "https://img4.idealista.it/blur/WEB_DETAIL/0/id.pro.it.image.master/6a/8e/e7/733579338.jpg",
+      "https://img4.idealista.it/blur/WEB_DETAIL/0/id.pro.it.image.master/15/c1/9e/733579339.jpg",
+      "https://img4.idealista.it/blur/WEB_DETAIL/0/id.pro.it.image.master/7c/ae/df/733579340.jpg",
+      "https://img4.idealista.it/blur/WEB_DETAIL/0/id.pro.it.image.master/e9/18/ae/733579341.jpg",
+      "https://img4.idealista.it/blur/WEB_DETAIL/0/id.pro.it.image.master/12/b4/44/733579342.jpg",
+      "https://img4.idealista.it/blur/WEB_DETAIL/0/id.pro.it.image.master/11/f0/4b/733579343.jpg",
+      "https://img4.idealista.it/blur/WEB_DETAIL/0/id.pro.it.image.master/ac/80/39/733579344.jpg",
+      "https://img4.idealista.it/blur/WEB_DETAIL/0/id.pro.it.image.master/04/e8/99/733579345.jpg"
+    ],
+    "mainImage": 0,
+    "amenities": [
+      {
+        "name": {
+          "it": "Chalet indipendente in posizione comoda e accessibile",
+          "en": "Detached chalet in a convenient and accessible position",
+          "cs": "Samostatny chalet v pohodlne a dobre pristupne poloze"
+        }
+      },
+      {
+        "name": {
+          "it": "A pochi minuti dagli impianti di risalita",
+          "en": "A few minutes from the ski lifts",
+          "cs": "Jen nekolik minut od lyzarskych vleku"
+        }
+      },
+      {
+        "name": {
+          "it": "Ampia zona giorno con caminetto e finiture in legno",
+          "en": "Large living area with fireplace and wood finishes",
+          "cs": "Prostorna obytna zona s krbem a drevenymi prvky"
+        }
+      },
+      {
+        "name": {
+          "it": "Tre camere al piano superiore piu due stanze mansardate",
+          "en": "Three bedrooms upstairs plus two attic rooms",
+          "cs": "Tri pokoje v patre a dalsi dva pokoje v podkrovi"
+        }
+      },
+      {
+        "name": {
+          "it": "Terrazzo con vista sul contesto montano",
+          "en": "Terrace with mountain setting views",
+          "cs": "Terasa s vyhledem do horskeho prostredi"
+        }
+      },
+      {
+        "name": {
+          "it": "Porticato affacciato sul giardino curato",
+          "en": "Covered porch overlooking the well-kept garden",
+          "cs": "Kryta veranda orientovana do udrzovane zahrady"
+        }
+      },
+      {
+        "name": {
+          "it": "Garage di generose dimensioni",
+          "en": "Generously sized garage",
+          "cs": "Prostorna garaz"
+        }
+      },
+      {
+        "name": {
+          "it": "Riscaldamento autonomo",
+          "en": "Independent heating",
+          "cs": "Samostatne vytapeni"
+        }
+      }
+    ],
+    "seoTitle": {
+      "en": "Detached Chalet for Sale in Ravascletto",
+      "cs": "Samostatny chalet na prodej v Ravascletto",
+      "it": "Chalet indipendente in vendita a Ravascletto"
+    },
+    "seoDescription": {
+      "en": "Detached chalet in Ravascletto: 243 sqm, 6 rooms, 3 bathrooms, terrace, porch, garden, garage and convenient location near ski lifts.",
+      "cs": "Samostatny chalet v Ravascletto: 243 m2, 6 mistnosti, 3 koupelny, terasa, portik, zahrada, garaz a poloha blizko lyzarskych vleku.",
+      "it": "Villa chalet a Ravascletto: 243 m2, 6 locali, 3 bagni, terrazzo, porticato, giardino, garage e posizione comoda agli impianti di risalita."
+    },
+    "keywords": [
+      "ravascletto",
+      "via nazionale",
+      "chalet",
+      "villa",
+      "carnia",
+      "impianti di risalita",
+      "friuli venezia giulia",
+      "casa montagna"
+    ],
+    "sourceUrl": "https://www.idealista.it/immobile/33878473/",
+    "_createdAt": "2026-05-25T13:35:27.778Z",
+    "_updatedAt": "2026-05-25T13:35:27.778Z"
+  },
+  {
     "_id": "local-import-friuli-venezia-giulia-duplex-camporosso-tarvisio-casa-ivana-1779192847787-8nub8",
     "_type": "listing",
     "title": {
@@ -60,9 +2549,11 @@
     "featured": false,
     "isNew": true,
     "noAgency": true,
+    "exclusive": true,
     "badges": [
       "new",
-      "no-agency"
+      "no-agency",
+      "exclusive"
     ],
     "videoUrl": "/uploads/properties/friuli-venezia-giulia-duplex-camporosso-tarvisio-casa-ivana/01-casa-ivana-video-tour.mp4",
     "description": {

@@ -1,27 +1,27 @@
 export const metadata = {
-  title: 'Buy Property in Italy by Region: Prices, Cities, Strategy | Domy v Itálii',
+  title: 'Koupě nemovitostí v Itálii podle regionu: ceny, města a strategie | Domy v Itálii',
   description:
-    'Compare Italian regions before buying: realistic price bands, top cities, legal checks, taxes, and buyer strategy for Tuscany, Lombardy, Veneto, Sicily, and more.',
+    'Porovnejte italské regiony před koupí: reálné cenové hladiny, hlavní města, právní kontroly, daně a strategie pro české kupující.',
   keywords: [
-    'buy property in Italy',
-    'Italy regions real estate',
-    'Tuscany property guide',
-    'Lombardy real estate',
-    'Sicily property prices',
-    'Italian property legal checks',
-    'foreign buyers Italy'
+    'koupě nemovitostí v Itálii',
+    'italské regiony nemovitosti',
+    'Toskánsko nemovitosti',
+    'Lombardie nemovitosti',
+    'Sicílie ceny nemovitostí',
+    'právní kontrola nemovitosti Itálie',
+    'čeští kupující Itálie'
   ],
   openGraph: {
-    title: 'Buy Property in Italy by Region | Domy v Itálii',
+    title: 'Koupě nemovitostí v Itálii podle regionu | Domy v Itálii',
     description:
-      'Regional property guides for Italy: prices, cities, legal due diligence, and practical strategy for foreign buyers.',
+      'Regionální průvodce nemovitostmi v Itálii: ceny, města, právní due diligence a praktická strategie pro české kupující.',
     type: 'website'
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Buy Property in Italy by Region | Domy v Itálii',
+    title: 'Koupě nemovitostí v Itálii podle regionu | Domy v Itálii',
     description:
-      'Regional property guides for Italy: prices, cities, legal due diligence, and practical strategy for foreign buyers.'
+      'Regionální průvodce nemovitostmi v Itálii: ceny, města, právní due diligence a praktická strategie pro české kupující.'
   }
 }
 

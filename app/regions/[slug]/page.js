@@ -1071,7 +1071,7 @@ function createPlaceholderRegion(slug = '') {
 
 export default function RegionDetailPage() {
   const params = useParams()
-  const [language, setLanguage] = useState('en')
+  const [language, setLanguage] = useState('cs')
   const rawSlug = Array.isArray(params?.slug) ? params.slug[0] : (params?.slug || '')
   const canonicalSlug = BUYER_GUIDANCE_SLUG_ALIASES[rawSlug] || rawSlug
   const bookingLink = REGION_BOOKING_LINKS[canonicalSlug] || REGION_BOOKING_LINKS[rawSlug] || DEFAULT_BOOKING_LINK

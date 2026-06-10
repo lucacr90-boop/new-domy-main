@@ -19,7 +19,7 @@ export default function AuthModal({
   title = '',
   message = '',
   defaultTab = 'login',
-  language = 'en'
+  language = 'cs'
 }) {
   const [isLoading, setIsLoading] = useState(false)
   const [showPassword, setShowPassword] = useState(false)

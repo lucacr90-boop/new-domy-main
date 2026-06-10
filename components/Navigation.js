@@ -1,19 +1,11 @@
 'use client'
 
-import { useState, useEffect, useRef } from 'react'
+import { useState, useEffect, useRef, useCallback } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { usePathname } from 'next/navigation'
 import { Button } from '@/components/ui/button'
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select'
-import { 
-  DropdownMenu, 
-  DropdownMenuContent, 
-  DropdownMenuItem, 
-  DropdownMenuLabel, 
-  DropdownMenuSeparator, 
-  DropdownMenuTrigger 
-} from '@/components/ui/dropdown-menu'
 import { Menu, X, User, XCircle, Crown, LayoutDashboard, LogOut, Settings } from 'lucide-react'
 import AuthModal from './AuthModal'
 import PremiumPdfComingSoonTrigger from '@/components/PremiumPdfComingSoonTrigger'
@@ -21,7 +13,7 @@ import { PREMIUM_PDFS_ENABLED } from '@/lib/featureFlags'
 import { supabase } from '@/lib/supabase'
 import { readLanguageFromBrowser, persistLanguage, DEFAULT_LANGUAGE, getInitialLanguage } from '@/lib/userPreferences'
 
-export default function Navigation() {
+export default function Navigation({ hideAuth = false }) {
   const pathname = usePathname()
   const [user, setUser] = useState(null)
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -30,13 +22,33 @@ export default function Navigation() {
   const [language, setLanguage] = useState(getInitialLanguage)
   const [isPopupBarVisible, setIsPopupBarVisible] = useState(true)
   const [isAdmin, setIsAdmin] = useState(false)
+  const [isUserDropdownOpen, setIsUserDropdownOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
   const navRef = useRef(null)
+  const userDropdownCloseTimerRef = useRef(null)
 
   const isActive = (path) => {
     if (path === '/') return pathname === '/'
     return pathname?.startsWith(path)
   }
+
+  const loadAdminStatus = useCallback(async (currentUser) => {
+    if (!currentUser) {
+      setIsAdmin(false)
+      return
+    }
+
+    try {
+      const response = await fetch('/api/admin/me', {
+        cache: 'no-store',
+        credentials: 'same-origin'
+      })
+      const payload = await response.json().catch(() => ({}))
+      setIsAdmin(response.ok && payload.admin === true)
+    } catch {
+      setIsAdmin(false)
+    }
+  }, [])
 
   useEffect(() => {
     const savedLanguage = readLanguageFromBrowser()
@@ -69,42 +81,41 @@ export default function Navigation() {
     const checkUser = async () => {
       const { data: { user } } = await supabase.auth.getUser()
       setUser(user)
-      
-      // Check if user is admin
-      if (user) {
-        const { data: profile } = await supabase
-          .from('profiles')
-          .select('role')
-          .eq('id', user.id)
-          .single()
-        
-        setIsAdmin(profile?.role === 'admin')
-      } else {
-        setIsAdmin(false)
-      }
+      await loadAdminStatus(user)
     }
     checkUser()
 
     // Listen for auth changes
     const { data: { subscription } } = supabase.auth.onAuthStateChange(async (event, session) => {
       setUser(session?.user || null)
-      
-      // Check admin status on auth change
-      if (session?.user) {
-        const { data: profile } = await supabase
-          .from('profiles')
-          .select('role')
-          .eq('id', session.user.id)
-          .single()
-        
-        setIsAdmin(profile?.role === 'admin')
-      } else {
-        setIsAdmin(false)
-      }
+      await loadAdminStatus(session?.user || null)
     })
 
     return () => subscription.unsubscribe()
+  }, [loadAdminStatus])
+
+  useEffect(() => {
+    return () => {
+      if (userDropdownCloseTimerRef.current) {
+        window.clearTimeout(userDropdownCloseTimerRef.current)
+      }
+    }
   }, [])
+
+  const openUserDropdown = () => {
+    if (userDropdownCloseTimerRef.current) {
+      window.clearTimeout(userDropdownCloseTimerRef.current)
+      userDropdownCloseTimerRef.current = null
+    }
+    setIsUserDropdownOpen(true)
+  }
+
+  const scheduleCloseUserDropdown = () => {
+    userDropdownCloseTimerRef.current = window.setTimeout(() => {
+      setIsUserDropdownOpen(false)
+      userDropdownCloseTimerRef.current = null
+    }, 150)
+  }
 
   const handleLogout = async () => {
     if (!supabase) return
@@ -114,8 +125,9 @@ export default function Navigation() {
     }
   }
 
-  const handleAuthSuccess = (user) => {
+  const handleAuthSuccess = async (user) => {
     setUser(user)
+    await loadAdminStatus(user)
     setIsAuthModalOpen(false)
   }
 
@@ -131,18 +143,22 @@ export default function Navigation() {
     setIsPopupBarVisible(false)
     localStorage.setItem('premium-club-popup-dismissed', 'true')
   }
-
   const navLabels = {
-    home: language === 'cs' ? 'Domů' : language === 'it' ? 'Casa' : 'Home',
-    properties: language === 'cs' ? 'Nemovitosti' : language === 'it' ? 'Proprietà' : 'Properties',
+    home: language === 'cs' ? 'Dom\u016f' : language === 'it' ? 'Casa' : 'Home',
+    properties: language === 'cs' ? 'Nemovitosti' : language === 'it' ? 'Propriet\u00e0' : 'Properties',
     regions: language === 'cs' ? 'Regiony' : language === 'it' ? 'Regioni' : 'Regions',
-    about: language === 'cs' ? 'O nás' : language === 'it' ? 'Chi siamo' : 'About',
+    about: language === 'cs' ? 'O n\u00e1s' : language === 'it' ? 'Chi siamo' : 'About',
     reference: language === 'cs' ? 'Reference' : language === 'it' ? 'Referenze' : 'References',
     contact: language === 'cs' ? 'Kontakt' : language === 'it' ? 'Contatto' : 'Contact',
-    dashboard: language === 'cs' ? 'Nástěnka' : language === 'it' ? 'Cruscotto' : 'Dashboard',
+    dashboard: language === 'cs' ? 'N\u00e1st\u011bnka' : language === 'it' ? 'Cruscotto' : 'Dashboard',
     admin: language === 'cs' ? 'Admin' : language === 'it' ? 'Amministrazione' : 'Admin'
   }
 
+  const mobileLanguageOptions = [
+    { code: 'cs', flag: '\u{1F1E8}\u{1F1FF}', label: '\u010ce\u0161tina' },
+    { code: 'it', flag: '\u{1F1EE}\u{1F1F9}', label: 'Italiano' },
+    { code: 'en', flag: '\u{1F1EC}\u{1F1E7}', label: 'English' }
+  ]
   return (
     <>
     <nav 
@@ -164,7 +180,7 @@ export default function Navigation() {
             <Link href="/" data-testid="nav-brand-link" className="relative overflow-visible">
               <Image
                 src="/logo domy.svg"
-                alt="Domy v Itálii"
+                alt="Domy v It\u00e1lii"
                 width={120}
                 height={115}
                 priority
@@ -176,10 +192,10 @@ export default function Navigation() {
             <div className="hidden lg:flex items-center space-x-0.5 xl:space-x-1" data-testid="nav-desktop-links">
               {[
                 { href: '/', label: navLabels.home, testId: 'nav-home-link' },
-                { href: '/process', label: language === 'cs' ? 'Náš proces' : language === 'it' ? 'Il nostro processo' : 'Our Process', testId: 'nav-process-link' },
+                { href: '/process', label: language === 'cs' ? 'N\u00e1\u0161 proces' : language === 'it' ? 'Il nostro processo' : 'Our Process', testId: 'nav-process-link' },
                 { href: '/properties', label: navLabels.properties, testId: 'nav-properties-link' },
                 { href: '/regions', label: navLabels.regions, testId: 'nav-regions-link' },
-                { href: '/blog', label: language === 'cs' ? 'Články' : language === 'it' ? 'Articoli' : 'Articles', testId: 'nav-blog-link' },
+                { href: '/blog', label: language === 'cs' ? '\u010cl\u00e1nky' : language === 'it' ? 'Articoli' : 'Articles', testId: 'nav-blog-link' },
                 { href: '/about', label: navLabels.about, testId: 'nav-about-link' },
                 { href: '/reference', label: navLabels.reference, testId: 'nav-reference-link' },
                 { href: '/contact', label: navLabels.contact, testId: 'nav-contact-link' },
@@ -206,7 +222,7 @@ export default function Navigation() {
           <div className="flex items-center gap-1 sm:gap-2 lg:gap-3" data-testid="nav-user-controls">
             {/* Language Selector */}
             <div className="hidden sm:flex items-center bg-white/10 backdrop-blur-md rounded-full px-1 py-1 shadow-sm border border-white/15 gap-0.5">
-              {['en', 'cs', 'it'].map((lang) => (
+              {['cs', 'en', 'it'].map((lang) => (
                 <button
                   key={lang}
                   onClick={() => handleLanguageChange(lang)}
@@ -223,48 +239,72 @@ export default function Navigation() {
             </div>
 
             {/* User Authentication */}
-            {user ? (
-              <DropdownMenu>
-                <DropdownMenuTrigger asChild>
-                  <Button variant="ghost" className="flex items-center gap-1 sm:gap-2 bg-transparent hover:bg-white/10 text-gray-200 hover:text-white rounded-full px-2 sm:px-3 py-1.5 sm:py-2 transition-all">
-                    <span className="h-7 w-7 sm:h-8 sm:w-8 border border-white/20 rounded-full bg-white/10 text-white text-sm inline-flex items-center justify-center">
-                      {(user.user_metadata?.name || user.email || 'U').charAt(0).toUpperCase()}
-                    </span>
-                    <span className="text-sm font-medium hidden lg:inline-block max-w-[100px] truncate">
-                      {user.user_metadata?.name || user.email}
-                    </span>
-                  </Button>
-                </DropdownMenuTrigger>
-                <DropdownMenuContent align="end" className="w-56 bg-[#0e152e] border-white/20 text-gray-200">
-                  <DropdownMenuLabel className="font-normal">
-                    <div className="flex flex-col space-y-1">
+            {!hideAuth && user ? (
+              <div
+                className="relative"
+                onMouseEnter={openUserDropdown}
+                onMouseLeave={scheduleCloseUserDropdown}
+              >
+                <Button
+                  type="button"
+                  variant="ghost"
+                  aria-haspopup="menu"
+                  aria-expanded={isUserDropdownOpen}
+                  onClick={() => setIsUserDropdownOpen((open) => !open)}
+                  className="flex items-center gap-1 sm:gap-2 bg-transparent hover:bg-white/10 text-gray-200 hover:text-white rounded-full px-2 sm:px-3 py-1.5 sm:py-2 transition-all"
+                >
+                  <span className="h-7 w-7 sm:h-8 sm:w-8 border border-white/20 rounded-full bg-white/10 text-white text-sm inline-flex items-center justify-center">
+                    {(user.user_metadata?.name || user.email || 'U').charAt(0).toUpperCase()}
+                  </span>
+                  <span className="text-sm font-medium hidden lg:inline-block max-w-[100px] truncate">
+                    {user.user_metadata?.name || user.email}
+                  </span>
+                </Button>
+
+                {isUserDropdownOpen && (
+                  <div
+                    role="menu"
+                    className="absolute right-0 top-full mt-2 w-56 overflow-hidden rounded-md border border-white/20 bg-[#0e152e] py-1 text-gray-200 shadow-xl"
+                  >
+                    <div className="px-3 py-2">
                       <p className="text-sm font-medium leading-none text-white">{user.user_metadata?.name || 'User'}</p>
-                      <p className="text-xs leading-none text-gray-400">{user.email}</p>
+                      <p className="mt-1 text-xs leading-none text-gray-400">{user.email}</p>
                     </div>
-                  </DropdownMenuLabel>
-                  <DropdownMenuSeparator className="bg-white/10" />
-                  <DropdownMenuItem className="focus:bg-white/10 focus:text-white cursor-pointer" asChild>
-                    <Link href="/dashboard" className="flex w-full items-center">
+                    <div className="my-1 h-px bg-white/10" />
+                    <Link
+                      href="/dashboard"
+                      role="menuitem"
+                      onClick={() => setIsUserDropdownOpen(false)}
+                      className="flex w-full items-center px-3 py-2 text-sm hover:bg-white/10 hover:text-white"
+                    >
                       <LayoutDashboard className="mr-2 h-4 w-4" />
                       <span>{navLabels.dashboard}</span>
                     </Link>
-                  </DropdownMenuItem>
-                  {isAdmin && (
-                    <DropdownMenuItem className="focus:bg-white/10 focus:text-white cursor-pointer" asChild>
-                      <Link href="/admin" className="flex w-full items-center">
+                    {isAdmin && (
+                      <Link
+                        href="/admin"
+                        role="menuitem"
+                        onClick={() => setIsUserDropdownOpen(false)}
+                        className="flex w-full items-center px-3 py-2 text-sm hover:bg-white/10 hover:text-white"
+                      >
                         <Settings className="mr-2 h-4 w-4" />
                         <span>{navLabels.admin}</span>
                       </Link>
-                    </DropdownMenuItem>
-                  )}
-                  <DropdownMenuSeparator className="bg-white/10" />
-                  <DropdownMenuItem onClick={handleLogout} className="focus:bg-white/10 focus:text-white cursor-pointer text-red-400 focus:text-red-400">
-                    <LogOut className="mr-2 h-4 w-4" />
-                    <span>Logout</span>
-                  </DropdownMenuItem>
-                </DropdownMenuContent>
-              </DropdownMenu>
-            ) : (
+                    )}
+                    <div className="my-1 h-px bg-white/10" />
+                    <button
+                      type="button"
+                      role="menuitem"
+                      onClick={handleLogout}
+                      className="flex w-full items-center px-3 py-2 text-left text-sm text-red-400 hover:bg-white/10 hover:text-red-400"
+                    >
+                      <LogOut className="mr-2 h-4 w-4" />
+                      <span>Logout</span>
+                    </button>
+                  </div>
+                )}
+              </div>
+            ) : !hideAuth ? (
               <div className="hidden sm:flex items-center gap-2">
                 <button
                   onClick={() => { setAuthModalDefaultTab('login'); setIsAuthModalOpen(true) }}
@@ -272,7 +312,7 @@ export default function Navigation() {
                   data-testid="login-button"
                 >
                   <User className="h-3.5 w-3.5" />
-                  <span>{language === 'cs' ? 'Přihlásit' : (language === 'it' ? 'Accedi' : 'Login')}</span>
+                  <span>{language === 'cs' ? 'P\u0159ihl\u00e1sit' : (language === 'it' ? 'Accedi' : 'Login')}</span>
                 </button>
                 <button
                   onClick={() => { setAuthModalDefaultTab('signup'); setIsAuthModalOpen(true) }}
@@ -282,38 +322,27 @@ export default function Navigation() {
                   <span>{language === 'cs' ? 'Registrovat' : (language === 'it' ? 'Registrati' : 'Register')}</span>
                 </button>
               </div>
-            )}
-            
-            {/* Mobile dashboard shortcut — visible when logged in, below lg */}
-            {user && (
-              <Link
-                href="/dashboard"
-                className="lg:hidden flex items-center gap-1.5 bg-white/10 rounded-full px-3 py-1.5 text-xs font-medium text-white/90 hover:text-white hover:bg-white/20 border border-white/15 transition-all duration-200"
-                data-testid="mobile-dashboard-button"
-              >
-                <LayoutDashboard className="h-3.5 w-3.5" />
-                <span>{navLabels.dashboard}</span>
-              </Link>
-            )}
+            ) : null}
 
             {/* Mobile language selector */}
             <div className="sm:hidden flex items-center bg-white/10 backdrop-blur-md rounded-full px-1 py-1 shadow-sm border border-white/15 gap-0.5">
-              {['en', 'cs', 'it'].map((lang) => (
+              {mobileLanguageOptions.map(({ code, flag, label }) => (
                 <button
-                  key={lang}
-                  onClick={() => handleLanguageChange(lang)}
-                  className={`px-2 py-1 rounded-full text-[11px] font-medium leading-none transition-all duration-200 ${
-                    language === lang
+                  key={code}
+                  onClick={() => handleLanguageChange(code)}
+                  className={`h-8 w-8 rounded-full text-base leading-none transition-all duration-200 ${
+                    language === code
                       ? 'bg-white/20 text-white shadow-sm'
-                      : 'text-white/50 hover:text-white/80 hover:bg-white/5'
+                      : 'text-white/60 hover:text-white hover:bg-white/5'
                   }`}
-                  data-testid={`mobile-language-option-${lang}`}
+                  aria-label={label}
+                  title={label}
+                  data-testid={`mobile-language-option-${code}`}
                 >
-                  {lang.toUpperCase()}
+                  <span aria-hidden="true">{flag}</span>
                 </button>
               ))}
             </div>
-
             {/* Mobile menu button */}
             <button
               className="lg:hidden p-2 rounded-lg cursor-pointer text-gray-200 hover:text-white hover:bg-white/10 transition-colors duration-200"
@@ -334,51 +363,47 @@ export default function Navigation() {
         >
           <div className="flex flex-col space-y-1 pt-4 pb-6 mt-3 border-t border-white/10 overflow-y-auto max-h-[calc(100dvh-6rem)]" data-testid="mobile-menu-links">
             {[
+              ...(user ? [{ href: '/dashboard', label: navLabels.dashboard, testId: 'mobile-dashboard-link', premium: true }] : []),
               { href: '/', label: navLabels.home, testId: 'mobile-home-link' },
-              { href: '/process', label: language === 'cs' ? 'Náš proces' : language === 'it' ? 'Il nostro processo' : 'Our Process', testId: 'mobile-process-link' },
+              { href: '/process', label: language === 'cs' ? 'N\u00e1\u0161 proces' : language === 'it' ? 'Il nostro processo' : 'Our Process', testId: 'mobile-process-link' },
               { href: '/properties', label: navLabels.properties, testId: 'mobile-properties-link' },
               { href: '/regions', label: navLabels.regions, testId: 'mobile-regions-link' },
-              { href: '/blog', label: language === 'cs' ? 'Články' : language === 'it' ? 'Articoli' : 'Articles', testId: 'mobile-blog-link' },
+              { href: '/blog', label: language === 'cs' ? '\u010cl\u00e1nky' : language === 'it' ? 'Articoli' : 'Articles', testId: 'mobile-blog-link' },
               { href: '/faq', label: 'FAQ', testId: 'mobile-faq-link' },
               { href: '/about', label: navLabels.about, testId: 'mobile-about-link' },
               { href: '/reference', label: navLabels.reference, testId: 'mobile-reference-link' },
               { href: '/contact', label: navLabels.contact, testId: 'mobile-contact-link' },
-            ].map(({ href, label, testId }) => (
+            ].map(({ href, label, testId, premium }) => (
               <Link 
                 key={href}
                 href={href}
                 className={`px-3 py-2.5 rounded-lg text-base transition-all duration-200 ${
-                  isActive(href) 
-                    ? 'text-white bg-white/10 font-medium' 
-                    : 'text-gray-300 hover:text-white hover:bg-white/5'
+                  premium
+                    ? 'border border-amber-400/45 bg-amber-500/15 text-amber-100 font-semibold shadow-[0_0_18px_rgba(245,158,11,0.18)] hover:bg-amber-500/25'
+                    : isActive(href)
+                      ? 'text-white bg-white/10 font-medium'
+                      : 'text-gray-300 hover:text-white hover:bg-white/5'
                 }`}
                 onClick={() => setIsMenuOpen(false)}
                 data-testid={testId}
               >
-                {label}
+                <span className={premium ? 'flex items-center gap-2' : ''}>
+                  {premium && <LayoutDashboard className="h-4 w-4" />}
+                  {label}
+                </span>
               </Link>
             ))}
-            {user && (
-              <Link 
-                href="/dashboard" 
-                className={`px-3 py-2.5 rounded-lg text-base transition-colors ${isActive('/dashboard') ? 'text-white bg-white/10 font-medium' : 'text-gray-300 hover:text-white hover:bg-white/5'}`}
-                onClick={() => setIsMenuOpen(false)}
-                data-testid="mobile-dashboard-link"
-              >
-                {navLabels.dashboard}
-              </Link>
-            )}
-            {user && isAdmin && (
+            {!hideAuth && user && isAdmin && (
               <Link 
                 href="/admin" 
-                className="px-3 py-2.5 rounded-lg text-base text-gray-300 hover:text-white hover:bg-white/5 transition-colors"
+                className="flex items-center gap-2 px-3 py-2.5 rounded-lg text-base text-gray-300 hover:text-white hover:bg-white/5 transition-colors"
                 onClick={() => setIsMenuOpen(false)}
                 data-testid="mobile-admin-link"
               >
-                {navLabels.admin}
+                <span>{navLabels.admin}</span>
               </Link>
             )}
-            {!user && (
+            {!hideAuth && !user && (
               <button
                 onClick={() => {
                   setIsMenuOpen(false)
@@ -387,20 +412,22 @@ export default function Navigation() {
                 className="px-3 py-2.5 rounded-lg text-base leading-none cursor-pointer text-copper-300 hover:text-copper-200 hover:bg-white/5 transition-colors text-left font-medium"
                 data-testid="mobile-login-link"
               >
-                {language === 'cs' ? 'Přihlásit / Registrovat' : (language === 'it' ? 'Accedi / Registrati' : 'Login / Register')}
+                {language === 'cs' ? 'P\u0159ihl\u00e1sit / Registrovat' : (language === 'it' ? 'Accedi / Registrati' : 'Login / Register')}
               </button>
             )}
           </div>
         </div>
       </div>
       
-      <AuthModal 
-        isOpen={isAuthModalOpen}
-        onClose={() => setIsAuthModalOpen(false)}
-        onAuthSuccess={handleAuthSuccess}
-        defaultTab={authModalDefaultTab}
-        language={language}
-      />
+      {!hideAuth && (
+        <AuthModal
+          isOpen={isAuthModalOpen}
+          onClose={() => setIsAuthModalOpen(false)}
+          onAuthSuccess={handleAuthSuccess}
+          defaultTab={authModalDefaultTab}
+          language={language}
+        />
+      )}
       
       {/* Premium Club Popup Bar - inside nav so it flows directly below */}
       {PREMIUM_PDFS_ENABLED && isPopupBarVisible && (
@@ -418,7 +445,7 @@ export default function Navigation() {
               >
                 <Crown className="h-3 w-3 sm:h-3.5 sm:w-3.5 text-white/90 flex-shrink-0" />
                 <span className="text-white/90 font-normal text-xs">
-                  {language === 'cs' ? 'Klub pro klienty - Zaregistrujte se zdarma nyní' :
+                  {language === 'cs' ? 'Klub pro klienty - Zaregistrujte se zdarma nyn\u00ed' :
                    language === 'it' ? 'Klub pro klienty - Registrati gratuitamente ora' :
                    'Klub pro klienty - Register for Free Now'}
                 </span>

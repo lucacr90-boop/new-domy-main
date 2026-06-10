@@ -416,6 +416,23 @@ export async function POST(request, { params }) {
         return NextResponse.json({ error: error.message }, { status: 500 })
       }
 
+      try {
+        const { default: emailService } = await import('@/lib/emailService')
+
+        await emailService.sendInternalInquiryNotification({
+          userEmail: email,
+          userName: name,
+          userPhone: phone,
+          propertyTitle: propertyTitle || (listingId ? `Property ${listingId}` : 'General inquiry'),
+          listingId,
+          inquiryMessage: message,
+          inquiryType: type,
+          inquiryId: data?.id
+        })
+      } catch (emailError) {
+        console.error('Failed to send internal inquiry notification email:', emailError)
+      }
+
       // Send inquiry confirmation email if user has email notifications enabled
       if (user) {
         try {

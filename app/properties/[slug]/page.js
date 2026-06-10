@@ -41,16 +41,19 @@ const PROPERTY_TYPE_LABELS_CS = {
 }
 
 function formatPriceForSeo(price) {
+  if (price?.onRequest || price?.priceOnRequest) return 'Cena na vyžádání'
   if (!price?.amount) return null
   const currency = price.currency || 'EUR'
   try {
-    return new Intl.NumberFormat('cs-CZ', {
+    const formatted = new Intl.NumberFormat('cs-CZ', {
       style: 'currency',
       currency,
       maximumFractionDigits: 0
     }).format(price.amount)
+    return price?.prefix || price?.startingFrom || price?.from ? `Od ${formatted}` : formatted
   } catch {
-    return `${price.amount} ${currency}`
+    const formatted = `${price.amount} ${currency}`
+    return price?.prefix || price?.startingFrom || price?.from ? `Od ${formatted}` : formatted
   }
 }
 
@@ -156,7 +159,11 @@ export default async function PropertyDetailPage({ params }) {
     amenities: sanityProperty.amenities || [],
     developer: sanityProperty.developer,
     status: sanityProperty.status || 'available',
-    featured: sanityProperty.featured || false
+    featured: sanityProperty.featured || false,
+    isNew: Boolean(sanityProperty.isNew || sanityProperty.newListing),
+    noAgency: Boolean(sanityProperty.noAgency || sanityProperty.no_agency || sanityProperty.badges?.includes('no-agency')),
+    exclusive: Boolean(sanityProperty.exclusive || sanityProperty.isExclusive || sanityProperty.badges?.includes('exclusive')),
+    videoUrl: sanityProperty.videoUrl || sanityProperty.video_url || ''
   }
 
   return (

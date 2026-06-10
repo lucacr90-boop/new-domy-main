@@ -36,7 +36,7 @@ const inputClass = "bg-white border-gray-200 text-gray-900"
 export default function ContentPage() {
   const [searchQuery, setSearchQuery] = useState('')
   const [selectedVideoCategory, setSelectedVideoCategory] = useState('All')
-  const [language, setLanguage] = useState('en')
+  const [language, setLanguage] = useState('cs')
 
   const [content, setContent] = useState({ videos: [], guides: [], articles: [] })
   const [loading, setLoading] = useState(true)

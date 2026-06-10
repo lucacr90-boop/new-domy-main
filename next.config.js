@@ -1,13 +1,8 @@
 ﻿const nextConfig = {
   // Removed 'output: standalone' for Vercel deployment
   // Vercel handles builds automatically
-
-  // Tell the SWC compiler to read the "browserslist" field in package.json
-  // instead of its conservative built-in default. This drops polyfills for
-  // Array.at, Array.flat, Object.fromEntries, Object.hasOwn, etc. that are
-  // natively supported since 2021 in our minimum-target browsers.
-  experimental: {
-    browsersListForSwc: true,
+  outputFileTracingExcludes: {
+    '*': ['./data/import/**/*'],
   },
 
   images: {
@@ -62,5 +57,3 @@
   }
 };
 module.exports = nextConfig;
-
-

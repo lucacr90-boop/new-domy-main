@@ -1,4 +1,4 @@
-﻿'use client'
+'use client'
 
 import { useState, useEffect, useRef } from 'react'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
@@ -166,7 +166,7 @@ export default function IntakeForm() {
   const [saving, setSaving] = useState(false)
   const [message, setMessage] = useState({ type: '', text: '' })
   const [showExtendedForm, setShowExtendedForm] = useState(false)
-  const [language, setLanguage] = useState('en')
+  const [language, setLanguage] = useState('cs')
   const extendedFormRef = useRef(null)
 
   const handleToggleExtendedForm = () => {

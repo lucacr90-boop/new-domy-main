@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { Phone, Mail, MapPin, ArrowUpRight } from 'lucide-react'
 import ProtectedContentLink from '@/components/ProtectedContentLink'
 
-export default function Footer({ language = 'en' }) {
+export default function Footer({ language = 'cs' }) {
   const footerLabels = {
     brand: 'Domy v Itálii',
     brandDescription:

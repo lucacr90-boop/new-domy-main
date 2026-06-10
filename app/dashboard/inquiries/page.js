@@ -63,7 +63,7 @@ export default function InquiriesManagement() {
   const [statusFilter, setStatusFilter] = useState('all')
   const [selectedInquiry, setSelectedInquiry] = useState(null)
   const [user, setUser] = useState(null)
-  const [language, setLanguage] = useState('en')
+  const [language, setLanguage] = useState('cs')
 
   useEffect(() => {
     loadInquiries()

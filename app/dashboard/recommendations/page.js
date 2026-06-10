@@ -145,7 +145,7 @@ export default function PropertyRecommendations() {
   const [feedbackGiven, setFeedbackGiven] = useState(new Set())
   const [filterType, setFilterType] = useState('all')
   const [minMatchScore, setMinMatchScore] = useState(0)
-  const [language, setLanguage] = useState('en')
+  const [language, setLanguage] = useState('cs')
   const [currency, setCurrency] = useState('EUR')
 
   useEffect(() => {

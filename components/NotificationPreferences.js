@@ -9,7 +9,7 @@ import { Label } from "@/components/ui/label";
 import { toast } from "sonner";
 import { t } from '../lib/translations';
 
-export default function NotificationPreferences({ language = 'en' }) {
+export default function NotificationPreferences({ language = 'cs' }) {
   const [preferences, setPreferences] = useState({
     property_alerts: true,
     inquiry_responses: true,

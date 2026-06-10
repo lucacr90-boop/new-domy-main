@@ -432,7 +432,7 @@ function Box({ title, children, tone = 'default' }) {
 }
 
 export default function RealEstatePurchaseSystemItalyPage() {
-  const [language, setLanguage] = useState('en')
+  const [language, setLanguage] = useState('cs')
   const [isCtaLoading, setIsCtaLoading] = useState(false)
   const router = useRouter()
 

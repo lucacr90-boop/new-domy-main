@@ -37,7 +37,7 @@ const COPY = {
 }
 
 export default function InformationalDisclaimer({
-  language = 'en',
+  language = 'cs',
   variant = 'article',
   className = ''
 }) {

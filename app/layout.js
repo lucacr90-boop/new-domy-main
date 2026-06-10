@@ -98,6 +98,17 @@ export default async function RootLayout({ children }) {
           fetchPriority="high"
         />
         <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              try {
+                document.documentElement.lang = 'cs';
+                document.cookie = 'preferred-language=cs; path=/; max-age=31536000; SameSite=Lax';
+                window.localStorage && window.localStorage.setItem('preferred-language', 'cs');
+              } catch (error) {}
+            `
+          }}
+        />
+        <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
         />

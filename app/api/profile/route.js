@@ -1,6 +1,7 @@
 import { NextResponse } from 'next/server'
 import { createServerClient } from '@supabase/ssr'
 import { cookies } from 'next/headers'
+import { isAdminEmail } from '@/lib/adminAuth'
 
 export const dynamic = 'force-dynamic'
 export const runtime = 'nodejs'
@@ -57,9 +58,15 @@ function buildProfileFromUser(user) {
       user.user_metadata?.full_name ||
       user.email?.split('@')[0] ||
       'User',
-    role: String(user.email || '').trim().toLowerCase() === 'luca.croce@domyvitalii.cz'
-      ? 'admin'
-      : 'user'
+    role: isAdminEmail(user.email) ? 'admin' : 'user'
+  }
+}
+
+function withEffectiveRole(profile, user) {
+  if (!profile) return profile
+  return {
+    ...profile,
+    role: isAdminEmail(user?.email) ? 'admin' : profile.role
   }
 }
 
@@ -92,7 +99,7 @@ export async function POST() {
         NextResponse.json({
           success: true,
           message: 'Profile already exists',
-          profile: existingProfile
+          profile: withEffectiveRole(existingProfile, user)
         })
       )
     }
@@ -174,7 +181,7 @@ export async function GET() {
     return applyCookies(
       NextResponse.json({
         success: true,
-        profile
+        profile: withEffectiveRole(profile, user)
       })
     )
   } catch (error) {

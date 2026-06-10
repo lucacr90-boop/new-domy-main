@@ -23,6 +23,7 @@ import { t } from '@/lib/translations'
 export default function AdminShell({ children, user, profile }) {
   const [sidebarOpen, setSidebarOpen] = useState(false)
   const [language, setLanguage] = useState('cs')
+  const [hasNewInquiries, setHasNewInquiries] = useState(false)
 
   useEffect(() => {
     const savedLanguage = localStorage.getItem('language') || 'cs'
@@ -39,6 +40,51 @@ export default function AdminShell({ children, user, profile }) {
     return () => {
       window.removeEventListener('languageChange', handleLanguageChange)
       window.removeEventListener('storage', handleLanguageChange)
+    }
+  }, [])
+
+  useEffect(() => {
+    let cancelled = false
+
+    const loadNewInquiries = async () => {
+      try {
+        const response = await fetch('/api/inquiries', { cache: 'no-store' })
+        if (!response.ok) return
+
+        const inquiries = await response.json()
+        const propertyInquiries = Array.isArray(inquiries)
+          ? inquiries.filter((inquiry) => !inquiry?.type || inquiry.type === 'property')
+          : []
+
+        const latestInquiryDate = propertyInquiries.length > 0
+          ? propertyInquiries.reduce((latest, inquiry) => {
+              const createdAt = inquiry?.createdAt || inquiry?.created_at
+              if (!createdAt) return latest
+              return !latest || new Date(createdAt) > new Date(latest) ? createdAt : latest
+            }, null)
+          : null
+
+        const lastSeenDate = localStorage.getItem('admin-inquiries-last-seen-at')
+        const hasNew = latestInquiryDate && (!lastSeenDate || new Date(latestInquiryDate) > new Date(lastSeenDate))
+
+        if (!cancelled) {
+          setHasNewInquiries(Boolean(hasNew))
+        }
+      } catch (error) {
+        console.error('Failed to load new inquiries indicator:', error)
+      }
+    }
+
+    loadNewInquiries()
+    const intervalId = window.setInterval(loadNewInquiries, 60000)
+    window.addEventListener('focus', loadNewInquiries)
+    window.addEventListener('adminInquiriesSeen', loadNewInquiries)
+
+    return () => {
+      cancelled = true
+      window.clearInterval(intervalId)
+      window.removeEventListener('focus', loadNewInquiries)
+      window.removeEventListener('adminInquiriesSeen', loadNewInquiries)
     }
   }, [])
 
@@ -174,8 +220,17 @@ export default function AdminShell({ children, user, profile }) {
                   onClick={() => setSidebarOpen(false)}
                 >
                   <Icon className="h-5 w-5" />
-                  <div>
-                    <div className="font-medium">{t(item.titleKey, language)}</div>
+                  <div className="min-w-0">
+                    <div className="flex items-center gap-2 font-medium">
+                      <span>{t(item.titleKey, language)}</span>
+                      {item.href === '/admin/inquiries' && hasNewInquiries && (
+                        <span
+                          className="inline-flex h-2.5 w-2.5 rounded-full bg-red-500 ring-2 ring-white"
+                          aria-label="Nové žádosti o nemovitost"
+                          title="Nové žádosti o nemovitost"
+                        />
+                      )}
+                    </div>
                     <div className="text-xs text-gray-500">{t(item.descKey, language)}</div>
                   </div>
                 </Link>

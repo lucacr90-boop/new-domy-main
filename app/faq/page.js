@@ -111,7 +111,7 @@ const FAQ_ITEMS = [
 ]
 
 export default function FAQPage() {
-  const [language, setLanguage] = useState('en')
+  const [language, setLanguage] = useState('cs')
   const [openIndex, setOpenIndex] = useState(null)
 
   useEffect(() => {

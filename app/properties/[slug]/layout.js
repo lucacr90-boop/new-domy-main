@@ -20,7 +20,7 @@ export async function generateStaticParams() {
   }
 }
 
-function getLocalizedValue(value, language = 'en', fallback = '') {
+function getLocalizedValue(value, language = 'cs', fallback = '') {
   if (value && typeof value === 'object') {
     return value[language] || value.en || value.it || value.cs || fallback
   }

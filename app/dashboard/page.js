@@ -67,7 +67,7 @@ export default function DashboardOverview() {
   })
   const [user, setUser] = useState(null)
   const [upcomingWebinars, setUpcomingWebinars] = useState([])
-  const [language, setLanguage] = useState('en')
+  const [language, setLanguage] = useState('cs')
 
   useEffect(() => {
     loadDashboardData()

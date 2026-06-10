@@ -42,7 +42,7 @@ export default function FavoritesManagement() {
   const [viewMode, setViewMode] = useState('grid')
   const [selectedProperties, setSelectedProperties] = useState(new Set())
   const [user, setUser] = useState(null)
-  const [language, setLanguage] = useState('en')
+  const [language, setLanguage] = useState('cs')
   const [currency, setCurrency] = useState('EUR')
 
   useEffect(() => {

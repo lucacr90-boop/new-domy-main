@@ -80,6 +80,17 @@ export default function InquiryManagement() {
       }))
 
       setInquiries(inquiriesWithStatus)
+
+      const latestInquiryDate = inquiriesWithStatus.reduce((latest, inquiry) => {
+        const createdAt = inquiry?.createdAt || inquiry?.created_at
+        if (!createdAt) return latest
+        return !latest || new Date(createdAt) > new Date(latest) ? createdAt : latest
+      }, null)
+
+      if (latestInquiryDate) {
+        localStorage.setItem('admin-inquiries-last-seen-at', latestInquiryDate)
+        window.dispatchEvent(new CustomEvent('adminInquiriesSeen'))
+      }
     } catch (error) {
       console.error('Error loading inquiries:', error)
     } finally {

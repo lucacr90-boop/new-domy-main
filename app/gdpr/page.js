@@ -235,10 +235,10 @@ const CONTENT = {
 }
 
 export default function GdprPage() {
-  const [language, setLanguage] = useState('en')
+  const [language, setLanguage] = useState('cs')
 
   useEffect(() => {
-    const savedLanguage = localStorage.getItem('preferred-language') || 'en'
+    const savedLanguage = localStorage.getItem('preferred-language') || 'cs'
     setLanguage(savedLanguage)
     document.documentElement.lang = savedLanguage
 

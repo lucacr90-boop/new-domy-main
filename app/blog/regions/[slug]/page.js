@@ -103,12 +103,12 @@ const REGION_BLOG_DATA = {
 export default function RegionBlogPage() {
   const params = useParams()
   const slug = Array.isArray(params?.slug) ? params.slug[0] : params?.slug
-  const [language, setLanguage] = useState('en')
+  const [language, setLanguage] = useState('cs')
   const [isLiked, setIsLiked] = useState(false)
   const [blogData, setBlogData] = useState(null)
 
   useEffect(() => {
-    const savedLanguage = localStorage.getItem('preferred-language') || 'en'
+    const savedLanguage = localStorage.getItem('preferred-language') || 'cs'
     setLanguage(savedLanguage)
     
     if (slug && REGION_BLOG_DATA[slug]) {

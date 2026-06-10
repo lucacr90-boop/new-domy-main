@@ -1,0 +1,86 @@
+{
+  "slug": "campania-villa-torchiara-parco-elena",
+  "title_it": "Villa a Torchiara, Parco Elena",
+  "title_en": "Villa in Torchiara, Parco Elena",
+  "title_cs": "Vila v Torchiaře, Parco Elena",
+  "propertyType": "villa",
+  "propertyType_it": "villa",
+  "region_it": "Campania",
+  "city_it": "Torchiara",
+  "city_en": "Torchiara",
+  "city_cs": "Torchiara",
+  "address_it": "Parco Elena, Torchiara",
+  "address_en": "Parco Elena, Torchiara",
+  "address_cs": "Parco Elena, Torchiara",
+  "price": 175000,
+  "rooms": 3,
+  "bedrooms": 3,
+  "bathrooms": 2,
+  "square_meters": 144,
+  "features": [
+    {
+      "it": "villa in area residenziale da verificare con sopralluogo",
+      "en": "villa in a residential area to be checked on site",
+      "cs": "vila v rezidenční oblasti k ověření při prohlídce"
+    },
+    {
+      "it": "144 mq commerciali",
+      "en": "144 commercial sqm",
+      "cs": "144 m2 užitné plochy"
+    },
+    {
+      "it": "3 locali",
+      "en": "3 rooms",
+      "cs": "3 místností"
+    },
+    {
+      "it": "3 camere da letto",
+      "en": "3 bedrooms",
+      "cs": "3 ložnice"
+    },
+    {
+      "it": "2 bagni",
+      "en": "2 bathrooms",
+      "cs": "2 koupelny"
+    }
+  ],
+  "description_it": "A Torchiara, proponiamo villa con 144 mq, 3 locali, 3 camere e 2 bagni. La proprietà si trova in Parco Elena, Torchiara e ha un prezzo richiesto di 175.000 euro.\n\nIl punto da valutare è villa in area residenziale da verificare con sopralluogo. Dalla descrizione originale emerge inoltre: Ci sono case che non si raccontano solo con le stanze, ma con le sensazioni che riescono a trasmettere. Questa soluzione, situata a Torchiara all’interno di un parco, accoglie fin dal primo ingresso con il piacere dell’indipendenza e della tranquillità. L’ingresso autonomo e lo spazio esterno privato regalano subito l’idea di una casa da vivere senza fretta: un angolo tutto proprio dove fermarsi al mattino per un caffè, organizzare una cena d’estate o semplicemente godersi il silenzio dopo una giornata intensa. L’abitazione si sviluppa su due livelli e offre ambienti pensati per la vita quotidiana, ma anche per i momenti più belli da condividere. La zona giorno è ampia e accogliente, con il camino che diventa il cuore caldo della casa: il luogo dove ritrovarsi nelle sere d’inverno, dove parlare, rilassarsi, vivere la famiglia. La cucina a vista rende l’ambiente ancora più conviviale, aperto e naturale, perfetto per chi ama una casa vissuta, autentica, piena di presenza. La zona notte custodisce tre camere da letto e un secondo bagno, offrendo spazi comodi e riservati per ogni esigenza: la camera padronale, le stanze per i figli, per gli ospiti o per creare un piccolo spazio personale dove lavorare, leggere o ritrovare il proprio tempo. La posizione completa il fascino di questa proprietà: siamo a Torchiara, a circa 10 minuti dalle spiagge di Agropoli e a pochi minuti dai servizi della zona Madonna del Carmine. Una distanza breve, che permette di vivere la quiete del parco e, allo stesso tempo, raggiungere facilmente il mare, i servizi e la quotidianità. Una casa ideale per chi desidera indipendenza, spazio esterno, atmosfera e vicinanza al mare. Una soluzione pensata per chi non cerca solo un immobile, ma un luogo dove sentirsi davvero a casa.\n\nPrima di procedere è necessario verificare documenti, stato tecnico, spese e condizioni reali con sopralluogo.",
+  "description_en": "In Torchiara, this villa offers 144 sqm, 3 rooms, 3 bedrooms and 2 bathrooms. The property is located at Parco Elena, Torchiara and has an asking price of EUR 175,000.\n\nThe point to assess is villa in a residential area to be checked on site. The property should be reviewed according to the buyer's goals, with particular attention to documentation, technical condition and real costs.\n\nBefore any purchase decision, documents, technical checks and an on-site visit remain essential.",
+  "description_cs": "V lokalitě Torchiara nabízí tato nemovitost 144 m2, 3 místností, 3 ložnic a 2 koupelen. Nachází se na adrese Parco Elena, Torchiara a požadovaná cena je 175 000 EUR.\n\nHlavním bodem k posouzení je vila v rezidenční oblasti k ověření při prohlídce. Nemovitost je vhodné hodnotit podle cíle kupujícího, se zvláštním důrazem na dokumentaci, technický stav a reálné náklady.\n\nPřed rozhodnutím o koupi je nutné ověřit dokumenty, technický stav a nemovitost osobně navštívit.",
+  "seo_title_it": "Villa a Torchiara, Parco Elena in vendita",
+  "seo_title_en": "Villa in Torchiara, Parco Elena for sale",
+  "seo_title_cs": "Vila v Torchiaře, Parco Elena na prodej",
+  "seo_description_it": "Torchiara: villa di 144 mq, 3 camere, 2 bagni. Prezzo 175.000 euro.",
+  "seo_description_en": "Torchiara: villa of 144 sqm, 3 bedrooms, 2 bathrooms. Asking price EUR 175,000.",
+  "seo_description_cs": "Torchiara: nemovitost 144 m2, 3 ložnice, 2 koupelny. Cena 175 000 EUR.",
+  "status": "available",
+  "featured": false,
+  "isNew": false,
+  "badges": [],
+  "keywords": [
+    "campania",
+    "torchiara",
+    "villa",
+    "parco-elena",
+    "immobiliare-it"
+  ],
+  "source_url": "https://www.immobiliare.it/annunci/129047742/",
+  "lat": 40.3253,
+  "lng": 15.029,
+  "image_urls": [
+    "https://pwm.im-cdn.it/image/1923461758/xxl.jpg",
+    "https://pwm.im-cdn.it/image/1923461328/xxl.jpg",
+    "https://pwm.im-cdn.it/image/1923461406/xxl.jpg",
+    "https://pwm.im-cdn.it/image/1923461764/xxl.jpg",
+    "https://pwm.im-cdn.it/image/1923461618/xxl.jpg",
+    "https://pwm.im-cdn.it/image/1923461638/xxl.jpg",
+    "https://pwm.im-cdn.it/image/1923461434/xxl.jpg",
+    "https://pwm.im-cdn.it/image/1923461344/xxl.jpg",
+    "https://pwm.im-cdn.it/image/1923461464/xxl.jpg",
+    "https://pwm.im-cdn.it/image/1923461358/xxl.jpg",
+    "https://pwm.im-cdn.it/image/1923461494/xxl.jpg",
+    "https://pwm.im-cdn.it/image/1923461372/xxl.jpg"
+  ],
+  "_createdAt": "2026-04-30T10:00:00.000Z",
+  "_updatedAt": "2026-04-30T10:00:00.000Z"
+}

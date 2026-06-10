@@ -46,7 +46,7 @@ const COPY = {
 }
 
 export default function FormPrivacyNotice({
-  language = 'en',
+  language = 'cs',
   purpose = 'contact',
   className = ''
 }) {

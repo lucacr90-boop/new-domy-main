@@ -1,0 +1,86 @@
+{
+  "slug": "campania-villa-centola-via-velardino",
+  "title_it": "Villetta A Schiera a Centola, Via velardino",
+  "title_en": "Villa in Centola, Via velardino",
+  "title_cs": "Řadová vila v Centole, Via Velardino",
+  "propertyType": "villa",
+  "propertyType_it": "villa",
+  "region_it": "Campania",
+  "city_it": "Centola",
+  "city_en": "Centola",
+  "city_cs": "Centola",
+  "address_it": "Via velardino, 22, Centola",
+  "address_en": "Via velardino, 22, Centola",
+  "address_cs": "Via velardino, 22, Centola",
+  "price": 119000,
+  "rooms": 2,
+  "bedrooms": 2,
+  "bathrooms": 1,
+  "square_meters": 70,
+  "features": [
+    {
+      "it": "immobile con vista mare o contesto costiero",
+      "en": "property with sea view or coastal setting",
+      "cs": "nemovitost s výhledem na moře nebo v přímořském prostředí"
+    },
+    {
+      "it": "70 mq commerciali",
+      "en": "70 commercial sqm",
+      "cs": "70 m2 užitné plochy"
+    },
+    {
+      "it": "2 locali",
+      "en": "2 rooms",
+      "cs": "2 místností"
+    },
+    {
+      "it": "2 camere da letto",
+      "en": "2 bedrooms",
+      "cs": "2 ložnice"
+    },
+    {
+      "it": "1 bagni",
+      "en": "1 bathrooms",
+      "cs": "1 koupelny"
+    }
+  ],
+  "description_it": "A Centola, proponiamo villa con 70 mq, 2 locali, 2 camere e 1 bagni. La proprietà si trova in Via velardino, 22, Centola e ha un prezzo richiesto di 119.000 euro.\n\nIl punto da valutare è immobile con vista mare o contesto costiero. Dalla descrizione originale emerge inoltre: Centola, In vendita, incantevole villetta situata in una zona collinare, all'interno di un parco privato e immerso nel verde. La casa, luminosa e spaziosa, si sviluppa con un ampio salone che si collega a una cucina perfetta per vivere momenti conviviali. La zona notte è composta da due camere da letto, una matrimoniale e una singola, entrambe con affaccio su un balcone che regala una vista serena sulla natura circostante. A completare l’interno, un elegante bagno. Il vero valore aggiunto della proprietà è lo spazio esterno esclusivo, con una splendida vista mare che rende ogni angolo un rifugio di tranquillità. Il parco, dotato di piscina, campo da tennis e campo da basket, offre molteplici opportunità di svago. A pochi minuti dal centro del paese e dalle meravigliose spiagge di Palinuro, questa villetta è il luogo ideale per chi cerca comfort, natura e serenità. Ape non disponibile, la classe energetica non è stata verificata, il certificato verrà consegnato all'atto definitivo.\n\nPrima di procedere è necessario verificare documenti, stato tecnico, spese e condizioni reali con sopralluogo.",
+  "description_en": "In Centola, this villa offers 70 sqm, 2 rooms, 2 bedrooms and 1 bathrooms. The property is located at Via velardino, 22, Centola and has an asking price of EUR 119,000.\n\nThe point to assess is property with sea view or coastal setting. The property should be reviewed according to the buyer's goals, with particular attention to documentation, technical condition and real costs.\n\nBefore any purchase decision, documents, technical checks and an on-site visit remain essential.",
+  "description_cs": "V lokalitě Centola nabízí tato nemovitost 70 m2, 2 místností, 2 ložnic a 1 koupelen. Nachází se na adrese Via velardino, 22, Centola a požadovaná cena je 119 000 EUR.\n\nHlavním bodem k posouzení je nemovitost s výhledem na moře nebo v přímořském prostředí. Nemovitost je vhodné hodnotit podle cíle kupujícího, se zvláštním důrazem na dokumentaci, technický stav a reálné náklady.\n\nPřed rozhodnutím o koupi je nutné ověřit dokumenty, technický stav a nemovitost osobně navštívit.",
+  "seo_title_it": "Villetta A Schiera a Centola, Via velardino in vendita",
+  "seo_title_en": "Villa in Centola, Via velardino for sale",
+  "seo_title_cs": "Řadová vila v Centole, Via Velardino na prodej",
+  "seo_description_it": "Centola: villa di 70 mq, 2 camere, 1 bagni. Prezzo 119.000 euro.",
+  "seo_description_en": "Centola: villa of 70 sqm, 2 bedrooms, 1 bathrooms. Asking price EUR 119,000.",
+  "seo_description_cs": "Centola: nemovitost 70 m2, 2 ložnice, 1 koupelny. Cena 119 000 EUR.",
+  "status": "available",
+  "featured": false,
+  "isNew": false,
+  "badges": [],
+  "keywords": [
+    "campania",
+    "centola",
+    "villa",
+    "via-velardino",
+    "immobiliare-it"
+  ],
+  "source_url": "https://www.immobiliare.it/annunci/126461445/",
+  "lat": 40.0725,
+  "lng": 15.3058,
+  "image_urls": [
+    "https://pwm.im-cdn.it/image/1861528985/cover-m-c.jpg",
+    "https://pwm.im-cdn.it/image/1861574165/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1861574177/xxs-c.jpg",
+    "https://pwm.im-cdn.it/image/1861574181/xxl.jpg",
+    "https://pwm.im-cdn.it/image/1861574193/xxl.jpg",
+    "https://pwm.im-cdn.it/image/1861574201/xxl.jpg",
+    "https://pwm.im-cdn.it/image/1861574211/xxl.jpg",
+    "https://pwm.im-cdn.it/image/1861574219/xxl.jpg",
+    "https://pwm.im-cdn.it/image/1861574231/xxl.jpg",
+    "https://pwm.im-cdn.it/image/1861574271/xxl.jpg",
+    "https://pwm.im-cdn.it/image/1861574239/xxl.jpg",
+    "https://pwm.im-cdn.it/image/1861574245/xxl.jpg"
+  ],
+  "_createdAt": "2026-04-30T10:00:00.000Z",
+  "_updatedAt": "2026-04-30T10:00:00.000Z"
+}

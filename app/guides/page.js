@@ -1,4 +1,4 @@
-﻿'use client'
+'use client'
 
 import { useEffect, useMemo, useState } from 'react'
 import { BookOpen, Clock, ChevronRight } from 'lucide-react'
@@ -126,7 +126,7 @@ function localize(value, language) {
 }
 
 export default function GuidesHubPage() {
-  const [language, setLanguage] = useState('en')
+  const [language, setLanguage] = useState('cs')
 
   useEffect(() => {
     const savedLanguage = localStorage.getItem('preferred-language')

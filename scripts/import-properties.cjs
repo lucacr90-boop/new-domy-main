@@ -747,6 +747,10 @@ async function transformFolderToProperty({
   const noAgency = Boolean(listing.noAgency || listing.no_agency || badges.includes('no-agency'))
   const videoUrl = normalizeWhitespace(pick(listing, ['videoUrl', 'video_url'], '')) || videosFromFolder[0] || ''
   const now = new Date().toISOString()
+  const createdAtInput = normalizeWhitespace(pick(listing, ['_createdAt', 'createdAt', 'created_at'], ''))
+  const updatedAtInput = normalizeWhitespace(pick(listing, ['_updatedAt', 'updatedAt', 'updated_at'], ''))
+  const createdAt = Number.isFinite(Date.parse(createdAtInput)) ? new Date(createdAtInput).toISOString() : now
+  const updatedAt = Number.isFinite(Date.parse(updatedAtInput)) ? new Date(updatedAtInput).toISOString() : now
 
   const property = {
     _id: `local-import-${finalSlug}-${Date.now()}-${Math.random().toString(36).slice(2, 7)}`,
@@ -826,8 +830,8 @@ async function transformFolderToProperty({
     },
     keywords: parseKeywords(listing),
     sourceUrl: normalizeWhitespace(pick(listing, ['source_url', 'sourceUrl'], '')),
-    _createdAt: now,
-    _updatedAt: now
+    _createdAt: createdAt,
+    _updatedAt: updatedAt
   }
 
   return {

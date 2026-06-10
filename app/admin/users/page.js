@@ -8,22 +8,15 @@ import { Badge } from '@/components/ui/badge'
 import { Alert, AlertDescription } from '@/components/ui/alert'
 import { 
   FileText,
-  Video,
   File,
   Users, 
   Search, 
-  Filter, 
-  MoreHorizontal,
   Shield,
   Mail,
   Calendar,
   Heart,
-  BookOpen,
   MessageSquare,
-  Trash2,
-  Edit
 } from 'lucide-react'
-import { supabase } from '../../../lib/supabase'
 import { t } from '@/lib/translations'
 
 export default function UserManagement() {
@@ -34,7 +27,7 @@ export default function UserManagement() {
   const [searchTerm, setSearchTerm] = useState('')
   const [roleFilter, setRoleFilter] = useState('all')
   const [userStats, setUserStats] = useState({})
-  const [selectedUser, setSelectedUser] = useState(null)
+  const [error, setError] = useState('')
 
   useEffect(() => {
     // Load language from localStorage
@@ -67,76 +60,20 @@ export default function UserManagement() {
   const loadUsers = async () => {
     try {
       setLoading(true)
-      
-      // Load users with their activity data
-      const { data: profiles, error: profilesError } = await supabase
-        .from('profiles')
-        .select('*')
-        .order('createdAt', { ascending: false })
+      setError('')
 
-      if (profilesError) throw profilesError
+      const response = await fetch('/api/admin/users', { cache: 'no-store' })
+      const result = await response.json().catch(() => ({}))
 
-      // Load user statistics (favorites, saved searches, inquiries)
-      const userStatsData = {}
-      
-      for (const user of profiles || []) {
-        // Get favorites count
-        const { count: favoritesCount } = await supabase
-          .from('favorites')
-          .select('*', { count: 'exact', head: true })
-          .eq('userId', user.id)
-        
-        // Get saved searches count
-        const { count: searchesCount } = await supabase
-          .from('saved_searches')
-          .select('*', { count: 'exact', head: true })
-          .eq('userId', user.id)
-        
-        // Get inquiries count
-        const { count: inquiriesCount } = await supabase
-          .from('inquiries')
-          .select('*', { count: 'exact', head: true })
-          .eq('userId', user.id)
-
-        userStatsData[user.id] = {
-          favorites: favoritesCount || 0,
-          savedSearches: searchesCount || 0,
-          inquiries: inquiriesCount || 0,
-          forms: 0,
-          webinars: 0,
-          documents: 0
-        }
-        
-        // Get intake forms count
-        const { count: formsCount } = await supabase
-          .from('client_intake_forms')
-          .select('*', { count: 'exact', head: true })
-          .eq('user_id', user.id)
-          
-        if (formsCount) userStatsData[user.id].forms = formsCount
-
-        // Get webinar registrations count
-        const { count: webinarsCount } = await supabase
-          .from('webinar_registrations')
-          .select('*', { count: 'exact', head: true })
-          .eq('user_id', user.id)
-          
-        if (webinarsCount) userStatsData[user.id].webinars = webinarsCount
-        
-        // Get document access count
-        const { count: docsCount } = await supabase
-          .from('document_access_logs')
-          .select('*', { count: 'exact', head: true })
-          .eq('user_id', user.id)
-          
-        if (docsCount) userStatsData[user.id].documents = docsCount
-
+      if (!response.ok) {
+        throw new Error(result.details || result.error || 'Failed to load users')
       }
 
-      setUsers(profiles || [])
-      setUserStats(userStatsData)
+      setUsers(result.users || [])
+      setUserStats(result.stats || {})
     } catch (error) {
       console.error('Error loading users:', error)
+      setError(error.message || 'Failed to load users')
     } finally {
       setLoading(false)
     }
@@ -149,6 +86,7 @@ export default function UserManagement() {
     if (searchTerm) {
       filtered = filtered.filter(user => 
         user.name?.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        user.email?.toLowerCase().includes(searchTerm.toLowerCase()) ||
         user.id.toLowerCase().includes(searchTerm.toLowerCase())
       )
     }
@@ -163,14 +101,17 @@ export default function UserManagement() {
 
   const updateUserRole = async (userId, newRole) => {
     try {
-      const { error } = await supabase
-        .from('profiles')
-        .update({ role: newRole })
-        .eq('id', userId)
+      const response = await fetch('/api/admin/users', {
+        method: 'PATCH',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ userId, role: newRole })
+      })
+      const result = await response.json().catch(() => ({}))
 
-      if (error) throw error
+      if (!response.ok || !result.success) {
+        throw new Error(result.details || result.error || 'Failed to update user role')
+      }
 
-      // Update local state
       setUsers(prev => prev.map(user => 
         user.id === userId ? { ...user, role: newRole } : user
       ))
@@ -178,7 +119,7 @@ export default function UserManagement() {
       alert('User role updated successfully!')
     } catch (error) {
       console.error('Error updating user role:', error)
-      alert('Failed to update user role')
+      alert(error.message || 'Failed to update user role')
     }
   }
 
@@ -218,6 +159,13 @@ export default function UserManagement() {
           {t('admin.users.refreshUsers', language)}
         </Button>
       </div>
+
+      {error && (
+        <Alert variant="destructive">
+          <Shield className="h-4 w-4" />
+          <AlertDescription>{error}</AlertDescription>
+        </Alert>
+      )}
 
       {/* Filters */}
       <Card>
@@ -313,7 +261,7 @@ export default function UserManagement() {
                         <div className="flex items-center space-x-4 text-sm text-gray-600">
                           <span className="flex items-center">
                             <Mail className="h-3 w-3 mr-1" />
-                            ID: {user.id.substring(0, 8)}...
+                            {user.email || `ID: ${user.id.substring(0, 8)}...`}
                           </span>
                           <span className="flex items-center">
                             <Calendar className="h-3 w-3 mr-1" />

@@ -189,12 +189,12 @@ function getRegionDetailSlug(slug = '') {
   return REGION_DETAIL_SLUGS[slug] || slug
 }
 
-function getRegionDisplayName(region, language = 'en') {
+function getRegionDisplayName(region, language = 'cs') {
   const raw = region?.name?.[language] || region?.name?.en || ''
   return raw.split(' - ')[0]
 }
 
-function RegionCard({ region, language = 'en' }) {
+function RegionCard({ region, language = 'cs' }) {
   const formatPrice = (price) => {
     if (typeof price !== 'number' || Number.isNaN(price)) {
       return 'N/A'
@@ -247,13 +247,14 @@ function RegionCard({ region, language = 'en' }) {
             ? `Prezzo medio: ${formatPrice(region.averagePrice)}`
             : `Average price: ${formatPrice(region.averagePrice)}`
       ]
-  const warningBySlug =
+  const cleanWarningBySlug =
     CLEAN_REGION_CARD_WARNINGS[overrideSlug] ||
-    CLEAN_REGION_CARD_WARNINGS[regionSlug] ||
+    CLEAN_REGION_CARD_WARNINGS[regionSlug]
+  const regionalWarningBySlug =
     REGION_CARD_WARNINGS[overrideSlug] ||
     REGION_CARD_WARNINGS[regionSlug]
   const detailSlug = getRegionDetailSlug(region.slug?.current || '')
-  const warningText = region.warning?.[language] || warningBySlug?.[language] || (language === 'cs'
+  const warningText = region.warning?.[language] || cleanWarningBySlug?.[language] || regionalWarningBySlug?.[language] || (language === 'cs'
     ? 'Před podáním nabídky vždy proveďte technickou a právní due diligence.'
     : (
         language === 'it'
@@ -373,7 +374,7 @@ function RegionCard({ region, language = 'en' }) {
 }
 
 export default function RegionsListingClient({ initialRegions }) {
-  const [language, setLanguage] = useState('en')
+  const [language, setLanguage] = useState('cs')
   const [regionsData, setRegionsData] = useState(initialRegions)
   const mobileFeaturedRegions = regionsData.slice(0, 5)
   const mobileRemainingRegions = regionsData.slice(5)

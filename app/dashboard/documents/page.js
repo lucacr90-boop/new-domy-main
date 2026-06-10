@@ -34,7 +34,7 @@ export default function DocumentsPage() {
   const [searchQuery, setSearchQuery] = useState('')
   const [selectedCategory, setSelectedCategory] = useState('All Documents')
   const [categories, setCategories] = useState(['All Documents'])
-  const [language, setLanguage] = useState('en')
+  const [language, setLanguage] = useState('cs')
 
   useEffect(() => {
     loadDocuments()

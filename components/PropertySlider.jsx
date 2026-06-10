@@ -10,6 +10,8 @@ import PropertyImage from '@/components/PropertyImage'
 import { getPropertyImage } from '@/lib/getPropertyImage'
 import NewPropertyRibbon from '@/components/NewPropertyRibbon'
 import NoAgencyBadge from '@/components/NoAgencyBadge'
+import ExclusiveBadge from '@/components/ExclusiveBadge'
+import { formatPriceCompact } from '@/lib/currency'
 
 const LABELS = {
   cs: {
@@ -42,13 +44,6 @@ const LABELS = {
     sold: 'Sold',
     reserved: 'Reserved',
   },
-}
-
-function formatPrice(amount, currency = 'EUR') {
-  if (!amount) return null
-  if (amount >= 1_000_000) return `${(amount / 1_000_000).toFixed(1).replace('.0', '')}M ${currency}`
-  if (amount >= 1_000) return `${Math.round(amount / 1_000)}k ${currency}`
-  return `${amount} ${currency}`
 }
 
 function getLocalizedValue(value, language, fallback = '') {
@@ -84,7 +79,7 @@ function transformProperty(prop, index) {
     id: prop._id || `prop-${index}`,
     titleI18n,
     region: regionName,
-    price: prop.price?.amount || 0,
+    price: prop.price || { amount: 0, currency: 'EUR' },
     currency: prop.price?.currency || 'EUR',
     bedrooms: prop.specifications?.bedrooms || 0,
     bathrooms: prop.specifications?.bathrooms || 0,
@@ -97,6 +92,7 @@ function transformProperty(prop, index) {
     updatedAt: prop._updatedAt || prop.updatedAt || '',
     isNew: Boolean(prop.isNew || prop.newListing),
     noAgency: Boolean(prop.noAgency || prop.no_agency || prop.badges?.includes('no-agency')),
+    exclusive: Boolean(prop.exclusive || prop.isExclusive || prop.badges?.includes('exclusive')),
   }
 }
 
@@ -117,7 +113,7 @@ function shuffle(arr) {
 function SlideCard({ property, language, labels }) {
   const title = getLocalizedValue(property.titleI18n, language, 'Property')
   const href = getPropertyHref(property)
-  const priceStr = formatPrice(property.price, property.currency)
+  const priceStr = formatPriceCompact(property.price, property.currency, language)
 
   const statusLabel =
     property.status === 'sold'
@@ -149,10 +145,18 @@ function SlideCard({ property, language, labels }) {
         />
         <div className="absolute inset-0 bg-gradient-to-t from-slate-800/40 via-transparent to-transparent" />
 
-        {property.isNew && <NewPropertyRibbon language={language} />}
-        {property.noAgency && (
-          <div className="absolute right-3 top-3 z-20 pointer-events-none">
-            <NoAgencyBadge language={language} className="px-2.5 py-1 text-[10px] tracking-[0.1em]" />
+        {(property.noAgency || property.exclusive || property.isNew) && (
+          <div
+            className="absolute right-3 top-3 z-30 flex max-w-[calc(100%-6rem)] flex-col items-end gap-1.5 pointer-events-none"
+            data-testid="property-slider-badge-stack"
+          >
+            {property.noAgency && (
+              <NoAgencyBadge language={language} className="px-2.5 py-1 text-[10px] tracking-[0.1em]" />
+            )}
+            {property.exclusive && (
+              <ExclusiveBadge language={language} className="px-2.5 py-1 text-[10px] tracking-[0.1em]" />
+            )}
+            {property.isNew && <NewPropertyRibbon language={language} compact inline className="scale-90 origin-top-right" />}
           </div>
         )}
 
@@ -177,8 +181,8 @@ function SlideCard({ property, language, labels }) {
         )}
 
         {priceStr && (
-          <div className="absolute bottom-3 right-3 z-20 pointer-events-none">
-            <span className="bg-white/95 text-slate-900 font-bold text-sm px-3 py-1.5 rounded-xl shadow-lg">
+          <div className="absolute bottom-3 left-3 right-3 z-30 pointer-events-none">
+            <span className="inline-flex w-fit min-w-0 max-w-full items-center overflow-hidden text-ellipsis whitespace-nowrap rounded-xl bg-white/95 px-2.5 py-1.5 text-[clamp(0.72rem,1.9vw,0.95rem)] font-bold leading-none text-slate-900 shadow-lg sm:px-3">
               {priceStr}
             </span>
           </div>
@@ -218,7 +222,7 @@ function SlideCard({ property, language, labels }) {
   )
 }
 
-export default function PropertySlider({ language = 'en' }) {
+export default function PropertySlider({ language = 'cs' }) {
   const labels = LABELS[language] || LABELS.en
   const [properties, setProperties] = useState([])
   const [loading, setLoading] = useState(true)

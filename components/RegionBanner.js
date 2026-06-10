@@ -331,7 +331,7 @@ const REGION_DATA = {
   }
 }
 
-function RegionBanner({ regionSlug, language = 'en', onClose }) {
+function RegionBanner({ regionSlug, language = 'cs', onClose }) {
   const [region, setRegion] = useState(null)
 
   useEffect(() => {

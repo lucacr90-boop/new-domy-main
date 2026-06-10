@@ -1,0 +1,86 @@
+{
+  "slug": "puglia-casa-indipendente-triggiano-via-tito-fanfulla",
+  "title_it": "Casa Indipendente a Triggiano, Via Tito Fanfulla",
+  "title_en": "House in Triggiano, Via Tito Fanfulla",
+  "title_cs": "Samostatný dům v Triggianu, Via Tito Fanfulla",
+  "propertyType": "house",
+  "propertyType_it": "casa indipendente",
+  "region_it": "Puglia",
+  "city_it": "Triggiano",
+  "city_en": "Triggiano",
+  "city_cs": "Triggiano",
+  "address_it": "Via Tito Fanfulla, 38, Triggiano",
+  "address_en": "Via Tito Fanfulla, 38, Triggiano",
+  "address_cs": "Via Tito Fanfulla, 38, Triggiano",
+  "price": 90000,
+  "rooms": 3,
+  "bedrooms": 2,
+  "bathrooms": 2,
+  "square_meters": 90,
+  "features": [
+    {
+      "it": "spazi esterni vivibili come terrazzo o balcone",
+      "en": "usable outdoor space such as terrace or balcony",
+      "cs": "využitelné venkovní prostory jako terasa nebo balkon"
+    },
+    {
+      "it": "90 mq commerciali",
+      "en": "90 commercial sqm",
+      "cs": "90 m2 užitné plochy"
+    },
+    {
+      "it": "3 locali",
+      "en": "3 rooms",
+      "cs": "3 místností"
+    },
+    {
+      "it": "2 camere da letto",
+      "en": "2 bedrooms",
+      "cs": "2 ložnice"
+    },
+    {
+      "it": "2 bagni",
+      "en": "2 bathrooms",
+      "cs": "2 koupelny"
+    }
+  ],
+  "description_it": "A Triggiano, proponiamo casa indipendente con 90 mq, 3 locali, 2 camere e 2 bagni. La proprietà si trova in Via Tito Fanfulla, 38, Triggiano e ha un prezzo richiesto di 90.000 euro.\n\nIl punto da valutare è spazi esterni vivibili come terrazzo o balcone. Dalla descrizione originale emerge inoltre: Vi presento questo fantastica casa singola di 3 locali in vendita nel comune di Triggiano. Si trova proprio nel pieno centro del paese, ma in una zona super tranquilla. Il prezzo è davvero conveniente, solo 90.000 euro! La casa ha tutto quello di cui avete bisogno: scuole, trasporti pubblici e servizi sono tutti a portata di mano. Cii sono due camere da letto e quattro posti letto in totale. Inoltre, ci sono due bagni, quindi niente più code la mattina! La casa è stata recentemente ristrutturata, quindi potete essere sicuri che sia in ottime condizioni. Inoltre dispone di due ampi terrazzi dove potrete trascorrere momenti di relax in compagnia della vostra famiglia o dei vostri amici. Non lasciatevi scappare questa occasione, contattateci subito per organizzare una visita!\n\nPrima di procedere è necessario verificare documenti, stato tecnico, spese e condizioni reali con sopralluogo.",
+  "description_en": "In Triggiano, this house offers 90 sqm, 3 rooms, 2 bedrooms and 2 bathrooms. The property is located at Via Tito Fanfulla, 38, Triggiano and has an asking price of EUR 90,000.\n\nThe point to assess is usable outdoor space such as terrace or balcony. The property should be reviewed according to the buyer's goals, with particular attention to documentation, technical condition and real costs.\n\nBefore any purchase decision, documents, technical checks and an on-site visit remain essential.",
+  "description_cs": "V lokalitě Triggiano nabízí tato nemovitost 90 m2, 3 místností, 2 ložnic a 2 koupelen. Nachází se na adrese Via Tito Fanfulla, 38, Triggiano a požadovaná cena je 90 000 EUR.\n\nHlavním bodem k posouzení je využitelné venkovní prostory jako terasa nebo balkon. Nemovitost je vhodné hodnotit podle cíle kupujícího, se zvláštním důrazem na dokumentaci, technický stav a reálné náklady.\n\nPřed rozhodnutím o koupi je nutné ověřit dokumenty, technický stav a nemovitost osobně navštívit.",
+  "seo_title_it": "Casa Indipendente a Triggiano, Via Tito Fanfulla in vendita",
+  "seo_title_en": "House in Triggiano, Via Tito Fanfulla for sale",
+  "seo_title_cs": "Samostatný dům v Triggianu, Via Tito Fanfulla na prodej",
+  "seo_description_it": "Triggiano: casa indipendente di 90 mq, 2 camere, 2 bagni. Prezzo 90.000 euro.",
+  "seo_description_en": "Triggiano: house of 90 sqm, 2 bedrooms, 2 bathrooms. Asking price EUR 90,000.",
+  "seo_description_cs": "Triggiano: nemovitost 90 m2, 2 ložnice, 2 koupelny. Cena 90 000 EUR.",
+  "status": "available",
+  "featured": false,
+  "isNew": false,
+  "badges": [],
+  "keywords": [
+    "puglia",
+    "triggiano",
+    "house",
+    "via-tito-fanfulla",
+    "immobiliare-it"
+  ],
+  "source_url": "https://www.immobiliare.it/annunci/120549148/",
+  "lat": 41.0625,
+  "lng": 16.9226,
+  "image_urls": [
+    "https://pwm.im-cdn.it/image/1706151032/xxl.jpg",
+    "https://pwm.im-cdn.it/image/1706151044/xxl.jpg",
+    "https://pwm.im-cdn.it/image/1706151052/xxl.jpg",
+    "https://pwm.im-cdn.it/image/1706151060/xxl.jpg",
+    "https://pwm.im-cdn.it/image/1706151068/xxl.jpg",
+    "https://pwm.im-cdn.it/image/1706151074/xxl.jpg",
+    "https://pwm.im-cdn.it/image/1706151084/xxl.jpg",
+    "https://pwm.im-cdn.it/image/1706151090/xxl.jpg",
+    "https://pwm.im-cdn.it/image/1706151100/xxl.jpg",
+    "https://pwm.im-cdn.it/image/1706151106/xxl.jpg",
+    "https://pwm.im-cdn.it/image/1706151116/xxl.jpg",
+    "https://pwm.im-cdn.it/image/1706151126/xxl.jpg"
+  ],
+  "_createdAt": "2026-04-30T10:00:00.000Z",
+  "_updatedAt": "2026-04-30T10:00:00.000Z"
+}

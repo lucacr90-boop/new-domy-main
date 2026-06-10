@@ -23,6 +23,10 @@ __pycache__
 # SQL setup files (run these in Supabase, not needed in deployment)
 *.sql
 
+# Raw import sources are only used by local import scripts. Runtime reads
+# data/local-properties.json plus public/uploads assets.
+data/import
+
 # Documentation
 *.md
 !README.md
@@ -49,4 +53,3 @@ test-*.html
 backend_test*.py
 sanity_test.py
 extended_backend_test.py
-

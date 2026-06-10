@@ -7,7 +7,7 @@ import { Bell, Mail, Settings } from 'lucide-react';
 import { t } from '../../../lib/translations';
 
 export default function NotificationsPage() {
-  const [language, setLanguage] = useState('en');
+  const [language, setLanguage] = useState('cs');
 
   useEffect(() => {
     // Load language preference

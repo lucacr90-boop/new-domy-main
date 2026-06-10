@@ -111,15 +111,70 @@ export default function DashboardLayout({ children }) {
   const [loading, setLoading] = useState(true)
   const [sidebarOpen, setSidebarOpen] = useState(false)
   const [userProfile, setUserProfile] = useState(null)
+  const [hasNewInquiries, setHasNewInquiries] = useState(false)
   const [language, setLanguage] = useState(() => {
     if (typeof window === 'undefined') return 'en'
     const savedLanguage = localStorage.getItem('preferred-language')
-    return savedLanguage || 'en'
+    return savedLanguage || 'cs'
   })
   const router = useRouter()
 
   useEffect(() => {
     checkUserAccess()
+  }, [])
+
+  useEffect(() => {
+    let cancelled = false
+    let intervalId = null
+
+    const loadPendingInquiries = async () => {
+      try {
+        const adminResponse = await fetch('/api/admin/me', { cache: 'no-store' })
+        const adminPayload = await adminResponse.json().catch(() => ({}))
+
+        if (!adminResponse.ok || adminPayload.admin !== true) {
+          if (!cancelled) setHasNewInquiries(false)
+          return
+        }
+
+        const response = await fetch('/api/inquiries', { cache: 'no-store' })
+        if (!response.ok) return
+
+        const data = await response.json()
+        const propertyInquiries = Array.isArray(data)
+          ? data.filter((inquiry) => !inquiry?.type || inquiry.type === 'property')
+          : []
+
+        const latestInquiryDate = propertyInquiries.length > 0
+          ? propertyInquiries.reduce((latest, inquiry) => {
+              const createdAt = inquiry?.createdAt || inquiry?.created_at
+              if (!createdAt) return latest
+              return !latest || new Date(createdAt) > new Date(latest) ? createdAt : latest
+            }, null)
+          : null
+
+        const lastSeenDate = localStorage.getItem('admin-inquiries-last-seen-at')
+        const hasNew = latestInquiryDate && (!lastSeenDate || new Date(latestInquiryDate) > new Date(lastSeenDate))
+
+        if (!cancelled) {
+          setHasNewInquiries(Boolean(hasNew))
+        }
+      } catch (error) {
+        console.error('Failed to load dashboard inquiry notifications:', error)
+      }
+    }
+
+    loadPendingInquiries()
+    intervalId = window.setInterval(loadPendingInquiries, 60000)
+    window.addEventListener('focus', loadPendingInquiries)
+    window.addEventListener('adminInquiriesSeen', loadPendingInquiries)
+
+    return () => {
+      cancelled = true
+      if (intervalId) window.clearInterval(intervalId)
+      window.removeEventListener('focus', loadPendingInquiries)
+      window.removeEventListener('adminInquiriesSeen', loadPendingInquiries)
+    }
   }, [])
 
   const handleLanguageChange = (newLanguage) => {
@@ -253,12 +308,21 @@ export default function DashboardLayout({ children }) {
                   <Link
                     key={item.href}
                     href={item.href}
-                    className="flex items-center space-x-3 px-3 py-2 rounded-lg text-gray-700 hover:bg-gray-100 hover:text-gray-900 transition-colors"
+                    className="relative flex items-center space-x-3 px-3 py-2 rounded-lg text-gray-700 hover:bg-gray-100 hover:text-gray-900 transition-colors"
                     onClick={() => setSidebarOpen(false)}
                   >
                     <Icon className={`h-5 w-5 ${item.className || ''}`} />
-                    <div>
-                      <div className={`font-medium ${item.className || ''}`}>{item.title}</div>
+                    <div className="min-w-0">
+                      <div className={`flex items-center gap-2 font-medium ${item.className || ''}`}>
+                        <span>{item.title}</span>
+                        {item.href === '/dashboard/inquiries' && hasNewInquiries && (
+                          <span
+                            className="inline-flex h-2.5 w-2.5 rounded-full bg-red-500 ring-2 ring-white"
+                            aria-label="New property inquiries"
+                            title="New property inquiries"
+                          />
+                        )}
+                      </div>
                       <div className="text-xs text-gray-500">{item.description}</div>
                     </div>
                   </Link>

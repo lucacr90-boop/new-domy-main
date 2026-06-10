@@ -89,7 +89,7 @@ export default function ConciergePage() {
   const [submitting, setSubmitting] = useState(false)
   const [message, setMessage] = useState({ type: '', text: '' })
   const [tickets, setTickets] = useState([])
-  const [language, setLanguage] = useState('en')
+  const [language, setLanguage] = useState('cs')
 
   const [newTicket, setNewTicket] = useState({
     subject: '',

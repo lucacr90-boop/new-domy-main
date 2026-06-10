@@ -1,4 +1,4 @@
-﻿'use client'
+'use client'
 
 import { useState } from 'react'
 import { MapPin, TrendingUp, Home, ChevronRight, Star } from 'lucide-react'
@@ -351,7 +351,7 @@ const ITALIAN_REGIONS = [
   }
 ]
 
-function RegionCard({ region, language = 'en' }) {
+function RegionCard({ region, language = 'cs' }) {
   const formatPrice = (price) => {
     if (price >= 1000000) {
       const millions = price / 1000000
@@ -498,7 +498,7 @@ function RegionCard({ region, language = 'en' }) {
   )
 }
 
-export default function RegionCards({ language = 'en', showAll = false }) {
+export default function RegionCards({ language = 'cs', showAll = false }) {
   const [selectedRegion, setSelectedRegion] = useState(null)
   
   // Sort regions by popularity (descending) and then by name

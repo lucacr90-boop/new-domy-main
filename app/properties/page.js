@@ -34,12 +34,11 @@ import { getPropertyImage } from '@/lib/getPropertyImage';
 import { formatPriceCompact } from '../../lib/currency';
 import NewPropertyRibbon from '@/components/NewPropertyRibbon';
 import NoAgencyBadge from '@/components/NoAgencyBadge';
-
-const AuthModal = dynamic(() => import('../../components/AuthModal'), { ssr: false });
+import ExclusiveBadge from '@/components/ExclusiveBadge';
 
 // Format price with compact symbols (k, M) using shared currency utility
-const formatPrice = (price, currency = 'EUR') => {
-  return formatPriceCompact(price, currency)
+const formatPrice = (price, currency = 'EUR', language = 'cs') => {
+  return formatPriceCompact(price, currency, language)
 }
 
 const PROPERTY_TYPE_LABELS = {
@@ -134,7 +133,7 @@ const getPropertyTimestamp = (property) => {
 }
 
 // PropertyCard component matching homepage design
-function PropertyCard({ property, onFavorite, isFavorited, language, currency, onClick }) {
+function PropertyCard({ property, onFavorite, isFavorited, canFavorite, language, currency, onClick }) {
   const roomsLabel = language === 'cs' ? 'm\u00edstnosti' : language === 'it' ? 'locali' : 'rooms'
   const bedroomsLabel = language === 'cs' ? 'lo\u017enice' : language === 'it' ? 'camere' : 'bedrooms'
   const viewDetailsLabel = PAGE_LABELS[language]?.viewDetails || PAGE_LABELS.en.viewDetails
@@ -182,10 +181,14 @@ function PropertyCard({ property, onFavorite, isFavorited, language, currency, o
           data-testid="property-image"
         />
 
-        {property.isNew && <NewPropertyRibbon language={language} />}
-        {property.noAgency && (
-          <div className="absolute right-4 top-16 z-30 pointer-events-none">
-            <NoAgencyBadge language={language} />
+        {(property.noAgency || property.exclusive || property.isNew) && (
+          <div
+            className="absolute right-3 top-16 z-30 flex max-w-[calc(100%-7rem)] flex-col items-end gap-2 pointer-events-none sm:right-4 sm:top-20"
+            data-testid="property-card-badge-stack"
+          >
+            {property.noAgency && <NoAgencyBadge language={language} />}
+            {property.exclusive && <ExclusiveBadge language={language} />}
+            {property.isNew && <NewPropertyRibbon language={language} compact inline />}
           </div>
         )}
 
@@ -213,32 +216,34 @@ function PropertyCard({ property, onFavorite, isFavorited, language, currency, o
             {localizedTypeLabel}
           </Badge>
           
-          <Button
-            variant="ghost"
-            size="icon"
-            className={`p-2.5 rounded-full transition-all duration-300 active:scale-95 shadow-lg backdrop-blur-sm border border-white/20 ${
-              isFavorited 
-                ? 'bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 text-white hover:shadow-red-500/25' 
-                : 'bg-gradient-to-r from-slate-700 to-slate-800 hover:from-slate-600 hover:to-slate-700 text-white hover:shadow-slate-500/25'
-            }`}
-            onClick={handleFavoriteClick}
-            data-testid="favorite-button"
-            data-property-id={property.id}
-            data-favorited={isFavorited}
-          >
-            <Heart className={`h-4 w-4 ${isFavorited ? 'fill-current' : ''}`} />
-          </Button>
+          {canFavorite && (
+            <Button
+              variant="ghost"
+              size="icon"
+              className={`p-2.5 rounded-full transition-all duration-300 active:scale-95 shadow-lg backdrop-blur-sm border border-white/20 ${
+                isFavorited 
+                  ? 'bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 text-white hover:shadow-red-500/25' 
+                  : 'bg-gradient-to-r from-slate-700 to-slate-800 hover:from-slate-600 hover:to-slate-700 text-white hover:shadow-slate-500/25'
+              }`}
+              onClick={handleFavoriteClick}
+              data-testid="favorite-button"
+              data-property-id={property.id}
+              data-favorited={isFavorited}
+            >
+              <Heart className={`h-4 w-4 ${isFavorited ? 'fill-current' : ''}`} />
+            </Button>
+          )}
         </div>
         
         {/* Price overlay */}
-        <div className="absolute bottom-4 left-4">
-          <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl px-4 py-2.5 shadow-lg hover:bg-white/20 transition-all duration-300 group-hover:shadow-xl group-hover:bg-white/15">
+        <div className="absolute bottom-4 left-4 right-4 z-30 pointer-events-none">
+          <div className="inline-flex w-fit max-w-full items-center rounded-xl border border-white/20 bg-white/10 px-3 py-2 shadow-lg backdrop-blur-md transition-all duration-300 group-hover:bg-white/15 group-hover:shadow-xl sm:px-4 sm:py-2.5">
             <span 
-              className="text-2xl font-bold text-white"
+              className="block min-w-0 max-w-full overflow-hidden text-ellipsis whitespace-nowrap text-[clamp(1rem,2.35vw,1.5rem)] font-bold leading-none text-white"
               data-testid="property-price"
-              data-price={property.price}
+              data-price={property.priceAmount || property.price?.amount || property.price}
             >
-              {formatPrice(property.price, currency)}
+              {formatPrice(property.price, currency, language)}
             </span>
           </div>
         </div>
@@ -492,7 +497,7 @@ const amenities = [
 ];
 
 // Map placeholder component
-function MapPlaceholder({ properties, selectedProperty }) {
+function MapPlaceholder({ properties, selectedProperty, currency = 'EUR', language = 'cs' }) {
   return (
     <div className="h-full bg-slate-50 flex items-center justify-center">
       <div className="text-center">
@@ -506,7 +511,7 @@ function MapPlaceholder({ properties, selectedProperty }) {
             <h4 className="font-semibold text-sm text-gray-900">{selectedProperty.title}</h4>
             <p className="text-xs text-gray-600 mt-1">{selectedProperty.description}</p>
             <div className="flex justify-between mt-2 text-xs">
-              <span className="text-slate-800 font-bold">{formatPrice(selectedProperty.price)}</span>
+              <span className="text-slate-800 font-bold">{formatPrice(selectedProperty.price, currency, language)}</span>
               <span className="text-gray-500">{selectedProperty.area}m²</span>
             </div>
           </div>
@@ -536,7 +541,6 @@ export default function PropertiesPage() {
   
   // Navigation state (user only used for Favorites functionality)
   const [user, setUser] = useState(null);
-  const [isAuthModalOpen, setIsAuthModalOpen] = useState(false);
   const [language, setLanguage] = useState('cs');
   const [currency, setCurrency] = useState('EUR');
 
@@ -599,7 +603,6 @@ export default function PropertiesPage() {
 
   const handleToggleFavorite = async (propertyId) => {
     if (!user) {
-      setIsAuthModalOpen(true);
       return;
     }
 
@@ -729,7 +732,8 @@ export default function PropertiesPage() {
               type: resolvedType,
               region: regionName,
               regionSlug,
-              price: prop.price?.amount || 0,
+              price: prop.price || { amount: 0, currency: 'EUR' },
+              priceAmount: prop.price?.amount || 0,
               rooms: prop.specifications?.rooms || prop.specifications?.bedrooms || 0,
               bedrooms: prop.specifications?.bedrooms || 0,
               bathrooms: prop.specifications?.bathrooms || 0,
@@ -749,7 +753,8 @@ export default function PropertiesPage() {
               createdAt: prop._createdAt || prop.createdAt || '',
               updatedAt: prop._updatedAt || prop.updatedAt || '',
               isNew: Boolean(prop.isNew || prop.newListing),
-              noAgency: Boolean(prop.noAgency || prop.no_agency || prop.badges?.includes('no-agency'))
+              noAgency: Boolean(prop.noAgency || prop.no_agency || prop.badges?.includes('no-agency')),
+              exclusive: Boolean(prop.exclusive || prop.isExclusive || prop.badges?.includes('exclusive'))
             };
           });
 
@@ -822,11 +827,6 @@ export default function PropertiesPage() {
     }
   }, [showRegionBanner]);
 
-  const handleAuthSuccess = (user) => {
-    setUser(user);
-    setIsAuthModalOpen(false);
-  };
-
   // Load more properties
   const handleLoadMore = () => {
     setIsLoadingMore(true);
@@ -875,10 +875,11 @@ export default function PropertiesPage() {
       if (filters.rooms && !matchesRoomLayout(property.rooms, filters.rooms)) {
         return false;
       }
-      if (filters.priceFrom && property.price < parseInt(filters.priceFrom)) {
+      const propertyPriceAmount = property.priceAmount || property.price?.amount || property.price || 0
+      if (filters.priceFrom && propertyPriceAmount < parseInt(filters.priceFrom)) {
         return false;
       }
-      if (filters.priceTo && property.price > parseInt(filters.priceTo)) {
+      if (filters.priceTo && propertyPriceAmount > parseInt(filters.priceTo)) {
         return false;
       }
       if (filters.amenities.length > 0) {
@@ -1029,7 +1030,7 @@ export default function PropertiesPage() {
   return (
     <div className="min-h-screen bg-[#faf8f5] overflow-x-hidden">
       {/* Navigation */}
-      <Navigation />
+      <Navigation hideAuth />
 
       {/* Prominent search bar — full width, above everything */}
       <div className="bg-white border-b border-gray-200 pt-28 sm:pt-24 pb-6 sm:pb-8">
@@ -1342,6 +1343,7 @@ export default function PropertiesPage() {
                       property={property} 
                       onFavorite={handleToggleFavorite}
                       isFavorited={userFavorites.has(property.id)}
+                      canFavorite={Boolean(user)}
                       language={language}
                       currency={currency}
                       onClick={handleCardClick}
@@ -1491,15 +1493,6 @@ export default function PropertiesPage() {
       {/* Footer */}
       <Footer language={language} />
 
-      {/* Auth Modal (for Favorites) */}
-      <AuthModal 
-        isOpen={isAuthModalOpen}
-        onClose={() => setIsAuthModalOpen(false)}
-        onAuthSuccess={handleAuthSuccess}
-        language={language}
-        title={language === 'cs' ? 'Přihlášení vyžadováno' : language === 'it' ? 'Accesso richiesto' : 'Login required'}
-        message={language === 'cs' ? 'Pro uložení nemovitosti do oblíbených se prosím přihlaste nebo si vytvořte bezplatný účet.' : language === 'it' ? 'Per salvare una proprietà nei preferiti devi accedere o creare un account gratuito.' : 'To save a property to your favorites, please log in or create a free account.'}
-      />
     </div>
   )
 }

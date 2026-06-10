@@ -6,7 +6,7 @@ import Image from 'next/image'
 import PropertyImage from '@/components/PropertyImage'
 import { getPropertyImageList, PROPERTY_IMAGE_FALLBACK } from '@/lib/getPropertyImage'
 import { useParams } from 'next/navigation'
-import { Heart, MapPin, Home, Bed, Bath, Square, Car, Wifi, Utensils, Tv, ArrowLeft, Share2, Calendar, Phone, Mail, User, X, ChevronLeft, ChevronRight, ZoomIn, Menu } from 'lucide-react'
+import { Heart, MapPin, Home, Bed, Bath, Square, Car, Wifi, Utensils, Tv, ArrowLeft, Share2, Calendar, Phone, Mail, User, X, ChevronLeft, ChevronRight, ZoomIn, Menu, Play } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
@@ -18,22 +18,9 @@ import Link from 'next/link'
 import { supabase } from '../../../lib/supabase'
 import { formatPrice as formatPriceUtil } from '../../../lib/currency'
 import FormPrivacyNotice from '@/components/legal/FormPrivacyNotice'
-import AuthModal from '../../../components/AuthModal'
 import Footer from '@/components/Footer'
-import NewPropertyRibbon, { getNewPropertyLabel } from '@/components/NewPropertyRibbon'
-import NoAgencyBadge, { getNoAgencyLabel } from '@/components/NoAgencyBadge'
-
-function getPropertyStatusLabel(status, language) {
-  if (status === 'sold') {
-    return language === 'cs' ? 'Prodano' : language === 'it' ? 'Venduto' : 'Sold'
-  }
-
-  if (status === 'reserved') {
-    return language === 'cs' ? 'Rezervovano' : language === 'it' ? 'Riservato' : 'Reserved'
-  }
-
-  return null
-}
+import { getNewPropertyLabel } from '@/components/NewPropertyRibbon'
+import { getNoAgencyLabel } from '@/components/NoAgencyBadge'
 
 const PROPERTY_TYPE_LABELS = {
   apartment: { cs: 'Byt', it: 'Appartamento', en: 'Apartment' },
@@ -56,12 +43,15 @@ function isLocalAsset(url) {
   return typeof url === 'string' && url.startsWith('/')
 }
 
-function ImageGallery({ images, title, status, language, isNew, noAgency }) {
+function ImageGallery({ images = [], title, language, videoUrl }) {
   const [lightboxOpen, setLightboxOpen] = useState(false)
   const [lightboxIndex, setLightboxIndex] = useState(0)
   const [mounted, setMounted] = useState(false)
   const [failedIndices, setFailedIndices] = useState(() => new Set())
-  const statusLabel = getPropertyStatusLabel(status, language)
+  const hasVideo = Boolean(videoUrl)
+  const mediaCount = images.length + (hasVideo ? 1 : 0)
+  const videoIndex = images.length
+  const isVideoIndex = (index) => hasVideo && index === videoIndex
 
   useEffect(() => { setMounted(true) }, [])
 
@@ -99,12 +89,12 @@ function ImageGallery({ images, title, status, language, isNew, noAgency }) {
   const closeLightbox = () => setLightboxOpen(false)
 
   const prevImage = useCallback(() => {
-    setLightboxIndex((i) => (i - 1 + images.length) % images.length)
-  }, [images.length])
+    setLightboxIndex((i) => (i - 1 + mediaCount) % mediaCount)
+  }, [mediaCount])
 
   const nextImage = useCallback(() => {
-    setLightboxIndex((i) => (i + 1) % images.length)
-  }, [images.length])
+    setLightboxIndex((i) => (i + 1) % mediaCount)
+  }, [mediaCount])
 
   useEffect(() => {
     if (!lightboxOpen) return
@@ -126,10 +116,25 @@ function ImageGallery({ images, title, status, language, isNew, noAgency }) {
     return () => { document.body.style.overflow = '' }
   }, [lightboxOpen])
 
-  if (!images || images.length === 0) {
+  if ((!images || images.length === 0) && !hasVideo) {
     return (
       <div className="aspect-[4/3] w-full bg-gray-200 rounded-xl flex items-center justify-center">
         <span className="text-gray-400">No images available</span>
+      </div>
+    )
+  }
+
+  if ((!images || images.length === 0) && hasVideo) {
+    return (
+      <div className="relative aspect-video overflow-hidden rounded-xl bg-black">
+        <video controls preload="metadata" className="h-full w-full">
+          <source src={videoUrl} type="video/mp4" />
+          {language === 'cs'
+            ? 'V\u00e1\u0161 prohl\u00ed\u017ee\u010d nepodporuje p\u0159ehr\u00e1v\u00e1n\u00ed videa.'
+            : language === 'it'
+            ? 'Il tuo browser non supporta la riproduzione video.'
+            : 'Your browser does not support video playback.'}
+        </video>
       </div>
     )
   }
@@ -154,19 +159,6 @@ function ImageGallery({ images, title, status, language, isNew, noAgency }) {
               onUpstreamError={() => markFailed(0)}
               className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
             />
-            {isNew && <NewPropertyRibbon language={language} />}
-            {noAgency && (
-              <div className="absolute right-4 top-4 z-20 pointer-events-none">
-                <NoAgencyBadge language={language} />
-              </div>
-            )}
-            {statusLabel && (
-              <div className="absolute left-4 top-4 z-10">
-                <span className={`inline-flex items-center rounded-full px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-white shadow-lg ${status === 'sold' ? 'bg-red-600/95' : 'bg-amber-600/95'}`}>
-                  {statusLabel}
-                </span>
-              </div>
-            )}
           </div>
         ) : (
           /* Multi-image mosaic: hero left + grid right */
@@ -186,19 +178,6 @@ function ImageGallery({ images, title, status, language, isNew, noAgency }) {
                 onUpstreamError={() => markFailed(0)}
                 className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
               />
-              {isNew && <NewPropertyRibbon language={language} />}
-              {noAgency && (
-                <div className="absolute right-4 top-4 z-20 pointer-events-none">
-                  <NoAgencyBadge language={language} />
-                </div>
-              )}
-              {statusLabel && (
-                <div className="absolute left-4 top-4 z-10">
-                  <span className={`inline-flex items-center rounded-full px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-white shadow-lg ${status === 'sold' ? 'bg-red-600/95' : 'bg-amber-600/95'}`}>
-                    {statusLabel}
-                  </span>
-                </div>
-              )}
               <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300" />
             </div>
 
@@ -238,18 +217,28 @@ function ImageGallery({ images, title, status, language, isNew, noAgency }) {
           </div>
         )}
 
+        {hasVideo && (
+          <button
+            onClick={() => openLightbox(videoIndex)}
+            className="absolute bottom-4 left-4 z-10 flex items-center gap-2 rounded-lg bg-black/70 border border-white/25 px-4 py-2 text-sm font-medium text-white shadow-md hover:bg-black/80 transition-all duration-200"
+          >
+            <Play className="h-4 w-4 fill-current" />
+            {language === 'cs' ? 'Video' : language === 'it' ? 'Video tour' : 'Video tour'}
+          </button>
+        )}
+
         {/* "Show all photos" button */}
-        {images.length > 1 && (
+        {mediaCount > 1 && (
           <button
             onClick={() => openLightbox(0)}
             className="absolute bottom-4 right-4 z-10 flex items-center gap-2 rounded-lg bg-white/95 border border-gray-200 px-4 py-2 text-sm font-medium text-gray-800 shadow-md hover:bg-white hover:shadow-lg transition-all duration-200"
           >
             <ZoomIn className="h-4 w-4" />
             {language === 'cs'
-              ? `Všechny fotky (${images.length})`
+              ? hasVideo ? `Fotky a video (${mediaCount})` : `Všechny fotky (${images.length})`
               : language === 'it'
-              ? `Tutte le foto (${images.length})`
-              : `All ${images.length} photos`}
+              ? hasVideo ? `Foto e video (${mediaCount})` : `Tutte le foto (${images.length})`
+              : hasVideo ? `Photos and video (${mediaCount})` : `All ${images.length} photos`}
           </button>
         )}
       </div>
@@ -272,11 +261,11 @@ function ImageGallery({ images, title, status, language, isNew, noAgency }) {
 
           {/* Counter */}
           <div className="absolute top-4 left-1/2 -translate-x-1/2 z-10 rounded-full bg-black/50 px-4 py-1.5 text-sm text-white">
-            {lightboxIndex + 1} / {images.length}
+            {lightboxIndex + 1} / {mediaCount}
           </div>
 
           {/* Prev */}
-          {images.length > 1 && (
+          {mediaCount > 1 && (
             <button
               className="absolute left-4 top-1/2 -translate-y-1/2 z-10 flex h-12 w-12 items-center justify-center rounded-full bg-white text-gray-900 shadow-xl hover:bg-gray-100 active:scale-95 transition-all"
               onClick={(e) => { e.stopPropagation(); prevImage() }}
@@ -286,25 +275,42 @@ function ImageGallery({ images, title, status, language, isNew, noAgency }) {
             </button>
           )}
 
-          {/* Image */}
+          {/* Media */}
           <div
             className="relative max-h-[80vh] max-w-[90vw] w-full h-full flex items-center justify-center pb-20"
             onClick={(e) => e.stopPropagation()}
           >
-            <PropertyImage
-              key={lightboxIndex}
-              src={srcAt(lightboxIndex)}
-              alt={`${title} - Image ${lightboxIndex + 1}`}
-              fill
-              sizes="90vw"
-              className="object-contain"
-              priority={isLocalAsset(images[lightboxIndex])}
-              onUpstreamError={() => markFailed(lightboxIndex)}
-            />
+            {isVideoIndex(lightboxIndex) ? (
+              <video
+                key={videoUrl}
+                controls
+                autoPlay
+                preload="metadata"
+                className="max-h-full max-w-full rounded-lg bg-black"
+              >
+                <source src={videoUrl} type="video/mp4" />
+                {language === 'cs'
+                  ? 'V\u00e1\u0161 prohl\u00ed\u017ee\u010d nepodporuje p\u0159ehr\u00e1v\u00e1n\u00ed videa.'
+                  : language === 'it'
+                  ? 'Il tuo browser non supporta la riproduzione video.'
+                  : 'Your browser does not support video playback.'}
+              </video>
+            ) : (
+              <PropertyImage
+                key={lightboxIndex}
+                src={srcAt(lightboxIndex)}
+                alt={`${title} - Image ${lightboxIndex + 1}`}
+                fill
+                sizes="90vw"
+                className="object-contain"
+                priority={isLocalAsset(images[lightboxIndex])}
+                onUpstreamError={() => markFailed(lightboxIndex)}
+              />
+            )}
           </div>
 
           {/* Next */}
-          {images.length > 1 && (
+          {mediaCount > 1 && (
             <button
               className="absolute right-4 top-1/2 -translate-y-1/2 z-10 flex h-12 w-12 items-center justify-center rounded-full bg-white text-gray-900 shadow-xl hover:bg-gray-100 active:scale-95 transition-all"
               onClick={(e) => { e.stopPropagation(); nextImage() }}
@@ -315,13 +321,13 @@ function ImageGallery({ images, title, status, language, isNew, noAgency }) {
           )}
 
           {/* Thumbnail strip */}
-          {images.length > 1 && (
+          {mediaCount > 1 && (
             <div
               className="absolute bottom-0 left-0 right-0 z-10 bg-black/60 px-4 py-3"
               onClick={(e) => e.stopPropagation()}
             >
               <div className="flex gap-2 overflow-x-auto pb-1 justify-center">
-                {images.map((img, idx) => (
+                {Array.from({ length: mediaCount }, (_, idx) => (
                   <button
                     key={idx}
                     onClick={() => setLightboxIndex(idx)}
@@ -331,14 +337,20 @@ function ImageGallery({ images, title, status, language, isNew, noAgency }) {
                         : 'opacity-40 hover:opacity-70'
                     }`}
                   >
-                    <PropertyImage
-                      src={srcAt(idx)}
-                      alt={`${title} - ${idx + 1}`}
-                      fill
-                      sizes="80px"
-                      onUpstreamError={() => markFailed(idx)}
-                      className="object-cover"
-                    />
+                    {isVideoIndex(idx) ? (
+                      <span className="absolute inset-0 flex items-center justify-center bg-black text-white">
+                        <Play className="h-5 w-5 fill-current" />
+                      </span>
+                    ) : (
+                      <PropertyImage
+                        src={srcAt(idx)}
+                        alt={`${title} - ${idx + 1}`}
+                        fill
+                        sizes="80px"
+                        onUpstreamError={() => markFailed(idx)}
+                        className="object-cover"
+                      />
+                    )}
                   </button>
                 ))}
               </div>
@@ -350,7 +362,7 @@ function ImageGallery({ images, title, status, language, isNew, noAgency }) {
   )
 }
 
-function InquiryForm({ propertyId, propertyTitle, language = 'en' }) {
+function InquiryForm({ propertyId, propertyTitle, language = 'cs' }) {
   const getDefaultMessage = (lang, title) => {
     if (lang === 'cs') return `Dobrý den, mám zájem o ${title}. Můžete mi prosím poskytnout více informací?`
     if (lang === 'it') return `Salve, sono interessato a ${title}. Potrebbe fornirmi maggiori informazioni?`
@@ -487,9 +499,8 @@ export default function PropertyDetailClient({ initialProperty = null }) {
     }
   }, [initialProperty])
   const [isFavorited, setIsFavorited] = useState(false)
-  const [isAuthModalOpen, setIsAuthModalOpen] = useState(false)
   const [user, setUser] = useState(null)
-  const [language, setLanguage] = useState('en')
+  const [language, setLanguage] = useState('cs')
   const [currency, setCurrency] = useState('EUR')
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
@@ -570,6 +581,7 @@ export default function PropertyDetailClient({ initialProperty = null }) {
             featured: sanityProperty.featured || false,
             isNew: Boolean(sanityProperty.isNew || sanityProperty.newListing),
             noAgency: Boolean(sanityProperty.noAgency || sanityProperty.no_agency || sanityProperty.badges?.includes('no-agency')),
+            exclusive: Boolean(sanityProperty.exclusive || sanityProperty.isExclusive || sanityProperty.badges?.includes('exclusive')),
             videoUrl: sanityProperty.videoUrl || sanityProperty.video_url || ''
           }
           
@@ -615,7 +627,6 @@ export default function PropertyDetailClient({ initialProperty = null }) {
 
   const handleFavorite = async () => {
     if (!user) {
-      setIsAuthModalOpen(true)
       return
     }
 
@@ -637,14 +648,6 @@ export default function PropertyDetailClient({ initialProperty = null }) {
 
   const formatPrice = (price) => {
     return formatPriceUtil(price, currency, language)
-  }
-
-  const handleAuthSuccess = (authUser) => {
-    setUser(authUser)
-    setIsAuthModalOpen(false)
-    if (property?._id) {
-      checkFavoriteStatus(property._id)
-    }
   }
 
   const handleCurrencyChange = (newCurrency) => {
@@ -836,7 +839,7 @@ export default function PropertyDetailClient({ initialProperty = null }) {
                 ))}
               </div>
 
-              {/* Login / user — desktop only */}
+              {/* User menu — desktop only */}
               {user ? (
                 <div className="hidden sm:flex items-center gap-2">
                   <span className="text-xs text-gray-300 hidden md:inline truncate max-w-[100px]">
@@ -855,16 +858,7 @@ export default function PropertyDetailClient({ initialProperty = null }) {
                     {language === 'cs' ? 'Odhlásit' : language === 'it' ? 'Esci' : 'Logout'}
                   </Button>
                 </div>
-              ) : (
-                <div className="hidden sm:block bg-white/10 backdrop-blur-md rounded-full px-4 py-1.5 border border-white/20">
-                  <button
-                    onClick={() => setIsAuthModalOpen(true)}
-                    className="text-xs font-medium text-white/90 hover:text-white transition-colors cursor-pointer"
-                  >
-                    {language === 'cs' ? 'Přihlásit' : language === 'it' ? 'Accedi' : 'Login'}
-                  </button>
-                </div>
-              )}
+              ) : null}
 
               {/* Hamburger — mobile only */}
               <button
@@ -937,7 +931,7 @@ export default function PropertyDetailClient({ initialProperty = null }) {
                 </div>
               </div>
 
-              {/* Login in mobile menu */}
+              {/* User action in mobile menu */}
               {user ? (
                 <button
                   onClick={async () => {
@@ -950,14 +944,7 @@ export default function PropertyDetailClient({ initialProperty = null }) {
                 >
                   {language === 'cs' ? 'Odhlásit' : language === 'it' ? 'Esci' : 'Logout'}
                 </button>
-              ) : (
-                <button
-                  onClick={() => { setIsMenuOpen(false); setIsAuthModalOpen(true) }}
-                  className="px-3 py-2.5 rounded-lg text-base text-amber-300 hover:text-amber-200 hover:bg-white/5 transition-colors font-medium text-left cursor-pointer"
-                >
-                  {language === 'cs' ? 'Přihlásit / Registrovat' : language === 'it' ? 'Accedi / Registrati' : 'Login / Register'}
-                </button>
-              )}
+              ) : null}
             </div>
           </div>
         </div>
@@ -1007,6 +994,11 @@ export default function PropertyDetailClient({ initialProperty = null }) {
                         {getNoAgencyLabel(language)}
                       </Badge>
                     )}
+                    {property.exclusive && (
+                      <Badge className="bg-amber-500 hover:bg-amber-600 text-white shadow-sm">
+                        {language === 'cs' ? 'Exkluzivn\u011b' : language === 'it' ? 'Esclusiva' : 'Exclusive'}
+                      </Badge>
+                    )}
                     <Badge variant="outline" className="capitalize">
                       {property.status === 'available' 
                         ? (language === 'cs' ? 'Dostupné' : language === 'it' ? 'Disponibile' : 'Available')
@@ -1046,13 +1038,15 @@ export default function PropertyDetailClient({ initialProperty = null }) {
                       <Share2 className="h-4 w-4 mr-1" />
                       {language === 'cs' ? 'Sdílet' : language === 'it' ? 'Condividi' : 'Share'}
                     </Button>
-                    <Button variant="outline" size="sm" onClick={handleFavorite}>
-                      <Heart className={`h-4 w-4 mr-1 ${isFavorited ? 'fill-red-500 text-red-500' : ''}`} />
-                      {isFavorited 
-                        ? (language === 'cs' ? 'Uloženo' : language === 'it' ? 'Salvato' : 'Saved')
-                        : (language === 'cs' ? 'Uložit' : language === 'it' ? 'Salva' : 'Save')
-                      }
-                    </Button>
+                    {user && (
+                      <Button variant="outline" size="sm" onClick={handleFavorite}>
+                        <Heart className={`h-4 w-4 mr-1 ${isFavorited ? 'fill-red-500 text-red-500' : ''}`} />
+                        {isFavorited
+                          ? (language === 'cs' ? 'Uloženo' : language === 'it' ? 'Salvato' : 'Saved')
+                          : (language === 'cs' ? 'Uložit' : language === 'it' ? 'Salva' : 'Save')
+                        }
+                      </Button>
+                    )}
                   </div>
                 </div>
               </div>
@@ -1062,10 +1056,8 @@ export default function PropertyDetailClient({ initialProperty = null }) {
             <ImageGallery 
               images={property.images || []} 
               title={getLocalizedText(property.title, 'Property')} 
-              status={property.status}
               language={language}
-              isNew={property.isNew}
-              noAgency={property.noAgency}
+              videoUrl={property.videoUrl}
             />
 
             {/* Property Details */}
@@ -1123,17 +1115,17 @@ export default function PropertyDetailClient({ initialProperty = null }) {
 
             {/* Video tour */}
             {property.videoUrl && (
-              <Card>
+              <Card className="w-fit max-w-full">
                 <CardHeader>
                   <CardTitle>
                     {language === 'cs' ? 'Videoprohl\u00eddka' : language === 'it' ? 'Video tour' : 'Video tour'}
                   </CardTitle>
                 </CardHeader>
-                <CardContent>
+                <CardContent className="pt-0">
                   <video
                     controls
                     preload="metadata"
-                    className="w-full overflow-hidden rounded-xl bg-black shadow-sm"
+                    className="h-[15cm] w-[10cm] max-w-full overflow-hidden rounded-xl bg-black object-contain shadow-sm"
                   >
                     <source src={property.videoUrl} type="video/mp4" />
                     {language === 'cs'
@@ -1279,14 +1271,6 @@ export default function PropertyDetailClient({ initialProperty = null }) {
 
       <Footer language={language} />
 
-      <AuthModal
-        isOpen={isAuthModalOpen}
-        onClose={() => setIsAuthModalOpen(false)}
-        onAuthSuccess={handleAuthSuccess}
-        language={language}
-        title={language === 'cs' ? 'Přihlášení vyžadováno' : language === 'it' ? 'Accesso richiesto' : 'Login required'}
-        message={language === 'cs' ? 'Pro uložení nemovitosti do oblíbených se prosím přihlaste nebo si vytvořte bezplatný účet.' : language === 'it' ? 'Per salvare una proprietà nei preferiti devi accedere o creare un account gratuito.' : 'To save a property to your favorites, please log in or create a free account.'}
-      />
     </div>
   )
 }

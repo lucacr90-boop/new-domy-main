@@ -19,7 +19,7 @@ const CONTENT = {
       'Právě stavební a urbanistické nesrovnalosti patří mezi nejcitlivější rizika. Někdy jde o velký problém, například přístavbu bez povolení. Jindy o detail, který na první pohled vypadá nevinně, ale při přípravě aktu může způsobit zdržení, náklady nebo nutnost regularizace.',
       'Základní pravidlo je jednoduché: nekupovat nemovitost s nevyřešenými nesrovnalostmi a nikdy neodkládat jejich řešení až po podpisu.'
     ],
-    imageAlt: 'Zákazová značka jako symbol rizika při koupi nemovitosti',
+    imageAlt: 'Dům v Itálii s půdorysem a upozorněním na nepovolené stavební úpravy',
     imageCaption:
       'U nemovitosti nejde jen o to, co je vidět při prohlídce. Rozhodující je shoda mezi skutečným stavem, projekty, katastrem a urbanistickými povoleními.',
     overviewTitle: 'Proč je to zásadní',
@@ -120,7 +120,7 @@ const CONTENT = {
       'Le abusività edilizie sono uno dei rischi più delicati dell’acquisto immobiliare. A volte il problema è evidente, come una veranda o un ampliamento non autorizzato. Altre volte sembra un dettaglio, ma può bloccare l’atto, generare costi o rendere necessaria una regolarizzazione.',
       'La regola da tenere a mente è semplice: non acquistare mai un immobile con abusività aperte e non rimandare la soluzione a dopo il rogito.'
     ],
-    imageAlt: 'Cartello di divieto come simbolo di rischio in un acquisto immobiliare',
+    imageAlt: 'Casa in Italia con planimetria e avviso sulle modifiche edilizie non autorizzate',
     imageCaption:
       'In un acquisto immobiliare non conta solo ciò che si vede durante la visita. Conta la coerenza tra stato reale, progetti, catasto e titoli urbanistici.',
     overviewTitle: 'Perché è un tema decisivo',
@@ -221,7 +221,7 @@ const CONTENT = {
       'Building irregularities are one of the most sensitive risks in an Italian property purchase. Sometimes the issue is obvious, such as an unauthorized extension. In other cases it looks minor, but can delay the deed, create costs, or require formal regularization.',
       'The core rule is simple: never buy a property with unresolved irregularities, and never leave the solution until after the deed.'
     ],
-    imageAlt: 'Do not enter sign as a symbol of property purchase risk',
+    imageAlt: 'House in Italy with a floor plan and warning about unauthorized building works',
     imageCaption:
       'In a property purchase, the visible condition is only one part of the picture. What matters is consistency between the real state, plans, cadastral records, and planning permissions.',
     overviewTitle: 'Why this matters',
@@ -378,6 +378,16 @@ export default function BuildingIrregularitiesGuidePage() {
 
       <main className="pt-28 pb-16 md:pb-24">
         <div className="container mx-auto px-6" style={{ maxWidth: '1200px' }}>
+          <figure className="mx-auto mb-8 max-w-5xl overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
+            <img
+              src="/articles/abusi-edilizi-italia-header.jpeg"
+              alt={t.imageAlt}
+              className="h-auto w-full"
+              loading="eager"
+            />
+            <figcaption className="px-4 py-3 text-sm text-slate-600">{t.imageCaption}</figcaption>
+          </figure>
+
           <article className="mx-auto max-w-4xl space-y-6" style={{ maxWidth: '720px', marginLeft: 'auto', marginRight: 'auto' }}>
             <Button asChild variant="outline" className="inline-flex items-center border-slate-300 text-slate-700 hover:bg-slate-100 hover:text-slate-700">
               <Link href="/blog">
@@ -406,9 +416,9 @@ export default function BuildingIrregularitiesGuidePage() {
 
             <figure className="overflow-hidden rounded-2xl border border-slate-200 bg-white">
               <img
-                src="/articles/common-mistakes-red-x.jpg"
+                src="/articles/abusi-edilizi-italia-header.jpeg"
                 alt={t.imageAlt}
-                className="h-64 w-full object-cover md:h-80"
+                className="h-auto w-full"
                 loading="eager"
               />
               <figcaption className="px-4 py-3 text-sm text-slate-600">{t.imageCaption}</figcaption>

@@ -26,11 +26,11 @@ const ARTICLES = [
     date: '2026-06-18',
     readTime: '8 min',
     category: { en: 'Legal', cs: 'Právo', it: 'Legale' },
-    image: '/articles/common-mistakes-red-x.jpg',
+    image: '/articles/abusi-edilizi-italia-header.jpeg',
     imageAlt: {
-      en: 'Do not enter sign as a symbol of property purchase risk',
-      cs: 'Zákazová značka jako symbol rizika při koupi nemovitosti',
-      it: 'Cartello di divieto come simbolo di rischio in un acquisto immobiliare'
+      en: 'House in Italy with a floor plan and warning about unauthorized building works',
+      cs: 'Dům v Itálii s půdorysem a upozorněním na nepovolené stavební úpravy',
+      it: 'Casa in Italia con planimetria e avviso sulle modifiche edilizie non autorizzate'
     },
     link: '/guides/abusivita-edilizie-in-italia'
   },

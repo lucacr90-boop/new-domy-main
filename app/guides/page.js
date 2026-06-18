@@ -10,6 +10,21 @@ import ProtectedContentLink from '@/components/ProtectedContentLink'
 
 const GUIDES = [
   {
+    slug: 'abusivita-edilizie-in-italia',
+    date: '2026-06-18',
+    readTime: '8 min',
+    title: {
+      en: 'Building irregularities in Italy: what to verify before buying',
+      cs: 'Stavební nesrovnalosti v Itálii: co ověřit před koupí',
+      it: 'Abusività edilizie in Italia: cosa verificare prima di comprare'
+    },
+    excerpt: {
+      en: 'The main types of building irregularities, warning signs, documents to check, and why everything must be solved before the deed.',
+      cs: 'Hlavní typy stavebních nesrovnalostí, varovné signály, dokumenty ke kontrole a proč vše vyřešit před podpisem.',
+      it: 'Tipi di abuso, segnali di rischio, documenti da controllare e perché risolvere tutto prima del rogito.'
+    }
+  },
+  {
     slug: 'rekonstrukce-domů-v-italii',
     date: '2026-03-10',
     readTime: '8 min',
@@ -207,4 +222,3 @@ export default function GuidesHubPage() {
     </div>
   )
 }
-

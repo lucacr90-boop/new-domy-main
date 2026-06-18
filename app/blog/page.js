@@ -12,6 +12,29 @@ import ProtectedContentLink from '@/components/ProtectedContentLink'
 
 const ARTICLES = [
   {
+    slug: 'abusivita-edilizie-in-italia',
+    title: {
+      en: 'Building irregularities in Italy: what to verify before buying a house',
+      cs: 'Stavební nesrovnalosti v Itálii: co ověřit před koupí domu',
+      it: 'Abusività edilizie in Italia: cosa verificare prima di comprare casa'
+    },
+    excerpt: {
+      en: 'A practical guide to unauthorized works, cadastral mismatches, changes of use, and why every issue must be resolved before the final deed.',
+      cs: 'Praktický průvodce nepovolenými pracemi, katastrálními rozdíly, změnami užívání a důvodem, proč vše vyřešit před rogitem.',
+      it: 'Guida pratica ad abusi edilizi, difformità catastali, cambi d’uso e motivi per cui ogni problema va risolto prima del rogito.'
+    },
+    date: '2026-06-18',
+    readTime: '8 min',
+    category: { en: 'Legal', cs: 'Právo', it: 'Legale' },
+    image: '/articles/common-mistakes-red-x.jpg',
+    imageAlt: {
+      en: 'Do not enter sign as a symbol of property purchase risk',
+      cs: 'Zákazová značka jako symbol rizika při koupi nemovitosti',
+      it: 'Cartello di divieto come simbolo di rischio in un acquisto immobiliare'
+    },
+    link: '/guides/abusivita-edilizie-in-italia'
+  },
+  {
     slug: 'kolik-stoji-dovolená-v-italii-v-roce-2026',
     title: {
       en: 'How Much Does a Holiday in Italy Cost in 2026?',

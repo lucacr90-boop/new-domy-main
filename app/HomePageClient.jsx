@@ -748,7 +748,7 @@ export default function HomePageClient({ initialProperties = [] }) {
   return (
     <div className="min-h-screen bg-[#f7f4ed] home-page-custom-border overflow-x-hidden" data-testid="homepage-container">
       {/* Navigation */}
-      <Navigation />
+      <Navigation logoSrc="/logo-domy-home-yellow.svg" />
 
       {/* Hero Section */}
       <section

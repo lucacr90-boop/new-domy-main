@@ -13,7 +13,7 @@ import { PREMIUM_PDFS_ENABLED } from '@/lib/featureFlags'
 import { supabase } from '@/lib/supabase'
 import { readLanguageFromBrowser, persistLanguage, DEFAULT_LANGUAGE, getInitialLanguage } from '@/lib/userPreferences'
 
-export default function Navigation({ hideAuth = false }) {
+export default function Navigation({ hideAuth = false, logoSrc = '/logo domy.svg' }) {
   const pathname = usePathname()
   const [user, setUser] = useState(null)
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -179,7 +179,7 @@ export default function Navigation({ hideAuth = false }) {
           <div className="flex items-center space-x-2 sm:space-x-4 md:space-x-8" data-testid="nav-brand-links">
             <Link href="/" data-testid="nav-brand-link" className="relative overflow-visible">
               <Image
-                src="/logo domy.svg"
+                src={logoSrc}
                 alt="Domy v It\u00e1lii"
                 width={120}
                 height={115}

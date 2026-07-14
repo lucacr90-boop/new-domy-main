@@ -11,6 +11,10 @@ import { requireAdminApiAccess } from '@/lib/adminAuth'
 export const dynamic = 'force-dynamic'
 export const runtime = 'nodejs'
 
+function isValidEmail(email) {
+  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(String(email || '').trim())
+}
+
 const LOCAL_PROPERTIES_PATH = path.join(process.cwd(), 'data', 'local-properties.json')
 
 function hasSanityConfig() {
@@ -392,6 +396,13 @@ export async function POST(request, { params }) {
       if (!supabase) return NextResponse.json({ error: 'Database not configured' }, { status: 503 })
       
       const { listingId, name, email, message, propertyTitle, phone, type = 'property' } = body
+
+      if (!String(name || '').trim() || !isValidEmail(email) || !String(message || '').trim()) {
+        return NextResponse.json(
+          { error: 'Name, a valid email address, and message are required' },
+          { status: 400 }
+        )
+      }
       
       // Get user if authenticated
       const { data: { user } } = await supabase.auth.getUser()
@@ -413,13 +424,25 @@ export async function POST(request, { params }) {
         .single()
 
       if (error) {
+        console.error('[INQUIRY] Database insert failed', {
+          code: error.code,
+          message: error.message,
+          type
+        })
         return NextResponse.json({ error: error.message }, { status: 500 })
       }
 
+      console.log('[INQUIRY] Saved', {
+        inquiryId: data?.id,
+        type,
+        hasListingId: Boolean(listingId)
+      })
+
+      let notificationResult
       try {
         const { default: emailService } = await import('@/lib/emailService')
 
-        await emailService.sendInternalInquiryNotification({
+        notificationResult = await emailService.sendInternalInquiryNotification({
           userEmail: email,
           userName: name,
           userPhone: phone,
@@ -429,8 +452,30 @@ export async function POST(request, { params }) {
           inquiryType: type,
           inquiryId: data?.id
         })
+
+        if (!notificationResult?.success) {
+          console.error('[INQUIRY] Internal notification failed', {
+            inquiryId: data?.id,
+            provider: notificationResult?.provider,
+            error: notificationResult?.error || notificationResult?.message || 'Unknown email error'
+          })
+        } else {
+          console.log('[INQUIRY] Internal notification sent', {
+            inquiryId: data?.id,
+            provider: notificationResult.provider,
+            statusCode: notificationResult.statusCode
+          })
+        }
       } catch (emailError) {
-        console.error('Failed to send internal inquiry notification email:', emailError)
+        notificationResult = {
+          success: false,
+          provider: 'sendgrid',
+          error: emailError.message
+        }
+        console.error('[INQUIRY] Internal notification exception', {
+          inquiryId: data?.id,
+          error: emailError.message
+        })
       }
 
       // Send inquiry confirmation email if user has email notifications enabled
@@ -459,7 +504,27 @@ export async function POST(request, { params }) {
         }
       }
 
-      return NextResponse.json({ success: true, data })
+      if (!notificationResult?.success) {
+        return NextResponse.json(
+          {
+            success: false,
+            inquirySaved: true,
+            inquiryId: data?.id,
+            error: 'Your request was saved, but the email notification could not be delivered.'
+          },
+          { status: 502 }
+        )
+      }
+
+      return NextResponse.json({
+        success: true,
+        data,
+        notification: {
+          sent: true,
+          provider: notificationResult.provider,
+          statusCode: notificationResult.statusCode
+        }
+      })
     }
 
     return NextResponse.json({ error: 'Not found' }, { status: 404 })
